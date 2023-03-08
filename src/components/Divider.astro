@@ -5,11 +5,10 @@ interface Props {
   color?: string;
 }
 
-const { vertical = false, classes, color = "black" } = Astro.props as Props;
+const { vertical = false, classes, color = 'black' } = Astro.props as Props;
 ---
 
-<div class:list={["divider", vertical ? "divider-vertical" : "", classes]}>
-</div>
+<div class:list={['divider', vertical ? 'divider-vertical' : '', classes]}></div>
 
 <style define:vars={{ color }}>
   /* Divider */

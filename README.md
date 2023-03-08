@@ -2,4 +2,4 @@
 
 AstroWind as a template
 
-- https://github.com/onwidget/astrowind
+- https://github.com/RatinA0/ratina0.github.io

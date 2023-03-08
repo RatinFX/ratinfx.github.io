@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { cleanSlug, trimSlash, POST_PERMALINK_PATTERN } from './permalinks';
 
-const generatePermalink = async ({ id, slug, publishDate, category }) => {
+const generatePermalink = async ({ id, slug, publishDate, category }: any) => {
   const year = String(publishDate.getFullYear()).padStart(4, '0');
   const month = String(publishDate.getMonth() + 1).padStart(2, '0');
   const day = String(publishDate.getDate()).padStart(2, '0');

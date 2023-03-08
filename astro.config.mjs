@@ -15,8 +15,7 @@ import { SITE } from './src/config.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const whenExternalScripts = (items = []) =>
-  SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
+const whenExternalScripts = (items = []) => [];
 
 export default defineConfig({
   site: SITE.origin,
@@ -35,10 +34,13 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
+
     sitemap(),
+
     image({
       serviceEntryPoint: '@astrojs/image/sharp',
     }),
+
     mdx(),
 
     ...whenExternalScripts(() =>

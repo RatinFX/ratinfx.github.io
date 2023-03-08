@@ -6,7 +6,7 @@ const formatter =
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    timeZone: 'UTC',
+    timeZone: 'CET',
   });
 
 /* eslint-disable no-mixed-spaces-and-tabs */

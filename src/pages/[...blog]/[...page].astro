@@ -9,7 +9,7 @@ import Pagination from '~/components/blog/Pagination.astro';
 import { fetchPosts } from '~/utils/blog';
 import { BLOG_BASE } from '~/utils/permalinks';
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: any) {
   if (BLOG?.disabled || BLOG?.list?.disabled) return [];
   return paginate(await fetchPosts(), {
     params: { blog: BLOG_BASE || undefined },
