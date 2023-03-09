@@ -1,7 +1,7 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import type { Post } from '~/types';
-import { cleanSlug, trimSlash, POST_PERMALINK_PATTERN } from './permalinks';
+import type { Project } from '~/types';
+import { cleanSlug, trimSlash, PROJECT_PERMALINK_PATTERN } from './permalinks';
 
 const generatePermalink = async ({ id, slug, publishDate, category }: any) => {
   const year = String(publishDate.getFullYear()).padStart(4, '0');
@@ -11,7 +11,7 @@ const generatePermalink = async ({ id, slug, publishDate, category }: any) => {
   const minute = String(publishDate.getMinutes()).padStart(2, '0');
   const second = String(publishDate.getSeconds()).padStart(2, '0');
 
-  const permalink = POST_PERMALINK_PATTERN.replace('%slug%', slug)
+  const permalink = PROJECT_PERMALINK_PATTERN.replace('%slug%', slug)
     .replace('%id%', id)
     .replace('%category%', category || '')
     .replace('%year%', year)
@@ -28,9 +28,9 @@ const generatePermalink = async ({ id, slug, publishDate, category }: any) => {
     .join('/');
 };
 
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
-  const { id, slug: rawSlug = '', data } = post;
-  const { Content } = await post.render();
+const getNormalizedProject = async (project: CollectionEntry<'project'>): Promise<Project> => {
+  const { id, slug: rawSlug = '', data } = project;
+  const { Content } = await project.render();
 
   const {
     tags: rawTags = [],
@@ -63,60 +63,60 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   };
 };
 
-const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+const load = async function (): Promise<Array<Project>> {
+  const projects = await getCollection('project');
+  const normalizedProjects = projects.map(async (project) => await getNormalizedProject(project));
 
-  const results = (await Promise.all(normalizedPosts))
+  const results = (await Promise.all(normalizedProjects))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
+    .filter((project) => !project.draft);
 
   return results;
 };
 
-let _posts: Array<Post>;
+let _projects: Array<Project>;
 
 /** */
-export const fetchPosts = async (): Promise<Array<Post>> => {
-  if (!_posts) {
-    _posts = await load();
+export const fetchProjects = async (): Promise<Array<Project>> => {
+  if (!_projects) {
+    _projects = await load();
   }
 
-  return _posts;
+  return _projects;
 };
 
 /** */
-export const findPostsBySlugs = async (slugs: Array<string>): Promise<Array<Post>> => {
+export const findProjectsBySlugs = async (slugs: Array<string>): Promise<Array<Project>> => {
   if (!Array.isArray(slugs)) return [];
 
-  const posts = await fetchPosts();
+  const projects = await fetchProjects();
 
-  return slugs.reduce(function (r: Array<Post>, slug: string) {
-    posts.some(function (post: Post) {
-      return slug === post.slug && r.push(post);
+  return slugs.reduce(function (r: Array<Project>, slug: string) {
+    projects.some(function (project: Project) {
+      return slug === project.slug && r.push(project);
     });
     return r;
   }, []);
 };
 
 /** */
-export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> => {
+export const findProjectsByIds = async (ids: Array<string>): Promise<Array<Project>> => {
   if (!Array.isArray(ids)) return [];
 
-  const posts = await fetchPosts();
+  const projects = await fetchProjects();
 
-  return ids.reduce(function (r: Array<Post>, id: string) {
-    posts.some(function (post: Post) {
-      return id === post.id && r.push(post);
+  return ids.reduce(function (r: Array<Project>, id: string) {
+    projects.some(function (project: Project) {
+      return id === project.id && r.push(project);
     });
     return r;
   }, []);
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
+export const findLatestProjects = async ({ count }: { count?: number }): Promise<Array<Project>> => {
   const _count = count || 4;
-  const posts = await fetchPosts();
+  const projects = await fetchProjects();
 
-  return posts ? posts.slice(0, _count) : [];
+  return projects ? projects.slice(0, _count) : [];
 };

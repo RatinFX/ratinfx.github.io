@@ -2,28 +2,30 @@
 import { SITE, PROJECTS } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Pagination from '~/components/blog/Pagination.astro';
+import ProjectList from '~/components/project/List.astro';
+import Pagination from '~/components/project/Pagination.astro';
 
-import { fetchPosts } from '~/utils/blog';
+import { fetchProjects } from '~/utils/project';
 import { TAG_BASE } from '~/utils/permalinks';
-import Headline from '~/components/blog/Headline.astro';
+import Headline from '~/components/project/Headline.astro';
 
 export async function getStaticPaths({ paginate }: any) {
   if (PROJECTS?.disabled || PROJECTS?.tag?.disabled) return [];
 
-  const posts = await fetchPosts();
+  const projects = await fetchProjects();
   const tags = new Set();
-  posts.map((post) => {
-    Array.isArray(post.tags) && post.tags.map((tag) => tags.add(tag.toLowerCase()));
+  projects.map((project) => {
+    Array.isArray(project.tags) && project.tags.map((tag) => tags.add(tag.toLowerCase()));
   });
 
   return Array.from(tags).map((tag: string | any) =>
     paginate(
-      posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
+      projects.filter(
+        (project) => Array.isArray(project.tags) && project.tags.find((elem) => elem.toLowerCase() === tag)
+      ),
       {
         params: { tag: tag, projects: TAG_BASE || undefined },
-        pageSize: PROJECTS.postsPerPage,
+        pageSize: PROJECTS.itemPerPage,
         props: { tag },
       }
     )
@@ -34,7 +36,7 @@ const { page, tag } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 const meta = {
-  title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `Projectss by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
   description: SITE.description,
   noindex: PROJECTS?.tag?.noindex,
 };
@@ -43,7 +45,7 @@ const meta = {
 <Layout meta={meta}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
     <Headline>Tag: {tag}</Headline>
-    <BlogList posts={page.data} />
+    <ProjectList projects={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>

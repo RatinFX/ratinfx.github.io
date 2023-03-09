@@ -2,37 +2,37 @@
 import { PROJECTS } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
-import SinglePost from '~/components/blog/SinglePost.astro';
-import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import SingleProject from '~/components/project/SingleProject.astro';
+import ToProjectLink from '~/components/project/ToProjectLink.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
-import { fetchPosts } from '~/utils/blog';
+import { fetchProjects } from '~/utils/project';
 import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
-  if (PROJECTS?.disabled || PROJECTS?.post?.disabled) return [];
-  return (await fetchPosts()).map((post) => ({
+  if (PROJECTS?.disabled || PROJECTS?.project?.disabled) return [];
+  return (await fetchProjects()).map((project) => ({
     params: {
-      projects: post.permalink,
+      projects: project.permalink,
     },
-    props: { post },
+    props: { project },
   }));
 }
 
-const { post } = Astro.props;
-const url = getCanonical(getPermalink(post.permalink, 'post'));
+const { project } = Astro.props;
+const url = getCanonical(getPermalink(project.permalink, 'project'));
 
 const meta = {
-  title: post.title,
-  description: post.description,
-  canonical: post.canonical || url,
-  image: await findImage(post.image),
-  noindex: PROJECTS?.post?.noindex,
+  title: project.title,
+  description: project.description,
+  canonical: project.canonical || url,
+  image: await findImage(project.image),
+  noindex: PROJECTS?.project?.noindex,
   ogType: 'article',
 };
 ---
 
 <Layout {meta}>
-  <SinglePost post={{ ...post, image: meta.image }} url={url} />
-  <ToBlogLink />
+  <SingleProject project={{ ...project, image: meta.image }} url={url} />
+  <ToProjectLink />
 </Layout>

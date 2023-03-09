@@ -21,7 +21,7 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-export const POST_PERMALINK_PATTERN = trimSlash(PROJECTS?.post?.permalink || '/%slug%');
+export const PROJECT_PERMALINK_PATTERN = trimSlash(PROJECTS?.project?.permalink || '/%slug%');
 
 export const PROJECTS_BASE = cleanSlug(PROJECTS?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(PROJECTS?.category?.pathname || 'category');
@@ -43,7 +43,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = createPath(TAG_BASE, trimSlash(slug));
       break;
 
-    case 'post':
+    case 'project':
       permalink = createPath(trimSlash(slug));
       break;
 

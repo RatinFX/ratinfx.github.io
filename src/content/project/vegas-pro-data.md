@@ -3,8 +3,9 @@ publishDate: 2023-01-06T00:00:00Z
 title: Vegas Pro Data
 excerpt: Open source feature collection for VEGAS developers
 image: ~/assets/images/colors.jpg
+category: Vegas Pro Extension
 tags:
-  - vegas-pro
+  - dev
   - c-sharp
   - winforms
 canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand

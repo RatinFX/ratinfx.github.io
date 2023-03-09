@@ -27,6 +27,45 @@ const projects = [
   },
 ];
 
+const socials = [
+  {
+    text: 'Twitch',
+    ariaLabel: 'Twitch',
+    icon: 'tabler:brand-twitch',
+    href: 'https://www.twitch.tv/RatinA0',
+  },
+  {
+    text: 'Main YouTube',
+    ariaLabel: 'Main YouTube',
+    icon: 'tabler:brand-youtube',
+    href: 'https://youtube.com/@MartinFX?sub_confirmation=1',
+  },
+  {
+    text: 'Second YouTube',
+    ariaLabel: 'Second YouTube',
+    icon: 'tabler:brand-youtube',
+    href: 'https://youtube.com/@RatinA0?sub_confirmation=1',
+  },
+  {
+    text: 'Twitter',
+    ariaLabel: 'Twitter',
+    icon: 'tabler:brand-twitter',
+    href: 'https://twitter.com/0RatinA0',
+  },
+  {
+    text: 'Instagram',
+    ariaLabel: 'Instagram',
+    icon: 'tabler:brand-instagram',
+    href: 'https://www.instagram.com/RatinA0',
+  },
+  {
+    text: 'Github',
+    ariaLabel: 'Github',
+    icon: 'tabler:brand-github',
+    href: 'https://github.com/RatinA0?tab=repositories',
+  },
+];
+
 export const headerData = {
   links: [
     {
@@ -36,66 +75,10 @@ export const headerData = {
     },
     {
       text: 'Socials',
-      links: [
-        {
-          text: 'Twitch',
-          href: 'https://www.twitch.tv/RatinA0',
-        },
-        {
-          text: 'Main YouTube',
-          href: 'https://youtube.com/@MartinFX',
-        },
-        {
-          text: 'Second YouTube',
-          href: 'https://youtube.com/@RatinA0',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/0RatinA0',
-        },
-        {
-          text: 'Instagram',
-          href: 'https://www.instagram.com/RatinA0',
-        },
-        {
-          text: 'Github',
-          href: 'https://github.com/RatinA0',
-        },
-      ],
+      links: [...socials],
     },
   ],
-  socialLinks: [
-    {
-      ariaLabel: 'Twitch',
-      icon: 'tabler:brand-twitch',
-      href: 'https://www.twitch.tv/RatinA0',
-    },
-    {
-      ariaLabel: 'Main YouTube',
-      icon: 'tabler:brand-youtube',
-      href: 'https://youtube.com/@MartinFX',
-    },
-    {
-      ariaLabel: 'Second YouTube',
-      icon: 'tabler:brand-youtube',
-      href: 'https://youtube.com/@RatinA0',
-    },
-    {
-      ariaLabel: 'Twitter',
-      icon: 'tabler:brand-twitter',
-      href: 'https://twitter.com/0RatinA0',
-    },
-    {
-      ariaLabel: 'Instagram',
-      icon: 'tabler:brand-instagram',
-      href: 'https://www.instagram.com/RatinA0',
-    },
-    {
-      ariaLabel: 'Github',
-      icon: 'tabler:brand-github',
-      href: 'https://github.com/RatinA0',
-    },
-  ],
+  socialLinks: [...socials],
 };
 
 export const footerData = {
@@ -106,32 +89,7 @@ export const footerData = {
     },
     {
       title: 'Socials',
-      links: [
-        {
-          text: 'Twitch',
-          href: 'https://www.twitch.tv/RatinA0',
-        },
-        {
-          text: 'Main YouTube',
-          href: 'https://youtube.com/@MartinFX',
-        },
-        {
-          text: 'Second YouTube',
-          href: 'https://youtube.com/@RatinA0',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/0RatinA0',
-        },
-        {
-          text: 'Instagram',
-          href: 'https://www.instagram.com/RatinA0',
-        },
-        {
-          text: 'Github',
-          href: 'https://github.com/RatinA0',
-        },
-      ],
+      links: [...socials],
     },
   ],
 };

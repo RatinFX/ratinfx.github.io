@@ -2,28 +2,28 @@
 import { SITE, PROJECTS } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
-import Pagination from '~/components/blog/Pagination.astro';
+import ProjectList from '~/components/project/List.astro';
+import Headline from '~/components/project/Headline.astro';
+import Pagination from '~/components/project/Pagination.astro';
 
-import { fetchPosts } from '~/utils/blog';
+import { fetchProjects } from '~/utils/project';
 import { CATEGORY_BASE } from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }: any) {
   if (PROJECTS?.disabled || PROJECTS?.category?.disabled) return [];
 
-  const posts = await fetchPosts();
+  const projects = await fetchProjects();
   const categories = new Set();
-  posts.map((post) => {
-    typeof post.category === 'string' && categories.add(post.category.toLowerCase());
+  projects.map((project) => {
+    typeof project.category === 'string' && categories.add(project.category.toLowerCase());
   });
 
   return Array.from(categories).map((category: string | any) =>
     paginate(
-      posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
+      projects.filter((project) => typeof project.category === 'string' && category === project.category.toLowerCase()),
       {
         params: { category: category, projects: CATEGORY_BASE || undefined },
-        pageSize: PROJECTS.postsPerPage,
+        pageSize: PROJECTS.itemPerPage,
         props: { category },
       }
     )
@@ -43,7 +43,7 @@ const meta = {
 <Layout meta={meta}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
     <Headline><span class="capitalize">{category.replaceAll('-', ' ')}</span></Headline>
-    <BlogList posts={page.data} />
+    <ProjectList projects={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>

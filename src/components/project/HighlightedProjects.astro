@@ -1,26 +1,26 @@
 ---
-import Grid from '~/components/blog/Grid.astro';
+import Grid from '~/components/project/Grid.astro';
 
 import { getProjectsPermalink } from '~/utils/permalinks';
-import { findPostsByIds } from '~/utils/blog';
+import { findProjectsByIds } from '~/utils/project';
 
 export interface Props {
   title?: string;
-  allPostsText?: string;
-  allPostsLink?: string | URL;
+  allProjectsText?: string;
+  allProjectsLink?: string | URL;
   information?: string;
-  postIds: string[];
+  projectIds: string[];
 }
 
 const {
   title = await Astro.slots.render('title'),
-  allPostsText = 'View all posts',
-  allPostsLink = getProjectsPermalink(),
+  allProjectsText = 'View all projects',
+  allProjectsLink = getProjectsPermalink(),
   information = await Astro.slots.render('information'),
-  postIds = [],
+  projectIds = [],
 } = Astro.props;
 
-const posts = await findPostsByIds(postIds);
+const projects = await findProjectsByIds(projectIds);
 ---
 
 <section class="px-4 py-16 mx-auto max-w-7xl lg:py-20">
@@ -35,12 +35,12 @@ const posts = await findPostsByIds(postIds);
         )
       }
       {
-        allPostsText && allPostsLink && (
+        allProjectsText && allProjectsLink && (
           <a
             class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 md:mb-0"
-            href={allPostsLink}
+            href={allProjectsLink}
           >
-            {allPostsText} »
+            {allProjectsText} »
           </a>
         )
       }
@@ -49,5 +49,5 @@ const posts = await findPostsByIds(postIds);
     {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
   </div>
 
-  <Grid posts={posts} />
+  <Grid projects={projects} />
 </section>

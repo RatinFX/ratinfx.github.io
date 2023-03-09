@@ -3,8 +3,9 @@ publishDate: 2023-01-09T00:00:00Z
 title: Better Search
 excerpt: Improved search for Effects, Generators, and their Presets
 image: ~/assets/images/tools.jpg
+category: Vegas Pro Extension
 tags:
-  - vegas-pro
+  - dockable
   - c-sharp
   - winforms
 ---

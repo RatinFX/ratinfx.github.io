@@ -8,9 +8,8 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import LatestProjects from '~/components/project/LatestProjects.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const meta = {
   title: SITE.title,
@@ -24,33 +23,52 @@ const meta = {
 
   <Hero
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/RatinA0/ratina0.github.io',
-      icon: 'tabler:download',
+      text: 'Projects',
+      href: getPermalink('/projects'),
+      icon: 'tabler:braces',
     }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction2={{
+      text: 'Videos',
+      href: 'https://youtube.com/@MartinFX?sub_confirmation=1',
+      icon: 'tabler:brand-youtube',
+      openOnNewTab: true,
+    }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden" /> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      Hi there! I'm <span class="text-primary dark:text-blue-400 highlight"> Martin</span>
+      also known as
+      <span class="text-primary dark:text-blue-400 highlight font-semibold">RatinA0</span>
+      or
+      <span class="text-primary dark:text-blue-400 highlight font-semibold">MartinFX</span>.
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="sm:inline">
+        <!-- Continue title -->
+
+        <!-- Lyrics videos -->
+        You might know me for creating YouTube videos like
+        <a
+          class="text-primary dark:text-blue-400 highlight font-semibold hover:text-blue-600 dark:hover:text-blue-300"
+          href="https://www.youtube.com/watch?v=h-mUGj41hWA"
+        >
+          NOMA - Brain Power | LYRICS!.
+        </a>
+
+        <!-- Work -->
+        <br />
+        I'm also a <span class="font-semibold">software developer</span> who created
+        <span class="font-semibold">extensions</span> for
+        <span class="font-semibold"> VEGAS Pro</span>, some being open-source on my Github page.
+      </span>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Note Widget ******************* ->->
 
   <Note />
 
-  <!-- Features Widget *************** -->
+  <!-- Features Widget *************** ->->
 
   <Features
     highlight="Features"
@@ -67,7 +85,7 @@ const meta = {
         {
           title: 'Ready-to-use Components',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Projects, Personal Profiles, Small Business...',
           icon: 'tabler:components',
         },
         {
@@ -100,7 +118,7 @@ const meta = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** ->->
 
   <Content
     highlight="Inside template"
@@ -128,47 +146,16 @@ const meta = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-blue-400 sm:text-3xl mb-2">Ad vix debet docendi</h3>
       Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
       tacimates.
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-    ]}
-    image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
-    }}
-  />
-
-  <!-- Steps Widget ****************** -->
+  <!-- Steps Widget ****************** ->->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Get your dream website up and running in no time with AstroWind.">
     items={[
       {
         title: 'Step 1: <span class="font-medium">Download</span>',
@@ -199,7 +186,7 @@ const meta = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features2 Widget ************** ->->
 
   <Features2
     title="Most used widgets"
@@ -263,83 +250,7 @@ const meta = {
     ]}
   />
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- HighlightedProjects Widget ******* -->
 
-  <LatestPosts
-    title="Project list"
-    information={`A list of Projects I've worked on.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
-		`}
-    postIds={[
-      'vegas-pro-flow.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-      'useful-resources-to-create-websites.md',
-    ]}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
-    highlight="FAQs"
-    items={[
-      [
-        {
-          question: 'What do I need to start?',
-          answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-        },
-        {
-          question: 'How to install the Astro + Tailwind CSS template?',
-          answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
-        },
-        {
-          question: "What's something that you don't understand?",
-          answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-        },
-      ],
-      [
-        {
-          question: "What's an example of when you changed your mind?",
-          answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-        },
-        {
-          question: 'What is something that you would like to try again?',
-          answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-        },
-        {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
-          answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-        },
-      ],
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/RatinA0/ratina0.github.io',
-      icon: 'tabler:download',
-    }}
-  >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  <LatestProjects title="Project list" />
 </Layout>

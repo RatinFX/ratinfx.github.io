@@ -1,12 +1,11 @@
 ---
-publishDate: 2023-01-08T00:00:00Z
+publishDate: 2023-03-09T00:00:00Z
 title: Vegas Pro Flow
-description: Create stunning animations using Beziér Curves
-excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
+excerpt: Create stunning animations using Beziér Curves
 image: ~/assets/images/stickers.jpg
-category: Tutorials
+category: Vegas Pro Extension
 tags:
-  - vegas-pro
+  - dockable
   - c-sharp
   - winforms
 canonical: https://astrowind.vercel.app/astrowind-template-in-depth

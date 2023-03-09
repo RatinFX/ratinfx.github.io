@@ -1,14 +1,14 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'RatinA0 Portfolio',
+  name: 'MartinFX Portfolio',
 
   origin: 'https://ratina0.github.com',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'RatinA0 Portfolio',
-  description: 'RatinA0 Portfolio made with Astro 🚀',
+  title: 'MartinFX Portfolio',
+  description: 'MartinFX Portfolio made with Astro 🚀',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -25,16 +25,16 @@ const CONFIG = {
 
   projects: {
     disabled: false,
-    postsPerPage: 4,
+    itemPerPage: 4,
 
-    post: {
+    project: {
       permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       noindex: false,
       disabled: false,
     },
 
     list: {
-      pathname: 'projects', // Blog main path, you can change this to "articles" (/articles)
+      pathname: 'projects', // Projects main path /projects
       noindex: false,
       disabled: false,
     },

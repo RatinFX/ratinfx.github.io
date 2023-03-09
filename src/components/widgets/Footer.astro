@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon';
 import { SITE } from '~/config.mjs';
 import { getHomePermalink } from '~/utils/permalinks';
 
@@ -37,13 +38,14 @@ const { links = [], theme = 'light' } = Astro.props;
             <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
+                {links.map(({ text, href, ariaLabel, icon }) => (
                   <li class="mb-2">
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out inline-flex "
                       href={href}
                       aria-label={ariaLabel}
                     >
+                      {icon && <Icon name={icon} class="w-5 h-5 mr-2" />}
                       <Fragment set:html={text} />
                     </a>
                   </li>

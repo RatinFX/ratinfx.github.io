@@ -6,6 +6,7 @@ interface CallToAction {
   text: string;
   href: string;
   icon?: string;
+  openOnNewTab?: boolean;
 }
 
 export interface Props {
@@ -30,8 +31,8 @@ const {
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
+    <div class="py-12 md:py-10">
+      <div class="text-center max-w-screen-lg mx-auto">
         {
           title && (
             <h1
@@ -49,7 +50,12 @@ const {
                   {typeof callToAction === 'string' ? (
                     <Fragment set:html={callToAction} />
                   ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
+                    <a
+                      class="btn btn-primary sm:mb-0 w-full"
+                      href={callToAction?.href}
+                      target={callToAction?.openOnNewTab ? '_blank' : ''}
+                      rel="noopener"
+                    >
                       {callToAction?.icon && (
                         <>
                           <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
@@ -67,7 +73,12 @@ const {
                   {typeof callToAction2 === 'string' ? (
                     <Fragment set:html={callToAction2} />
                   ) : (
-                    <a class="btn w-full" href={callToAction2?.href}>
+                    <a
+                      class="btn w-full"
+                      href={callToAction2?.href}
+                      target={callToAction2?.openOnNewTab ? '_blank' : ''}
+                      rel="noopener"
+                    >
                       {callToAction2?.icon && (
                         <>
                           <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
