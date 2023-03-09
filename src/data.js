@@ -1,124 +1,137 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getProjectsPermalink } from './utils/permalinks';
+
+const projects = [
+  {
+    text: 'Vegas Pro Flow',
+    href: getPermalink('/vegas-pro-flow'),
+  },
+  {
+    text: 'Vegas Pro Data',
+    href: getPermalink('/vegas-pro-data'),
+  },
+  {
+    text: 'Better Search',
+    href: getPermalink('/better-search'),
+  },
+  {
+    text: 'Custom Fades',
+    href: getPermalink('/custom-fades'),
+  },
+  {
+    text: 'Shorten/Extend media',
+    href: getPermalink('/shorten-extend-media'),
+  },
+  {
+    text: 'Github Pages',
+    href: 'https://github.com/RatinA0/ratina0.github.io',
+  },
+];
 
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Projects',
+      href: getProjectsPermalink(),
+      links: [...projects],
+    },
+    {
+      text: 'Socials',
       links: [
         {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
+          text: 'Twitch',
+          href: 'https://www.twitch.tv/RatinA0',
         },
         {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
+          text: 'Main YouTube',
+          href: 'https://youtube.com/@MartinFX',
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
+          text: 'Second YouTube',
+          href: 'https://youtube.com/@RatinA0',
+        },
+        {
+          text: 'Twitter',
+          href: 'https://twitter.com/0RatinA0',
+        },
+        {
+          text: 'Instagram',
+          href: 'https://www.instagram.com/RatinA0',
+        },
+        {
+          text: 'Github',
+          href: 'https://github.com/RatinA0',
         },
       ],
-    },
-    {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: '#',
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'About us',
-          href: '#',
-        },
-        {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
     },
   ],
-  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/RatinA0/ratina0.github.io' }],
+  socialLinks: [
+    {
+      ariaLabel: 'Twitch',
+      icon: 'tabler:brand-twitch',
+      href: 'https://www.twitch.tv/RatinA0',
+    },
+    {
+      ariaLabel: 'Main YouTube',
+      icon: 'tabler:brand-youtube',
+      href: 'https://youtube.com/@MartinFX',
+    },
+    {
+      ariaLabel: 'Second YouTube',
+      icon: 'tabler:brand-youtube',
+      href: 'https://youtube.com/@RatinA0',
+    },
+    {
+      ariaLabel: 'Twitter',
+      icon: 'tabler:brand-twitter',
+      href: 'https://twitter.com/0RatinA0',
+    },
+    {
+      ariaLabel: 'Instagram',
+      icon: 'tabler:brand-instagram',
+      href: 'https://www.instagram.com/RatinA0',
+    },
+    {
+      ariaLabel: 'Github',
+      icon: 'tabler:brand-github',
+      href: 'https://github.com/RatinA0',
+    },
+  ],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
-      links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
+      title: 'Projects',
+      links: [...projects],
     },
     {
-      title: 'Platform',
+      title: 'Socials',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        {
+          text: 'Twitch',
+          href: 'https://www.twitch.tv/RatinA0',
+        },
+        {
+          text: 'Main YouTube',
+          href: 'https://youtube.com/@MartinFX',
+        },
+        {
+          text: 'Second YouTube',
+          href: 'https://youtube.com/@RatinA0',
+        },
+        {
+          text: 'Twitter',
+          href: 'https://twitter.com/0RatinA0',
+        },
+        {
+          text: 'Instagram',
+          href: 'https://www.instagram.com/RatinA0',
+        },
+        {
+          text: 'Github',
+          href: 'https://github.com/RatinA0',
+        },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/RatinA0/ratina0.github.io' },
-  ],
-  footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
 };

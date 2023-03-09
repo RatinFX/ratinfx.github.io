@@ -16,22 +16,7 @@ const meta = {
 
 <Layout {meta}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      actions={[
-        {
-          type: 'ghost',
-          text: 'Login',
-          href: '#',
-        },
-        {
-          type: 'primary',
-          text: 'Sign Up',
-          href: '#',
-        },
-      ]}
-      isSticky
-    />
+    <Header {...headerData} isSticky showToggleTheme />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -46,8 +31,7 @@ const meta = {
     image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <br />
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      <span class="text-accent dark:text-white highlight"> RatinA0</span>
     </Fragment>
 
     <Fragment slot="subtitle">

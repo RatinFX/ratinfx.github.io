@@ -4,7 +4,7 @@ import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
-import { getHomePermalink, getAsset } from '~/utils/permalinks';
+import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -13,23 +13,19 @@ interface Link {
   icon?: string;
 }
 
-interface ActionLink extends Link {
-  type?: string;
-}
-
 interface MenuLink extends Link {
   links?: Array<Link>;
 }
 
 export interface Props {
   links?: Array<MenuLink>;
-  actions?: Array<ActionLink>;
+  socialLinks?: Array<Link>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
   position?: string;
 }
 
-const { links = [], actions = [], isSticky = false, showToggleTheme = false, position = 'center' } = Astro.props;
+const { links = [], socialLinks = [], isSticky = false, showToggleTheme = false, position = 'center' } = Astro.props;
 ---
 
 <header
@@ -60,7 +56,10 @@ const { links = [], actions = [], isSticky = false, showToggleTheme = false, pos
               {links?.length ? (
                 <>
                   <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
-                    {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
+                    <a href={href}>
+                      {text}
+                      <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
+                    </a>
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
@@ -91,21 +90,23 @@ const { links = [], actions = [], isSticky = false, showToggleTheme = false, pos
     <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
+
         {
-          actions?.length ? (
-            <span class="ml-4">
-              {actions.map(({ text, href, type }) => (
-                <a
-                  class:list={[
-                    'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
-                    { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
-                  ]}
-                  href={href}
-                >
-                  <Fragment set:html={text} />
-                </a>
+          socialLinks?.length ? (
+            <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+              {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+                <li>
+                  <a
+                    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label={ariaLabel}
+                    href={href}
+                  >
+                    {icon && <Icon name={icon} class="w-5 h-5" />}
+                    <Fragment set:html={text} />
+                  </a>
+                </li>
               ))}
-            </span>
+            </ul>
           ) : (
             ''
           )

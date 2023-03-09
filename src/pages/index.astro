@@ -10,7 +10,6 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const meta = {
@@ -267,16 +266,17 @@ const meta = {
   <!-- HighlightedPosts Widget ******* -->
 
   <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
+    title="Project list"
+    information={`A list of Projects I've worked on.
 			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
 			Astro is a very interesting technology. Thanks.
 		`}
     postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
+      'vegas-pro-flow.md',
       'how-to-customize-astrowind-to-your-brand.md',
       'useful-resources-to-create-websites.md',
       'astrowind-template-in-depth.md',
+      'useful-resources-to-create-websites.md',
     ]}
   />
 
@@ -321,17 +321,6 @@ const meta = {
             "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
         },
       ],
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
     ]}
   />
 

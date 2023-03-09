@@ -23,7 +23,7 @@ const CONFIG = {
     timeZone: 'CET',
   }),
 
-  blog: {
+  projects: {
     disabled: false,
     postsPerPage: 4,
 
@@ -34,7 +34,7 @@ const CONFIG = {
     },
 
     list: {
-      pathname: 'blog', // Blog main path, you can change this to "articles" (/articles)
+      pathname: 'projects', // Blog main path, you can change this to "articles" (/articles)
       noindex: false,
       disabled: false,
     },
@@ -53,6 +53,6 @@ const CONFIG = {
   },
 };
 
-export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
+export const SITE = { ...CONFIG, projects: undefined };
+export const PROJECTS = CONFIG.projects;
 export const DATE_FORMATTER = CONFIG.dateFormatter;
