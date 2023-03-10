@@ -1,7 +1,7 @@
-# Portfolio using Astro 🚀
+# Portfolio Github Pages using Astro 🚀
 
 > 📌 https://ratina0.github.io
 
-AstroWind as a template
+### Using AstroWind as a base template
 
-- https://github.com/onwidget/astrowind
+> https://github.com/onwidget/astrowind
