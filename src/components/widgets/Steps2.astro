@@ -1,24 +1,13 @@
 ---
 import { Icon } from 'astro-icon';
-
-interface Item {
-  title: string;
-  description: string;
-  icon?: string;
-}
-
-interface CallToAction {
-  text: string;
-  href: string;
-  icon?: string;
-}
+import type { CallToAction, StepItem } from '../types';
 
 export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
   callToAction?: string | CallToAction;
-  items: Array<Item>;
+  items: Array<StepItem>;
 }
 
 const {
@@ -38,7 +27,7 @@ const {
 	subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
 	callToAction={{
 		text: 'Get template',
-		href: 'https://github.com/RatinA0/ratina0.github.io',
+		href: 'https://github.com/RatinFX/ratinfx.github.io',
 		icon: 'tabler:download',
 	}}
 	items={[

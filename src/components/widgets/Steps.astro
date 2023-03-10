@@ -1,16 +1,11 @@
 ---
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
-
-interface Item {
-  title: string;
-  description?: string;
-  icon?: string;
-}
+import type { StepItem } from '../types';
 
 export interface Props {
   title?: string;
-  items: Array<Item>;
+  items: Array<StepItem>;
   image?: string | any; // TODO: find HTMLElementProps
 }
 

@@ -2,21 +2,10 @@
 import { Icon } from 'astro-icon';
 import { SITE } from '~/config.mjs';
 import { getHomePermalink } from '~/utils/permalinks';
-
-interface Link {
-  text?: string;
-  href?: string;
-  ariaLabel?: string;
-  icon?: string;
-}
-
-interface Links {
-  title?: string;
-  links: Array<Link>;
-}
+import type { MenuLink } from '../types';
 
 export interface Props {
-  links: Array<Links>;
+  links: Array<MenuLink>;
   theme?: string;
 }
 
@@ -60,10 +49,14 @@ const { links = [], theme = 'light' } = Astro.props;
       <div class="text-sm mr-4 dark:text-slate-400">
         <span
           class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"
-        ></span>
-        Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/RatinA0">
-          RatinA0</a
-        > · All rights reserved.
+        >
+        </span>
+        Made by
+        <a class="highlight-link" href="https://github.com/RatinFX"> RatinFX</a>
+        Using
+        <a class="highlight-link" href="https://astro.build">Astro</a> and
+        <a class="highlight-link" href="https://github.com/onwidget/astrowind">AstroWind</a>
+        · All rights reserved.
       </div>
     </div>
   </div>

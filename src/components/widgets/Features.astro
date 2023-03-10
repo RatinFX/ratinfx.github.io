@@ -1,17 +1,12 @@
 ---
 import { Icon } from 'astro-icon';
-
-interface Item {
-  title: string;
-  description: string;
-  icon?: string;
-}
+import type { FeatureItem1 } from '../types';
 
 export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
-  items: Array<Array<Item>>;
+  items: Array<Array<FeatureItem1>>;
 }
 
 const {

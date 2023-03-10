@@ -1,16 +1,12 @@
 ---
 import { Icon } from 'astro-icon';
-
-interface Item {
-  question: string;
-  answer: string;
-}
+import type { FAQItem } from '../types';
 
 export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
-  items: Array<Array<Item>>;
+  items: Array<Array<FAQItem>>;
 }
 
 const {

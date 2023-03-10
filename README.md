@@ -1,6 +1,6 @@
 # Portfolio using Astro 🚀
 
-> 📌 https://ratina0.github.io
+> 📌 https://ratinfx.github.io
 
 AstroWind as a template
 

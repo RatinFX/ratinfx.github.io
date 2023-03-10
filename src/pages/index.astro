@@ -1,6 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import { getPermalink } from '~/utils/permalinks';
+import { workExperience } from '~/data';
 
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -20,7 +21,7 @@ const meta = {
   <Hero
     callToAction={{
       text: 'Support me by donating',
-      href: 'https://streamlabs.com/RatinA0/tip',
+      href: 'https://streamlabs.com/RatinFX/tip',
       icon: 'tabler:rocket',
       openOnNewTab: true,
     }}
@@ -38,7 +39,7 @@ const meta = {
       <span class="sm:inline">
         <!-- Continue title -->
         also known as <span class="font-semibold highlight">MartinFX</span>
-        or <span class="font-semibold highlight">RatinA0</span>.
+        or <span class="font-semibold highlight" title="Formerly RatinA0">RatinFX</span>.
         <br />
         <br />
 
@@ -50,61 +51,23 @@ const meta = {
 
         <!-- Work -->
         <br />
-        I'm also a <span class="font-semibold">software developer</span> who also created
+        I'm also a <span class="font-semibold">software developer</span> who created
         <span class="font-semibold">extensions</span> for
         <span class="font-semibold"> VEGAS Pro</span>, some being open-source on my Github page.
       </span>
     </Fragment>
   </Hero>
 
-  <Features2
-    title="Work experience"
-    id="work-experience"
-    items={[
-      {
-        title: 'Unity Developer',
-        timeFrame: '2022. Sept - 2023.',
-        description: '- AR Book for Android and iOS <br/>' + '- Other project: Unity frontend, Firebase backend' + '',
-        icon: 'flat-color-icons:phone-android',
-        tags: ['Unity', 'C#', 'Firebase & Functions', 'TypeScript', 'Figma'],
-      },
-      {
-        title: 'Full-stack Web Developer',
-        timeFrame: '2021. May - 2022. Sept',
-        description:
-          '- Vue.js 2 with TypeScript frontend, ASP.NET Core backend <br/>' +
-          '- MediatR event handling <br/>' +
-          '- SignalR live communication <br/>' +
-          '- Cypress E2E testing' +
-          '',
-        icon: 'vscode-icons:file-type-vue',
-        tags: ['ASP.NET Core', 'C#', 'HTML', 'TypeScript', 'Vue.js 2', 'Vuetify', 'SQL'],
-      },
-      {
-        title: 'Video Collaborations',
-        timeFrame: '2016 - Present',
-        description:
-          'I have been involved in organizing and participating in video collaborations with more than 25 individuals.<br/> <br/>' +
-          '<a class="font-semibold highlight-link" ' +
-          ' href="https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye" ' +
-          ' target="_blank" rel="noopener" >' +
-          'Playlist of related videos' +
-          '</a>' +
-          '',
-        icon: 'logos:youtube-icon',
-        tags: ['VEGAS Pro', 'After Effects', 'Premiere Pro', 'Photoshop'],
-      },
-    ]}
-  />
-
   <LatestProjects title="Latest Projects" />
+
+  <Features2 title="Work experience" id="work-experience" items={workExperience} />
 
   <CallToAction
     title="Support me"
     subtitle="If you enjoy my work, please consider showing your support by following or donating! Your contribution can make a significant difference."
     callToAction={{
       text: 'Donate',
-      href: 'https://streamlabs.com/RatinA0/tip',
+      href: 'https://streamlabs.com/RatinFX/tip',
     }}
   />
 </Layout>

@@ -7,7 +7,7 @@ image: ~/assets/images/stickers.jpg
 category: Vegas Pro Extension
 tags:
   - dockable
-  - c-sharp
+  - csharp
   - winforms
 canonical: https://astrowind.vercel.app/astrowind-template-in-depth
 ---

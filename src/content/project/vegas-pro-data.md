@@ -7,7 +7,7 @@ image: ~/assets/images/colors.jpg
 category: Vegas Pro Extension
 tags:
   - dev
-  - c-sharp
+  - csharp
   - winforms
 canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand
 ---

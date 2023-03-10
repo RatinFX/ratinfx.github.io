@@ -3,7 +3,7 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'MartinFX Portfolio',
 
-  origin: 'https://ratina0.github.com',
+  origin: 'https://ratinfx.github.com',
   basePathname: '/',
   trailingSlash: false,
 

@@ -1,19 +1,14 @@
 ---
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
-
-interface Item {
-  title: string;
-  description?: string;
-  icon?: string;
-}
+import type { ContentItem } from '../types';
 
 export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
   content?: string;
-  items?: Array<Item>;
+  items?: Array<ContentItem>;
   image?: string | any; // TODO: find HTMLElementProps
   isReversed?: boolean;
   isAfterContent?: boolean;

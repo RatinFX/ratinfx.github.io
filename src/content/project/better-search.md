@@ -7,7 +7,7 @@ image: ~/assets/images/tools.jpg
 category: Vegas Pro Extension
 tags:
   - dockable
-  - c-sharp
+  - csharp
   - winforms
 ---
 

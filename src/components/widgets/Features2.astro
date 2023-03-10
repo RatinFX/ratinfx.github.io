@@ -1,19 +1,12 @@
 ---
 import { Icon } from 'astro-icon';
-
-interface Item {
-  title?: string;
-  description?: string;
-  icon?: string;
-  timeFrame?: string;
-  tags?: Array<string>;
-}
+import type { FeatureItem2 } from '../types';
 
 export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
-  items: Array<Item>;
+  items: Array<FeatureItem2>;
   id?: string;
 }
 
@@ -26,10 +19,10 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative" id={id}>
+<section class="relative" style="scroll-margin-top: 4rem" id={id}>
   <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 -mb-12">
-    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+    <div class="py-10 pt-8 lg:pt-12">
       {
         (title || subtitle || highlight) && (
           <div class="mb-8 md:mx-auto text-center max-w-3xl">
@@ -54,7 +47,7 @@ const {
       }
       <div class={`grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch`}>
         {
-          items.map(({ title, description, icon, timeFrame, tags }) => (
+          items.map(({ title, description, icon, timeFrame, tags, bottomLink, bottomLinkText }) => (
             <>
               <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
                 <div class="flex items-center">
@@ -66,16 +59,24 @@ const {
 
                 {tags && (
                   <ul class="mt-4 font-light text-sm">
-                    {tags.map((tag) => (
-                      <li class="badge-tag">
-                        <span class="highlight-light">{tag}</span>
-                      </li>
-                    ))}
+                    {tags
+                      .filter((tag) => tag)
+                      .map((tag) => (
+                        <li class="badge-tag">
+                          <span class="highlight-light">{tag}</span>
+                        </li>
+                      ))}
                   </ul>
                 )}
 
                 {description && (
                   <p class={`text-muted dark:text-gray-400 text-md ${tags ? 'mt-2' : 'mt-4'}`} set:html={description} />
+                )}
+
+                {bottomLink && (
+                  <a class="mt-4 font-semibold highlight-link" href={bottomLink} target="_blank" rel="noopener">
+                    {bottomLinkText}
+                  </a>
                 )}
               </div>
             </>
