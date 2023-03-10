@@ -10,6 +10,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import LatestProjects from '~/components/project/LatestProjects.astro';
 import { getPermalink } from '~/utils/permalinks';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const meta = {
   title: SITE.title,
@@ -23,41 +24,41 @@ const meta = {
 
   <Hero
     callToAction={{
+      text: 'Support me by donating',
+      href: 'https://streamlabs.com/RatinA0/tip',
+      icon: 'tabler:rocket',
+      openOnNewTab: true,
+    }}
+    callToAction2={{
       text: 'Projects',
       href: getPermalink('/projects'),
       icon: 'tabler:braces',
     }}
-    callToAction2={{
-      text: 'Videos',
-      href: 'https://youtube.com/@MartinFX?sub_confirmation=1',
-      icon: 'tabler:brand-youtube',
-      openOnNewTab: true,
-    }}
   >
     <Fragment slot="title">
-      Hi there! I'm <span class="text-primary dark:text-blue-400 highlight"> Martin</span>
-      also known as
-      <span class="text-primary dark:text-blue-400 highlight font-semibold">RatinA0</span>
-      or
-      <span class="text-primary dark:text-blue-400 highlight font-semibold">MartinFX</span>.
+      Hi there! I'm <span class="text-primary dark:text-blue-400"> Martin</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="sm:inline">
         <!-- Continue title -->
+        also known as <span class="text-primary dark:text-blue-400 font-semibold">MartinFX</span>
+        or <span class="text-primary dark:text-blue-400 font-semibold">RatinA0</span>.
+        <br />
+        <br />
 
-        <!-- Lyrics videos -->
+        <!-- Lyric videos -->
         You might know me for creating YouTube videos like
         <a
-          class="text-primary dark:text-blue-400 highlight font-semibold hover:text-blue-600 dark:hover:text-blue-300"
+          class="text-primary dark:text-blue-400 font-semibold hover:text-blue-600 dark:hover:text-blue-300"
           href="https://www.youtube.com/watch?v=h-mUGj41hWA"
         >
-          NOMA - Brain Power | LYRICS!.
+          NOMA - Brain Power | LYRICS!
         </a>
 
         <!-- Work -->
         <br />
-        I'm also a <span class="font-semibold">software developer</span> who created
+        I'm also a <span class="font-semibold">software developer</span> who also created
         <span class="font-semibold">extensions</span> for
         <span class="font-semibold"> VEGAS Pro</span>, some being open-source on my Github page.
       </span>
@@ -155,24 +156,21 @@ const meta = {
   <!-- Steps Widget ****************** ->->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind.">
+    title="Get your dream website up and running in no time with AstroWind."
     items={[
       {
         title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
+        description: 'Fusce sit amet dui tellus.',
         icon: 'tabler:package',
       },
       {
         title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+        description: 'Lorem ipsum dolor sit amet.',
         icon: 'tabler:letter-case',
       },
       {
         title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
+        description: 'Praesent placerat enim ut ex tincidunt vehicula.',
         icon: 'tabler:paint',
       },
       {
@@ -188,69 +186,56 @@ const meta = {
 
   <!-- Features2 Widget ************** ->->
 
+    <!-- Features2 Widget ****************** -->
+
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    highlight="Components"
+    title="Work experience"
+    id="work-experience"
     items={[
       {
-        title: 'Headers',
-        description:
-          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-        icon: 'flat-color-icons:template',
+        title: 'Unity Developer',
+        timeFrame: '2022. Sept - 2023.',
+        description: '- AR Book for Android and iOS <br/>' + '- Other project: Unity frontend, Firebase backend' + '',
+        icon: 'flat-color-icons:phone-android',
+        tags: ['Unity', 'C#', 'Firebase & Functions', 'TypeScript', 'Figma'],
       },
       {
-        title: 'Heros',
+        title: 'Full-stack Web Developer',
+        timeFrame: '2021. May - 2022. Sept',
         description:
-          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-        icon: 'flat-color-icons:gallery',
+          '- Vue.js 2 with TypeScript frontend, ASP.NET Core backend <br/>' +
+          '- MediatR event handling <br/>' +
+          '- SignalR live communication <br/>' +
+          '- Cypress E2E testing' +
+          '',
+        icon: 'vscode-icons:file-type-vue',
+        tags: ['ASP.NET Core', 'C#', 'TypeScript', 'HTML', 'Vue.js 2', 'Vuetify', 'SQL'],
       },
       {
-        title: 'Features',
+        title: 'Video Collaborations',
+        timeFrame: '2016 - Present',
         description:
-          'Display your product in action and how the Features actually create a solution for your target customer.',
-        icon: 'flat-color-icons:todo-list',
-      },
-      {
-        title: 'Content',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
+          'I have been involved in organizing and participating in video collaborations with more than 10 individuals.<br/> <br/>' +
+          '<a class="text-primary dark:text-blue-400 font-semibold hover:text-blue-600 dark:hover:text-blue-300" ' +
+          ' href="https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye" ' +
+          ' target="_blank" rel="noopener" >' +
+          'Playlist of related videos' +
+          '</a>' +
+          '',
+        icon: 'logos:youtube-icon',
+        tags: ['VEGAS Pro', 'After Effects', 'Premiere Pro', 'Photoshop'],
       },
     ]}
   />
 
-  <!-- HighlightedProjects Widget ******* -->
+  <LatestProjects title="Latest Projects" />
 
-  <LatestProjects title="Project list" />
+  <CallToAction
+    title="Support me"
+    subtitle="If you enjoy my work, please consider showing your support by following or donating! Your contribution can make a significant difference."
+    callToAction={{
+      text: 'Donate',
+      href: 'https://streamlabs.com/RatinA0/tip',
+    }}
+  />
 </Layout>

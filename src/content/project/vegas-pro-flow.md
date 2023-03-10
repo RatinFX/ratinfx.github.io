@@ -1,7 +1,8 @@
 ---
 publishDate: 2023-03-09T00:00:00Z
 title: Vegas Pro Flow
-excerpt: Create stunning animations using Beziér Curves
+description: Create stunning animations using Beziér Curves.
+excerpt: Create stunning animations using Beziér Curves.
 image: ~/assets/images/stickers.jpg
 category: Vegas Pro Extension
 tags:

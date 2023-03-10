@@ -8,7 +8,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'MartinFX Portfolio',
-  description: 'MartinFX Portfolio made with Astro 🚀',
+  description: 'Software developer, beginner animator and YouTube creator',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

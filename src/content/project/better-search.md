@@ -1,7 +1,8 @@
 ---
 publishDate: 2023-01-09T00:00:00Z
 title: Better Search
-excerpt: Improved search for Effects, Generators, and their Presets
+description: Improved search for Effects, Generators, and their Presets.
+excerpt: Improved search for Effects, Generators, and their Presets.
 image: ~/assets/images/tools.jpg
 category: Vegas Pro Extension
 tags:

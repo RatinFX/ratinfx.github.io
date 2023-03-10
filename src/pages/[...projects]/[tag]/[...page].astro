@@ -42,8 +42,9 @@ const meta = {
 };
 ---
 
+<!-- Tag filter -->
 <Layout meta={meta}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+  <section class="px-6 sm:px-6 py-10 mx-auto max-w-3xl">
     <Headline>Tag: {tag}</Headline>
     <ProjectList projects={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
