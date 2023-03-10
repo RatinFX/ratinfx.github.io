@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon';
+import type { CallToAction } from '../types';
+
+export interface Props {
+  callToAction: string | CallToAction;
+  primary?: boolean;
+  divClasses?: string;
+  btnClasses?: string;
+}
+
+const {
+  callToAction = Astro.props.callToAction,
+  tooltip = typeof callToAction !== 'string' ? { title: callToAction?.tooltip } : {},
+  primaryButton = Astro.props.primary ? 'btn-primary' : '',
+  divClasses,
+  btnClasses,
+
+  target = typeof callToAction !== 'string' && callToAction.openOnNewTab ? { target: '_blank' } : {},
+} = Astro.props;
+---
+
+<div class={`${divClasses}`}>
+  {
+    typeof callToAction === 'string' ? (
+      <Fragment set:html={callToAction} />
+    ) : (
+      callToAction &&
+      callToAction.text &&
+      callToAction.href && (
+        <a
+          class={`btn ${primaryButton} ${btnClasses} `}
+          href={callToAction.href}
+          rel="noopener"
+          {...target}
+          {...tooltip}
+        >
+          {callToAction.icon && <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />}
+          {callToAction.text}
+        </a>
+      )
+    )
+  }
+</div>

@@ -1,13 +1,13 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'MartinFX Portfolio',
+  name: 'RatinFX Portfolio',
 
   origin: 'https://ratinfx.github.com',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'MartinFX Portfolio',
+  title: 'RatinFX Portfolio',
   description: 'Software developer, beginner animator and YouTube creator',
   defaultImage: defaultImage,
 

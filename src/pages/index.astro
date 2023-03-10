@@ -6,9 +6,9 @@ import { workExperience } from '~/data';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import LatestProjects from '~/components/project/LatestProjects.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import SupportSection from '~/components/widgets/SupportSection.astro';
 
 const meta = {
   title: SITE.title,
@@ -20,15 +20,16 @@ const meta = {
 <Layout {meta}>
   <Hero
     callToAction={{
-      text: 'Support me by donating',
-      href: 'https://streamlabs.com/RatinFX/tip',
       icon: 'tabler:rocket',
+      text: 'Support me by donating',
+      tooltip: 'Tell me if you found me from this site!',
+      href: 'https://streamlabs.com/RatinFX/tip',
       openOnNewTab: true,
     }}
     callToAction2={{
+      icon: 'tabler:braces',
       text: 'Projects',
       href: getPermalink('/projects'),
-      icon: 'tabler:braces',
     }}
   >
     <Fragment slot="title">
@@ -62,12 +63,5 @@ const meta = {
 
   <Features2 title="Work experience" id="work-experience" items={workExperience} />
 
-  <CallToAction
-    title="Support me"
-    subtitle="If you enjoy my work, please consider showing your support by following or donating! Your contribution can make a significant difference."
-    callToAction={{
-      text: 'Donate',
-      href: 'https://streamlabs.com/RatinFX/tip',
-    }}
-  />
+  <SupportSection />
 </Layout>

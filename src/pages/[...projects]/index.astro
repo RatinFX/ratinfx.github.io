@@ -4,11 +4,11 @@ import { PROJECTS } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 import SingleProject from '~/components/project/SingleProject.astro';
 import ToProjectLink from '~/components/project/ToProjectLink.astro';
+import SupportSection from '~/components/widgets/SupportSection.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { fetchProjects } from '~/utils/project';
 import { findImage } from '~/utils/images';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 export async function getStaticPaths() {
   if (PROJECTS?.disabled || PROJECTS?.project?.disabled) return [];
@@ -36,15 +36,6 @@ const meta = {
 <!-- Change this for Project related info -->
 <Layout {meta}>
   <SingleProject project={{ ...project, image: meta.image }} url={url} />
-
-  <CallToAction
-    title="Support me"
-    subtitle="If you enjoy my work, please consider showing your support by following or donating! Your contribution can make a significant difference."
-    callToAction={{
-      text: 'Donate',
-      href: 'https://streamlabs.com/RatinFX/tip',
-    }}
-  />
-
+  <SupportSection />
   <ToProjectLink />
 </Layout>

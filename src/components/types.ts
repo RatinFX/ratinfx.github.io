@@ -41,6 +41,7 @@ export interface CallToAction {
   href: string;
   icon?: string;
   openOnNewTab?: boolean;
+  tooltip?: string;
 }
 
 export interface Link {

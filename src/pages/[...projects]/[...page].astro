@@ -5,6 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import ProjectList from '~/components/project/List.astro';
 import Headline from '~/components/project/Headline.astro';
 import Pagination from '~/components/project/Pagination.astro';
+import SupportSection from '~/components/widgets/SupportSection.astro';
 
 import { fetchProjects } from '~/utils/project';
 import { PROJECTS_BASE } from '~/utils/permalinks';
@@ -34,5 +35,6 @@ const meta = {
     <Headline subtitle="Public projects that I've worked on throughout the years.">Projects</Headline>
     <ProjectList projects={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    <SupportSection />
   </section>
 </Layout>

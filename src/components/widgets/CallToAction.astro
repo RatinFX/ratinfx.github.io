@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon';
 import type { CallToAction } from '../types';
+import CallToActionButton from './CallToActionButton.astro';
 
 export interface Props {
   title?: string;
@@ -29,21 +29,17 @@ const {
             />
           )
         }
+
         {subtitle && <p class="text-xl text-muted dark:text-slate-400" set:html={subtitle} />}
+
         {
-          typeof callToAction === 'string' ? (
-            <Fragment set:html={callToAction} />
-          ) : (
-            callToAction &&
-            callToAction.text &&
-            callToAction.href && (
-              <div class="mt-6 max-w-xs mx-auto">
-                <a class="btn btn-primary w-full sm:w-auto" href={callToAction.href} target="_blank" rel="noopener">
-                  {callToAction.icon && <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />}
-                  {callToAction.text}
-                </a>
-              </div>
-            )
+          callToAction && (
+            <CallToActionButton
+              callToAction={callToAction}
+              primary={true}
+              divClasses={'mt-6 max-w-xs mx-auto'}
+              btnClasses={'w-full w-auto'}
+            />
           )
         }
       </div>

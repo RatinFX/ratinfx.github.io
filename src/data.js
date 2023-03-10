@@ -70,7 +70,7 @@ export const headerData = {
   links: [
     {
       text: 'Work experience',
-      href: '#work-experience',
+      href: getPermalink('#work-experience'),
     },
     {
       text: 'Projects',
