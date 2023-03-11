@@ -1,5 +1,5 @@
 ---
-import type { Project } from '~/types';
+import type { Version } from '~/types';
 import { fetchProjects } from '~/utils/project';
 
 export async function getStaticPaths() {
@@ -7,17 +7,17 @@ export async function getStaticPaths() {
     params: {
       version: 'version/' + project.permalink,
     },
-    props: { project: project },
+    props: { version: project?.versions?.at(0) },
   }));
 }
 
 export interface Props {
-  project: Project;
+  version: Version;
 }
 
-const { project } = Astro.props;
+const { version } = Astro.props;
 ---
 
-<span id="version">
-  version={project.versions?.at(0)?.release}
+<span>
+  [version={version?.release}]
 </span>

@@ -1,7 +1,7 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'RatinFX Portfolio',
+  name: 'RatinFX',
 
   origin: 'https://ratinfx.github.com',
   basePathname: '/',

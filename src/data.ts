@@ -1,6 +1,9 @@
+import type { Props as HeaderProps } from '~/components/widgets/Header.astro';
+import type { Props as FooterProps } from '~/components/widgets/Footer.astro';
+import type { FeatureItem2, Link } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
-const projects = [
+const projects: Link[] = [
   {
     text: 'Vegas Pro Flow',
     href: getPermalink('/vegas-pro-flow'),
@@ -27,7 +30,7 @@ const projects = [
   },
 ];
 
-const socials = [
+const socials: Link[] = [
   {
     text: 'Twitch',
     ariaLabel: 'Twitch',
@@ -66,7 +69,7 @@ const socials = [
   },
 ];
 
-export const headerData = {
+export const headerData: HeaderProps = {
   links: [
     {
       text: 'Work experience',
@@ -85,7 +88,7 @@ export const headerData = {
   socialLinks: [...socials],
 };
 
-export const workExperience = [
+export const workExperience: Array<FeatureItem2> = [
   {
     icon: 'tabler:3d-cube-sphere',
     title: 'Unity Developer',
@@ -128,7 +131,7 @@ export const workExperience = [
   },
 ];
 
-export const footerData = {
+export const footerData: FooterProps = {
   links: [
     {
       title: 'Projects',
