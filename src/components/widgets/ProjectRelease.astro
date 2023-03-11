@@ -17,9 +17,9 @@ const { version, classes } = Astro.props;
       class="max-w-3xl mx-auto text-center p-4 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
     >
       <div class="flex justify-center items-center gap-4 pb-4">
-        <h1 style="margin-bottom: 0" class="text-2xl md:text-2xl">
+        <h6 style="margin-bottom: 0" class="text-2xl">
           Release: {version.release}
-        </h1>
+        </h6>
         <span class="dark:text-slate-400">
           <TimeBadge date={version.releaseDate} />
         </span>
