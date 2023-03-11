@@ -89,7 +89,7 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
-      release: '0.7.0.',
+      release: '1.0.0.',
       releaseDate: new Date('2023-03-11'),
       vp13link: '#',
       vp14link: '#',

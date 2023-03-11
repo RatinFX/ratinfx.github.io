@@ -6,15 +6,16 @@ import CallToActionButton from './CallToActionButton.astro';
 export interface Props {
   version: Version;
   classes?: string;
+  boxClasses?: string;
 }
 
-const { version, classes } = Astro.props;
+const { version, classes, boxClasses } = Astro.props;
 ---
 
 <section class={`relative ${classes}`}>
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div
-      class="max-w-3xl mx-auto text-center p-4 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
+      class={`max-w-3xl mx-auto text-center p-4 rounded-md shadow-xl ${boxClasses} dark:shadow-none dark:border dark:border-slate-600`}
     >
       <div class="flex justify-center items-center gap-4 pb-4">
         <h6 style="margin-bottom: 0" class="text-2xl">
@@ -35,6 +36,7 @@ const { version, classes } = Astro.props;
           }}
           divClasses={'flex w-full sm:w-auto not-prose'}
           btnClasses={'sm:mb-0 w-full'}
+          primary={true}
         />
         <CallToActionButton
           callToAction={{
@@ -45,6 +47,7 @@ const { version, classes } = Astro.props;
           }}
           divClasses={'flex w-full sm:w-auto not-prose'}
           btnClasses={'w-full'}
+          primary={true}
         />
       </div>
 
