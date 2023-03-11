@@ -9,6 +9,8 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Project } from '~/types';
+import ProjectRelease from '../widgets/ProjectRelease.astro';
+import HowToUse from '../widgets/HowToUse.astro';
 
 export interface Props {
   project: Project;
@@ -28,8 +30,7 @@ const { project, url } = Astro.props;
           {
             project.category && (
               <>
-                {' '}
-                ·{' '}
+                ·
                 <a class="capitalize hover:underline" href={getPermalink(project.category, 'category')}>
                   {project.category.replaceAll('-', ' ')}
                 </a>
@@ -83,6 +84,39 @@ const { project, url } = Astro.props;
           </>
         ) : (
           <Fragment set:html={project.content} />
+        )
+      }
+      {
+        project?.versions && (
+          <>
+            {project?.tags && <HowToUse tags={project.tags} />}
+
+            {project.versions.length > 0 &&
+              project.versions.map(
+                (version, index) =>
+                  index === 0 && (
+                    <>
+                      <h2 id="latest-version" style="scroll-margin-top: 5rem">
+                        Latest version
+                      </h2>
+                      <ProjectRelease version={version} />
+                    </>
+                  )
+              )}
+
+            {project.versions.length > 1 && (
+              <>
+                <details class="pt-6">
+                  <summary class="mb-6">Older versions</summary>
+                  {project.versions.map(
+                    (version, index) => index > 0 && <ProjectRelease classes={'mb-6'} version={version} />
+                  )}
+                </details>
+
+                <hr style="margin: 0" />
+              </>
+            )}
+          </>
         )
       }
     </div>

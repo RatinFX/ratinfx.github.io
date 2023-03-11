@@ -1,0 +1,65 @@
+---
+import type { Version } from '~/types';
+import TimeBadge from './TimeBadge.astro';
+import CallToActionButton from './CallToActionButton.astro';
+
+export interface Props {
+  version: Version;
+  classes?: string;
+}
+
+const { version, classes } = Astro.props;
+---
+
+<section class={`relative ${classes}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div
+      class="max-w-3xl mx-auto text-center p-4 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
+    >
+      <div class="flex justify-center items-center gap-4 pb-4">
+        <h1 style="margin-bottom: 0" class="text-2xl md:text-2xl">
+          Release: {version.release}
+        </h1>
+        <span class="dark:text-slate-400">
+          <TimeBadge date={version.releaseDate} />
+        </span>
+      </div>
+
+      <div class="pt-2 pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+        <CallToActionButton
+          callToAction={{
+            text: 'VEGAS Pro 13 and below',
+            href: version.vp13link,
+            icon: 'tabler:download',
+            openOnNewTab: true,
+          }}
+          divClasses={'flex w-full sm:w-auto not-prose'}
+          btnClasses={'sm:mb-0 w-full'}
+        />
+        <CallToActionButton
+          callToAction={{
+            text: 'VEGAS Pro 14 and above',
+            href: version.vp14link,
+            icon: 'tabler:download',
+            openOnNewTab: true,
+          }}
+          divClasses={'flex w-full sm:w-auto not-prose'}
+          btnClasses={'w-full'}
+        />
+      </div>
+
+      {
+        version?.changes && version.changes.length > 0 && (
+          <details class="text-start px-2">
+            <summary>Changes</summary>
+            <ul class="not-prose" style="margin: 0">
+              {version.changes.map((change) => (
+                <li set:html={change} />
+              ))}
+            </ul>
+          </details>
+        )
+      }
+    </div>
+  </div>
+</section>

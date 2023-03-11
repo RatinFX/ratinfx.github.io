@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon';
+import { getFormattedDate } from '~/utils/utils';
+
+export interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
+<time datetime={String(date)} class="text-base">{getFormattedDate(date)}</time>

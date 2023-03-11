@@ -1,0 +1,61 @@
+---
+import { Tags } from '~/enums';
+
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<>
+  <h2 id="how-to-use" style="scroll-margin-top: 5rem">How to use</h2>
+  <ol>
+    <li>
+      Download "<b>13 and below</b>" or "<b>14 and above</b>" depending on your
+      <b>VEGAS Pro version</b>
+    </li>
+    {
+      (tags.some((x) => x == Tags.customCommand) && (
+        <>
+          <li>
+            <b>Find or create</b> a folder called
+            <b>Vegas Application Extensions</b>
+            inside your <b>Documents folder</b> like this:
+            <blockquote style="margin-top: 0.5em">C:\Users\USERNAME\Vegas Application Extensions</blockquote>
+          </li>
+          <li>Extract the contents of the .zip file into the folder above</li>
+          <li>
+            Start VEGAS Pro and you can find the Extension at <b>View - Extensions</b>
+          </li>
+        </>
+      )) ||
+        (tags.some((x) => x == Tags.script) && (
+          <>
+            <li>
+              <b>Find or create</b> a folder called
+              <b>Script Menu</b>
+              inside your <b>Vegas Pro install folder</b> similar to this:
+              <blockquote style="margin-top: 0.5em">D:\Vegas Pro 14.0\Script Menu</blockquote>
+            </li>
+            <li>Extract the contents of the .zip file into the folder above</li>
+            <li>
+              Start VEGAS Pro and you can find the Script at <b>Tools - Scripting</b>
+            </li>
+          </>
+        )) ||
+        (tags.some((x) => x == Tags.dev) && (
+          <>
+            <li>Extract the contents of the .zip file into your project</li>
+            <li>
+              Add it as a <b>Reference</b>
+            </li>
+            <li>
+              Then import either
+              <b>ScriptPortal.Vegas</b> or <b>Sony.Vegas</b>
+            </li>
+          </>
+        ))
+    }
+  </ol>
+</>

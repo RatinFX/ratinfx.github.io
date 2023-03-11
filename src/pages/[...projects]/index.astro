@@ -12,12 +12,17 @@ import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
   if (PROJECTS?.disabled || PROJECTS?.project?.disabled) return [];
-  return (await fetchProjects()).map((project) => ({
+
+  const res = (await fetchProjects()).map((project) => ({
     params: {
       projects: project.permalink,
     },
     props: { project },
   }));
+
+  console.log('######################', 'res:', res);
+
+  return res;
 }
 
 const { project } = Astro.props;

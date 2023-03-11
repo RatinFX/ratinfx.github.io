@@ -1,0 +1,27 @@
+---
+import type { Project } from '~/types';
+import { fetchProjects } from '~/utils/project';
+
+export async function getStaticPaths() {
+  const res = (await fetchProjects()).map((project) => ({
+    params: {
+      version: 'version/' + project.permalink,
+    },
+    props: { project: project },
+  }));
+
+  console.log('######################', 'res:', res);
+
+  return res;
+}
+
+export interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<span id="version">
+  version={project.versions?.at(0)?.release}
+</span>

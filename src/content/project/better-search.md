@@ -6,7 +6,7 @@ excerpt: Improved search for Effects, Generators, and their Presets.
 image: ~/assets/images/tools.jpg
 category: Vegas Pro Extension
 tags:
-  - dockable
+  - custom-command
   - csharp
   - winforms
 ---
