@@ -82,10 +82,11 @@ export interface Project {
   publishDate: Date;
   title: string;
   description?: string;
+  github?: string;
 
   image?: string;
+  video?: string;
 
-  canonical?: string | URL;
   permalink?: string;
 
   draft?: boolean;

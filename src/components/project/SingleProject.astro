@@ -1,4 +1,5 @@
 ---
+import type { Project } from '~/types';
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 
@@ -8,9 +9,9 @@ import SocialShare from '~/components/common/SocialShare.astro';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
-import type { Project } from '~/types';
 import ProjectRelease from '../widgets/ProjectRelease.astro';
 import HowToUse from '../widgets/HowToUse.astro';
+import YouTube from '../YouTube.astro';
 
 export interface Props {
   project: Project;
@@ -45,10 +46,21 @@ const { project, url } = Astro.props;
         {project.title}
       </h1>
       <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
+        class="max-w-3xl mx-auto mt-4 mb-4 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
       >
         {project.excerpt}
       </p>
+
+      {
+        project.github && (
+          <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-l md:text-xl text-muted highlight-link text-justify">
+            <a href={project.github}>
+              This project is available on Github
+              <Icon name="tabler:brand-github" class="w-5 h-5 inline-block -mt-0.5 " />
+            </a>
+          </p>
+        )
+      }
 
       {
         project.image ? (
@@ -69,6 +81,14 @@ const { project, url } = Astro.props;
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <div class="border-t dark:border-slate-700" />
+          </div>
+        )
+      }
+
+      {
+        project.video && (
+          <div class="max-w-2xl mx-auto pt-6">
+            <YouTube id={project.video} />
           </div>
         )
       }

@@ -27,7 +27,7 @@ const url = getCanonical(getPermalink(project.permalink, 'project'));
 const meta = {
   title: project.title,
   description: project.description,
-  canonical: project.canonical || url,
+  canonical: url,
   image: await findImage(project.image),
   noindex: PROJECTS?.project?.noindex,
   ogType: 'article',

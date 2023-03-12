@@ -4,9 +4,10 @@ const project = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    image: z.string().optional(),
+    github: z.string().optional(),
 
-    canonical: z.string().url().optional(),
+    image: z.string().optional(),
+    video: z.string().optional(),
 
     publishDate: z.date().or(z.string()).optional(),
     draft: z.boolean().optional(),

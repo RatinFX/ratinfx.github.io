@@ -17,12 +17,12 @@ const projects: Link[] = [
     href: getPermalink('/better-search'),
   },
   {
-    text: 'Custom Fades',
-    href: getPermalink('/custom-fades'),
-  },
-  {
     text: 'Shorten/Extend media',
     href: getPermalink('/shorten-extend-media'),
+  },
+  {
+    text: 'Custom Fades',
+    href: getPermalink('/custom-fades'),
   },
   {
     text: 'Github Pages',

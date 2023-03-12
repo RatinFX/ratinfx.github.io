@@ -1,0 +1,8 @@
+---
+//@ts-ignore
+import { YouTube, Props } from '@astro-community/astro-embed-youtube';
+
+const { ...props } = Astro.props as Props;
+---
+
+<YouTube {...props} />
