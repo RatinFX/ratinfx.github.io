@@ -6,8 +6,9 @@ const betterSearch: ProjectVersion = {
     {
       release: '1.3.0.',
       releaseDate: new Date('2023-03-12'),
-      vp13link: '',
-      vp14link: '',
+      vp13link: 'https://github.com/RatinFX/BetterSearch/releases/download/1.3.0/BetterSearch13-1.3.0.zip',
+      vp14link: 'https://github.com/RatinFX/BetterSearch/releases/download/1.3.0/BetterSearch14-1.3.0.zip',
+      changes: ['Rebranding', 'Added <b>Creator</b> and <b>About</b> tab to the top row', 'VegasProData update'],
     },
     {
       release: '1.2.1.',
@@ -67,16 +68,17 @@ const vegasProData: ProjectVersion = {
   project: 'vegas-pro-data',
   versions: [
     {
-      release: '1.1.0.',
+      release: '1.3.0.',
       releaseDate: new Date('2023-03-12'),
-      vp13link: '',
-      vp14link: '',
+      vp13link: 'https://github.com/RatinFX/VegasProData/releases/download/1.3.0/VegasProData13-1.3.0.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProData/releases/download/1.3.0/VegasProData14-1.3.0.zip',
+      changes: ['Rebranding update', 'Added Custom Colors class', 'Added fileName to FavoriteConfig constructor'],
     },
     {
-      release: '0.6.0.',
-      releaseDate: new Date(),
-      vp13link: '',
-      vp14link: '',
+      release: '1.2.0.',
+      releaseDate: new Date('2023-02-18'),
+      vp13link: 'https://github.com/RatinFX/VegasProData/releases/download/1.2.0/VegasProData13-1.2.0.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProData/releases/download/1.2.0/VegasProData14-1.2.0.zip',
     },
   ],
 };
