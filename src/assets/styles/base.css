@@ -35,7 +35,8 @@
     @apply text-primary dark:text-blue-400;
   }
 
-  .highlight-link {
+  .highlight-link,
+  .highlight-link-a a {
     @apply highlight hover:text-blue-600 dark:hover:text-blue-300;
   }
 
