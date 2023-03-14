@@ -1,15 +1,26 @@
 ---
 import CallToAction from './CallToAction.astro';
+
+const subtitle =
+  'If you enjoy my work, please consider showing your support by following or donating! ' +
+  'Your contribution can make a significant difference.</br></br>' +
+  'Contact me if you have any feedback to share or questions to ask: ' +
+  '<a class="highlight-link" href="mailto:martindotwork@gmail.com">martindotwork@gmail.com</a>';
 ---
 
 <CallToAction
-  title="Consider supporting me"
-  subtitle="If you enjoy my work, please consider showing your support by following or donating! Your contribution can make a significant difference."
+  title="Support or Contact me"
+  subtitle={subtitle}
   callToAction={{
     icon: 'tabler:rocket',
     text: 'Donate',
     tooltip: 'Tell me if you found me from this site!',
     href: 'https://streamlabs.com/RatinFX/tip',
     openOnNewTab: true,
+  }}
+  callToAction2={{
+    icon: 'tabler:at',
+    text: 'Contact me',
+    href: 'mailto:martindotwork@gmail.com',
   }}
 />
