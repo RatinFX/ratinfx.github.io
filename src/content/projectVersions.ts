@@ -89,8 +89,8 @@ const vegasProFlow: ProjectVersion = {
     {
       release: '1.0.0.',
       releaseDate: new Date('2023-03-12'),
-      vp13link: '',
-      vp14link: '',
+      vp13link: '/releases/vegas-pro-flow/test13.zip',
+      vp14link: '/releases/vegas-pro-flow/test14.zip',
     },
   ],
 };
