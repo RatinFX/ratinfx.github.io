@@ -89,8 +89,8 @@ const vegasProFlow: ProjectVersion = {
     {
       release: '1.0.0.',
       releaseDate: new Date('2023-03-14'),
-      vp13link: '/releases/vegas-pro-flow/test13.zip',
-      vp14link: '/releases/vegas-pro-flow/test14.zip',
+      vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.0/VegasProFlow13-1.0.0.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.0/VegasProFlow14-1.0.0.zip',
       vp13tooltip: 'Not yet available',
       vp14tooltip: 'Not yet available',
     },
