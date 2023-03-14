@@ -31,6 +31,7 @@ const { version, classes, boxClasses } = Astro.props;
           callToAction={{
             text: 'VEGAS Pro 13 and below',
             href: version.vp13link,
+            tooltip: version?.vp13tooltip,
             icon: 'tabler:download',
             openOnNewTab: true,
           }}
@@ -42,6 +43,7 @@ const { version, classes, boxClasses } = Astro.props;
           callToAction={{
             text: 'VEGAS Pro 14 and above',
             href: version.vp14link,
+            tooltip: version?.vp14tooltip,
             icon: 'tabler:download',
             openOnNewTab: true,
           }}

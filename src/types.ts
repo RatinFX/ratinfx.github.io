@@ -72,6 +72,8 @@ export interface Version {
   releaseDate: Date;
   vp13link: string;
   vp14link: string;
+  vp13tooltip?: string;
+  vp14tooltip?: string;
   changes?: string[];
 }
 
