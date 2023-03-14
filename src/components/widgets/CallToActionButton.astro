@@ -16,7 +16,7 @@ const {
   divClasses,
   btnClasses,
 
-  target = typeof callToAction !== 'string' && callToAction.openOnNewTab ? { target: '_blank' } : {},
+  target = typeof callToAction !== 'string' && callToAction?.openOnNewTab ? { target: '_blank' } : {},
 } = Astro.props;
 ---
 
