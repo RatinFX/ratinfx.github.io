@@ -25,7 +25,7 @@ const CONFIG = {
 
   projects: {
     disabled: false,
-    itemPerPage: 4,
+    itemPerPage: 5,
 
     project: {
       permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
