@@ -92,7 +92,7 @@ export const workExperience: Array<FeatureItem2> = [
   {
     icon: 'tabler:3d-cube-sphere',
     title: 'Unity Developer',
-    timeFrame: '2022. Sept - 2023.',
+    timeFrame: '2022. Sept - 2023. March',
     tags: ['Unity', 'C#', 'Firebase & Functions', 'TypeScript', 'Figma'],
     description:
       'I worked on AR applications for Android and iOS using AR Foundation.<br/>' +

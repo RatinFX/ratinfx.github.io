@@ -8,7 +8,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import LatestProjects from '~/components/project/LatestProjects.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import SupportSection from '~/components/widgets/SupportSection.astro';
+import SupportSection from '~/components/project/SupportSection.astro';
 
 const meta = {
   title: SITE.title,
@@ -22,7 +22,7 @@ const meta = {
     callToAction={{
       icon: 'tabler:rocket',
       text: 'Support me by donating',
-      tooltip: 'Tell me if you found me from this site!',
+      tooltip: "Tell me you're from this site if you do so!",
       href: 'https://streamlabs.com/RatinFX/tip',
       openOnNewTab: true,
     }}
@@ -46,7 +46,11 @@ const meta = {
 
         <!-- Lyric videos -->
         You might know me for creating YouTube videos like
-        <a class="font-semibold highlight-link" href="https://www.youtube.com/watch?v=h-mUGj41hWA">
+        <a
+          class="font-semibold highlight-link"
+          href="https://www.youtube.com/watch?v=h-mUGj41hWA"
+          title="Over 15M views!"
+        >
           NOMA - Brain Power | LYRICS!</a
         >
 
