@@ -50,8 +50,7 @@ const link = !PROJECTS?.project?.disabled ? getPermalink(project.permalink, 'pro
           {
             project.category && (
               <>
-                {' '}
-                ·{' '}
+                -
                 <a class="capitalize hover:underline" href={getPermalink(project.category, 'category')}>
                   {project.category.replaceAll('-', ' ')}
                 </a>
