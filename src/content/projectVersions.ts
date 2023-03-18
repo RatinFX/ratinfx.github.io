@@ -87,6 +87,16 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.0.1.',
+      releaseDate: new Date('2023-03-18'),
+      vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.1/VegasProFlow13-1.0.1.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.1/VegasProFlow14-1.0.1.zip',
+      changes: [
+        'Added <b>Settings option</b> to toggle "Show Support view on Start"',
+        'Extended the description on the About tab',
+      ],
+    },
+    {
       release: '1.0.0.',
       releaseDate: new Date('2023-03-16'),
       vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.0/VegasProFlow13-1.0.0.zip',
