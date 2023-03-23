@@ -96,7 +96,7 @@ export const workExperience: Array<FeatureItem2> = [
     tags: ['Unity', 'C#', 'Firebase & Functions', 'TypeScript', 'Figma'],
     description:
       'I worked on AR applications for Android and iOS using AR Foundation.<br/>' +
-      'I created a Backend system with live data transfer and handling using Firebase for another project.' +
+      'For another project, I created a Firebase Backend system with live data handling and connected it with the proper Frontend components.' +
       '',
   },
   {
@@ -108,7 +108,8 @@ export const workExperience: Array<FeatureItem2> = [
       'Using Vue.js 2 with TypeScript frontend and ASP.NET Core backend.<br/>' +
       '- MediatR event handling <br/>' +
       '- SignalR live communication <br/>' +
-      '- Cypress E2E testing' +
+      '- Cypress E2E testing <br/>' +
+      '- Backent sortable and filterable search system' +
       '',
   },
   {
