@@ -4,7 +4,11 @@ import CallToAction from '../widgets/CallToAction.astro';
 const subtitle =
   'If you enjoy my work, please consider showing your support by following or donating! ' +
   'Your contribution can make a significant difference.</br></br>' +
-  'Contact me if you have any feedback to share or questions to ask: ' +
+  'If you have any feedback or question:</br>' +
+  'contact me ' +
+  '<span class="highlight">through my socials</span> (preferably ' +
+  '<a class="highlight-link" href="https://twitter.com/RatinFX">Twitter</a>) </br>' +
+  'or e-mail me: ' +
   '<a class="highlight-link" href="mailto:martindotwork@gmail.com">martindotwork@gmail.com</a>';
 ---
 
@@ -20,7 +24,7 @@ const subtitle =
   }}
   callToAction2={{
     icon: 'tabler:at',
-    text: 'Contact me',
+    text: 'E-mail',
     href: 'mailto:martindotwork@gmail.com',
   }}
 />
