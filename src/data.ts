@@ -32,6 +32,12 @@ const projects: Link[] = [
 
 const socials: Link[] = [
   {
+    text: 'Discord: Martin#2426',
+    ariaLabel: 'Discord: Martin#2426',
+    icon: 'tabler:brand-discord',
+    href: 'https://discord.gg/3Quqz28',
+  },
+  {
     text: 'Twitch',
     ariaLabel: 'Twitch',
     icon: 'tabler:brand-twitch',
@@ -93,7 +99,7 @@ export const workExperience: Array<FeatureItem2> = [
     icon: 'tabler:3d-cube-sphere',
     title: 'Unity Developer',
     timeFrame: '2022. Sept - 2023. March',
-    tags: ['Unity', 'C#', 'Firebase & Functions', 'TypeScript', 'Figma'],
+    tags: ['Unity', 'C#', 'Firebase', 'TypeScript', 'Figma'],
     description:
       'I worked on AR applications for Android and iOS using AR Foundation.<br/>' +
       'For another project, I created a Firebase Backend system with live data handling and connected it with the proper Frontend components.' +
@@ -118,7 +124,8 @@ export const workExperience: Array<FeatureItem2> = [
     timeFrame: '2016 - Present',
     tags: ['VEGAS Pro', 'After Effects', 'Premiere Pro', 'Photoshop'],
     description:
-      'I have been involved in organizing and participating in video collaborations with more than 25 individuals.' +
+      'I have been involved in organizing and participating' +
+      'in video collaborations with more than 25 individuals.' +
       '',
     bottomLink: 'https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye',
     bottomLinkText: 'Playlist of related videos',
@@ -128,7 +135,26 @@ export const workExperience: Array<FeatureItem2> = [
     title: 'Own projects',
     tags: ['Winforms', 'C#', 'WPF', 'VEGAS Pro', 'Astro'],
     description:
-      'I mainly focused on creating VEGAS Pro extensions to help out and speed up my own, and friends work.' + '',
+      'I mainly focused on creating VEGAS Pro extensions ' +
+      "to help out and speed up my own, and my friends' work " +
+      'while broadening my programming knowledge.' +
+      '',
+    bottomLink: 'https://github.com/RatinFX',
+    bottomLinkText: 'Github repositories',
+  },
+  {
+    icon: 'twemoji:red-circle',
+    title: 'osu!',
+    tags: ['osu!', 'Level design', 'Video game'],
+    description:
+      'Alongside becoming a former top #1000 player, I have crafted numerous playable maps in the ' +
+      'famous rhythm game called <a class="highlight-link" href="https://osu.ppy.sh/home">osu!</a>. ' +
+      '<br/>' +
+      'Some of which became officially featured content for the game ' +
+      'through hard work and help from other community members.' +
+      '',
+    bottomLink: 'https://osu.ppy.sh/users/3436625',
+    bottomLinkText: 'osu! profile',
   },
 ];
 
