@@ -1,20 +1,20 @@
 ---
 import CallToAction from '../widgets/CallToAction.astro';
 
-const subtitle =
+const supportSubtitle =
   'If you enjoy my work, please consider showing your support by following or donating! ' +
-  'Your contribution can make a significant difference.</br></br>' +
-  'If you have any feedback or question:</br>' +
-  'contact me ' +
-  '<span class="highlight">through my socials</span> (preferably ' +
-  '<a class="highlight-link" href="https://twitter.com/RatinFX">Twitter</a>) </br>' +
-  'or e-mail me: ' +
-  '<a class="highlight-link" href="mailto:martindotwork@gmail.com">martindotwork@gmail.com</a>';
+  'Your contribution can make a significant difference.';
+
+const contactSubtitle =
+  'Got any feedback or question?</br> Contact me ' +
+  '<span class="highlight">through my <b>Socials</b></span> (most active on ' +
+  'Discord: <span class="highlight">Martin#2426</span>) </br>' +
+  'or email me';
 ---
 
 <CallToAction
-  title="Support or Contact me"
-  subtitle={subtitle}
+  title="Support me"
+  subtitle={supportSubtitle}
   callToAction={{
     icon: 'tabler:rocket',
     text: 'Donate',
@@ -22,9 +22,19 @@ const subtitle =
     href: 'https://streamlabs.com/RatinFX/tip',
     openOnNewTab: true,
   }}
+/>
+
+<CallToAction
+  title="Contact me"
+  subtitle={contactSubtitle}
+  callToAction={{
+    icon: 'tabler:brand-discord',
+    text: 'Discord server',
+    href: 'https://discord.gg/3Quqz28',
+  }}
   callToAction2={{
     icon: 'tabler:at',
-    text: 'E-mail',
+    text: 'Email',
     href: 'mailto:martindotwork@gmail.com',
   }}
 />
