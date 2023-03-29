@@ -87,6 +87,17 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.0.3.',
+      releaseDate: new Date('2023-03-29'),
+      vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.3/VegasProFlow13-1.0.3.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.3/VegasProFlow14-1.0.3.zip',
+      changes: [
+        'Fixed multiple issues with Adding new Custom Curves',
+        'Added a warning for Track Pan/Crop animating, make sure you close the Track Motion window before applying curves!',
+        'Slightly increased the size of the curve name boxes',
+      ],
+    },
+    {
       release: '1.0.2.',
       releaseDate: new Date('2023-03-29'),
       vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.2/VegasProFlow13-1.0.2.zip',
