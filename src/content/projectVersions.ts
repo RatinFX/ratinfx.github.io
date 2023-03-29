@@ -93,7 +93,7 @@ const vegasProFlow: ProjectVersion = {
       vp14link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.2/VegasProFlow14-1.0.2.zip',
       changes: [
         'Added <b>Settings option</b> to toggle "Check for Updates on Start"',
-        'Refactored the <b>About tab</b>"',
+        'Refactored the <b>About tab</b>',
       ],
     },
     {
