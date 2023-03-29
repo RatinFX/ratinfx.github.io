@@ -87,6 +87,16 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.0.2.',
+      releaseDate: new Date('2023-03-29'),
+      vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.2/VegasProFlow13-1.0.2.zip',
+      vp14link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.2/VegasProFlow14-1.0.2.zip',
+      changes: [
+        'Added <b>Settings option</b> to toggle "Check for Updates on Start"',
+        'Refactored the <b>About tab</b>"',
+      ],
+    },
+    {
       release: '1.0.1.',
       releaseDate: new Date('2023-03-18'),
       vp13link: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.0.1/VegasProFlow13-1.0.1.zip',
