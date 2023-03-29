@@ -34,7 +34,7 @@ const { page, category } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 const meta = {
-  title: `Category'${category}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Category'${category}' ${currentPage > 1 ? ` - Page ${currentPage}` : ''}`,
   description: SITE.description,
   noindex: PROJECTS?.category?.noindex,
 };
