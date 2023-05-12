@@ -70,8 +70,10 @@ export interface ProjectVersion {
 export interface Version {
   release: string;
   releaseDate: Date;
-  vp13link: string;
-  vp14link: string;
+  vp13exe?: string;
+  vp14exe?: string;
+  vp13zip: string;
+  vp14zip: string;
   vp13tooltip?: string;
   vp14tooltip?: string;
   changes?: string[];

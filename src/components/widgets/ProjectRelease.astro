@@ -26,34 +26,73 @@ const { version, classes, boxClasses } = Astro.props;
         </span>
       </div>
 
-      <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
-        <CallToActionButton
-          callToAction={{
-            text: 'for VEGAS Pro 13 and earlier',
-            href: version.vp13link,
-            tooltip: version?.vp13tooltip,
-            icon: 'tabler:download',
-            openOnNewTab: true,
-          }}
-          divClasses={'flex w-full sm:w-auto not-prose'}
-          btnClasses={'sm:mb-0 w-full'}
-          primary={true}
-        />
-        <CallToActionButton
-          callToAction={{
-            text: 'for VEGAS Pro 14 and later',
-            href: version.vp14link,
-            tooltip: version?.vp14tooltip,
-            icon: 'tabler:download',
-            openOnNewTab: true,
-          }}
-          divClasses={'flex w-full sm:w-auto not-prose'}
-          btnClasses={'w-full'}
-          primary={true}
-        />
-      </div>
+      {
+        // Automatic install
+        version.vp13exe && version.vp14exe && (
+          <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+            <CallToActionButton
+              callToAction={{
+                text: 'for VEGAS Pro 13 and earlier',
+                href: version.vp13exe,
+                tooltip: version?.vp13tooltip,
+                icon: 'tabler:download',
+                openOnNewTab: true,
+              }}
+              divClasses={'flex w-full sm:w-auto not-prose'}
+              btnClasses={'sm:mb-0 w-full'}
+              primary={true}
+            />
+            <CallToActionButton
+              callToAction={{
+                text: 'for VEGAS Pro 14 and later',
+                href: version.vp14exe,
+                tooltip: version?.vp14tooltip,
+                icon: 'tabler:download',
+                openOnNewTab: true,
+              }}
+              divClasses={'flex w-full sm:w-auto not-prose'}
+              btnClasses={'w-full'}
+              primary={true}
+            />
+          </div>
+        )
+      }
 
       {
+        // Manual install
+        version.vp13zip && version.vp14zip && (
+          <details class="text-start px-2">
+            <summary>Download for manual install</summary>
+            <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+              <CallToActionButton
+                callToAction={{
+                  text: 'for VEGAS Pro 13 and earlier',
+                  href: version.vp13zip,
+                  tooltip: version?.vp13tooltip,
+                  icon: 'tabler:download',
+                  openOnNewTab: true,
+                }}
+                divClasses={'flex w-full sm:w-auto not-prose'}
+                btnClasses={'sm:mb-0 w-full'}
+              />
+              <CallToActionButton
+                callToAction={{
+                  text: 'for VEGAS Pro 14 and later',
+                  href: version.vp14zip,
+                  tooltip: version?.vp14tooltip,
+                  icon: 'tabler:download',
+                  openOnNewTab: true,
+                }}
+                divClasses={'flex w-full sm:w-auto not-prose'}
+                btnClasses={'w-full'}
+              />
+            </div>
+          </details>
+        )
+      }
+
+      {
+        // Changes
         version?.changes && version.changes.length > 0 && (
           <details class="text-start px-2">
             <summary>Changes</summary>
