@@ -10,7 +10,7 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import ProjectRelease from '../widgets/ProjectRelease.astro';
-import HowToUse from '../widgets/HowToUse.astro';
+import HowToInstall from '../widgets/HowToInstall.astro';
 import YouTube from '../YouTube.astro';
 
 export interface Props {
@@ -109,7 +109,7 @@ const { project, url } = Astro.props;
       {
         project?.versions && (
           <>
-            {project?.tags && <HowToUse tags={project.tags} />}
+            {project?.tags && <HowToInstall tags={project.tags} />}
 
             {project.versions.length > 0 &&
               project.versions.map(

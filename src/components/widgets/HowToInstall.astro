@@ -1,0 +1,27 @@
+---
+import { Tags } from '~/enums';
+import HowToInstallCustomCommand from '../project/vegas-pro/HowToInstallCustomCommand.astro';
+import HowToInstallScript from '../project/vegas-pro/HowToInstallScript.astro';
+import HowToInstallDev from '../project/vegas-pro/HowToInstallDev.astro';
+
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<>
+  <h2 id="how-to-install" style="scroll-margin-top: 5rem">How to install</h2>
+  Make sure you have at least <a
+    href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer"
+    >.NET 4.8 (or higher)</a
+  >
+  installed on your computer.
+
+  {
+    (tags.some((x) => x == Tags.customCommand) && <HowToInstallCustomCommand />) ||
+      (tags.some((x) => x == Tags.script) && <HowToInstallScript />) ||
+      (tags.some((x) => x == Tags.dev) && <HowToInstallDev />)
+  }
+</>
