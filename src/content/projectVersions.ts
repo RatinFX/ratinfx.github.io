@@ -114,8 +114,8 @@ const vegasProFlow: ProjectVersion = {
         'Added support for <b>Parent Track Motion</b>, <b>Parent Track Glow</b> and <b>Parent Track Shadow</b>',
         'Added support for <b>Track Envelopes</b>: Mute, Composite level, Fade to color',
         'Added support for <b>Event Envelopes</b>: (Fade in & Fade out) Transition Progress, Velocity',
-        '<b>Check for Updates on Start</b> is enabled by default on first start',
-        'Display all selectable Track, Event and Envelope options by default',
+        '<b>Check for Updates on Start</b> is enabled by default on the first start',
+        'Display all selectable Track, Event, and Envelope options by default',
       ],
     },
     {
