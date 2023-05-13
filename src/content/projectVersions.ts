@@ -4,12 +4,12 @@ const betterSearch: ProjectVersion = {
   project: 'better-search',
   versions: [
     {
-      release: '1.4.0',
-      releaseDate: new Date('2023-05-03'),
-      vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch13-1.4.0.exe',
-      vp14exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch14-1.4.0.exe',
-      vp13zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch13-1.4.0.zip',
-      vp14zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch14-1.4.0.zip',
+      release: '1.4.1',
+      releaseDate: new Date('2023-05-14'),
+      vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.1/BetterSearch13-1.4.1.exe',
+      vp14exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.1/BetterSearch14-1.4.1.exe',
+      vp13zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.1/BetterSearch13-1.4.1.zip',
+      vp14zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.1/BetterSearch14-1.4.1.zip',
       changes: [
         'Vegas Pro Data update',
         'Moved from <b>Views</b> to <b>Tools - Extensions</b>',
@@ -82,10 +82,10 @@ const vegasProData: ProjectVersion = {
   project: 'vegas-pro-data',
   versions: [
     {
-      release: '1.4.0',
-      releaseDate: new Date('2023-05-03'),
-      vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.0/VegasProData13-1.4.0.zip',
-      vp14zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.0/VegasProData14-1.4.0.zip',
+      release: '1.4.1',
+      releaseDate: new Date('2023-05-14'),
+      vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData13-1.4.1.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData14-1.4.1.zip',
       changes: ['VegasProFlow update'],
     },
     {
@@ -108,12 +108,12 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
-      release: '1.4.0',
-      releaseDate: new Date('2023-05-05'),
-      vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.0/VegasProFlow13-1.4.0.exe',
-      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.0/VegasProFlow14-1.4.0.exe',
-      vp13zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.0/VegasProFlow13-1.4.0.zip',
-      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.0/VegasProFlow14-1.4.0.zip',
+      release: '1.4.1',
+      releaseDate: new Date('2023-05-14'),
+      vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.1/VegasProFlow13-1.4.1.exe',
+      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.1/VegasProFlow14-1.4.1.exe',
+      vp13zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.1/VegasProFlow13-1.4.1.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.1/VegasProFlow14-1.4.1.zip',
       changes: [
         'Changed versioning',
         'Moved from <b>Views</b> to <b>Tools - Extensions</b>',
