@@ -12,6 +12,7 @@ const betterSearch: ProjectVersion = {
       vp14zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch14-1.4.0.zip',
       changes: [
         'Vegas Pro Data update',
+        'Moved from <b>Views</b> to <b>Tools - Extensions</b>',
         'Added <b>Check for Update on Start</b> setting option',
         'Renamed <b>About</b> to <b>Help</b> and split it into <b>Check for Update</b> and <b>About</b>',
       ],
