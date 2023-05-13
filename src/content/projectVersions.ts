@@ -6,9 +6,15 @@ const betterSearch: ProjectVersion = {
     {
       release: '1.4.0',
       releaseDate: new Date('2023-05-03'),
+      vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch13-1.4.0.exe',
+      vp14exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch14-1.4.0.exe',
       vp13zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch13-1.4.0.zip',
       vp14zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.0/BetterSearch14-1.4.0.zip',
-      changes: ['Vegas Pro Data update'],
+      changes: [
+        'Vegas Pro Data update',
+        'Added <b>Check for Update on Start</b> setting option',
+        'Renamed <b>About</b> to <b>Help</b> and split it into <b>Check for Update</b> and <b>About</b>',
+      ],
     },
     {
       release: '1.3.0',
@@ -79,7 +85,7 @@ const vegasProData: ProjectVersion = {
       releaseDate: new Date('2023-05-03'),
       vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.0/VegasProData13-1.4.0.zip',
       vp14zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.0/VegasProData14-1.4.0.zip',
-      changes: [''],
+      changes: ['VegasProFlow update'],
     },
     {
       release: '1.3.0',
