@@ -2,10 +2,8 @@
 import { projectVersions } from '~/content/projectVersions';
 import { getFormattedDate } from '~/utils/utils';
 
-const projectSlug = 'vegas-pro-flow';
-const projectName = 'Vegas Pro Flow';
-
-const lastUpdatedProject = projectVersions.find((x) => x.project == projectSlug)?.versions[0];
+const mainProjectSlug = 'vegas-pro-flow';
+const lastUpdatedProject = projectVersions.find((x) => x.project == mainProjectSlug)?.versions[0];
 const releaseDate = getFormattedDate(lastUpdatedProject?.releaseDate ?? new Date());
 const releaseNumber = lastUpdatedProject?.release ?? '0.0.0';
 ---
@@ -15,8 +13,11 @@ const releaseNumber = lastUpdatedProject?.release ?? '0.0.0';
 >
   <span class="text-xs py-0.5 px-1 bg-primary dark:bg-slate-700 dark:text-slate-300 font-semibold">NEW</span>
 
-  <a href=`https://ratinfx.github.io/${projectSlug}/#latest-version` class="highlight-link">
-    {releaseDate} - {projectName}
-    {releaseNumber} release is live!
-  </a>
+  {releaseDate} -
+
+  <a href=`https://ratinfx.github.io/${mainProjectSlug}/#latest-version` class="highlight-link"> Vegas Pro Flow</a> &
+  <a href=`https://ratinfx.github.io/better-search/#latest-version` class="highlight-link"> Better Search</a> &
+  <a href=`https://ratinfx.github.io/vegas-pro-data/#latest-version` class="highlight-link"> Vegas Pro Data</a>
+
+  {releaseNumber} release is live!
 </div>
