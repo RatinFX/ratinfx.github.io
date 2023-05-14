@@ -108,6 +108,18 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.4.2',
+      releaseDate: new Date('2023-05-14'),
+      vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.2/VegasProFlow13-1.4.2.exe',
+      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.2/VegasProFlow14-1.4.2.exe',
+      vp13zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.2/VegasProFlow13-1.4.2.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.2/VegasProFlow14-1.4.2.zip',
+      changes: [
+        'Removed <b>Mute</b> from supported Track Envelopes',
+        'Fixed various <b>Fade in/out Transition Progress Envelope</b> issues',
+      ],
+    },
+    {
       release: '1.4.1',
       releaseDate: new Date('2023-05-14'),
       vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.1/VegasProFlow13-1.4.1.exe',
