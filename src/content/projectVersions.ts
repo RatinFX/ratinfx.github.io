@@ -117,6 +117,15 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.4.3',
+      releaseDate: new Date('2023-05-15'),
+      vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.3/VegasProFlow13-1.4.3.exe',
+      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.3/VegasProFlow14-1.4.3.exe',
+      vp13zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.3/VegasProFlow13-1.4.3.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.3/VegasProFlow14-1.4.3.zip',
+      changes: ['Fixed more <b>Fade in/out Transition Progress Envelope</b> issues'],
+    },
+    {
       release: '1.4.2',
       releaseDate: new Date('2023-05-14'),
       vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.2/VegasProFlow13-1.4.2.exe',
