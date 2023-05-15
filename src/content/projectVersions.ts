@@ -4,6 +4,15 @@ const betterSearch: ProjectVersion = {
   project: 'better-search',
   versions: [
     {
+      release: '1.4.2',
+      releaseDate: new Date('2023-05-15'),
+      vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.2/BetterSearch13-1.4.2.exe',
+      vp14exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.2/BetterSearch14-1.4.2.exe',
+      vp13zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.2/BetterSearch13-1.4.2.zip',
+      vp14zip: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.2/BetterSearch14-1.4.2.zip',
+      changes: ['Move from <b>Views</b> to <b>Tools - Extensions</b>'],
+    },
+    {
       release: '1.4.1',
       releaseDate: new Date('2023-05-14'),
       vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.1/BetterSearch13-1.4.1.exe',
