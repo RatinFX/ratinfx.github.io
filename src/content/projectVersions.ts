@@ -4,6 +4,13 @@ const betterSearch: ProjectVersion = {
   project: 'better-search',
   versions: [
     {
+      release: '1.4.3',
+      releaseDate: new Date('2023-07-14'),
+      vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData13-1.4.1.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData14-1.4.1.zip',
+      changes: ['Fixed crashes on Vegas Pro 20.0 when the extension threw an error', 'Vegas Pro Data update'],
+    },
+    {
       release: '1.4.2',
       releaseDate: new Date('2023-05-15'),
       vp13exe: 'https://github.com/RatinFX/BetterSearch/releases/download/1.4.2/BetterSearch13-1.4.2.exe',
@@ -91,6 +98,13 @@ const vegasProData: ProjectVersion = {
   project: 'vegas-pro-data',
   versions: [
     {
+      release: '1.4.2',
+      releaseDate: new Date('2023-07-14'),
+      vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData13-1.4.1.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData14-1.4.1.zip',
+      changes: ['Fixed crashes on Vegas Pro 20.0 when the extension threw an error'],
+    },
+    {
       release: '1.4.1',
       releaseDate: new Date('2023-05-14'),
       vp13zip: 'https://github.com/RatinFX/VegasProData/releases/download/1.4.1/VegasProData13-1.4.1.zip',
@@ -116,6 +130,18 @@ const vegasProData: ProjectVersion = {
 const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
+    {
+      release: '1.4.4',
+      releaseDate: new Date('2023-07-14'),
+      vp13exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.4/VegasProFlow13-1.4.4.exe',
+      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.4/VegasProFlow14-1.4.4.exe',
+      vp13zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.4/VegasProFlow13-1.4.4.zip',
+      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.4/VegasProFlow14-1.4.4.zip',
+      changes: [
+        'Fixed an issue with Pan/Crop where the Rotation was set to 0 during the animated frames regardless of its given value',
+        'Fixed crashes on Vegas Pro 20.0 when the extension threw an error',
+      ],
+    },
     {
       release: '1.4.3',
       releaseDate: new Date('2023-05-15'),
