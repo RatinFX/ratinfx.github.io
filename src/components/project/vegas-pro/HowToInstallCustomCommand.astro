@@ -4,49 +4,73 @@
 <>
   <h3>Quick install</h3>
   <ol>
-    <li>
-      Download "...13" for <b>13 and earlier</b>, or "...14" for <b>14 and later</b> Vegas Pro versions
-    </li>
     <li>Save and close VEGAS Pro</li>
-    <li><b>Run the .exe</b> file, this automatically extracts the files to the selected folder</li>
-    <li>Click Next with the default options and wait for it to finish</li>
+    <li>
+      Download "...13" for <b>13 and earlier</b>, or "...14" for <b>14 and later</b> VEGAS Pro versions
+    </li>
+    <li>
+      <b>Run the .exe</b> and click <b>Extract</b> - this automatically moves the contained files to the destination folder
+      <blockquote style="margin-top: 0.5em">
+        - default path: <br />
+        %userprofile%\Documents\Vegas Application Extensions
+      </blockquote>
+    </li>
     <li>
       Start VEGAS Pro and search for the <b>Extension</b> under <b>Tools - Extensions</b>
     </li>
   </ol>
 
   <p>
-    If it does not show up inside VEGAS Pro, try <b>Manual install</b> using multiple path choices after removing the extension
-    from the default folder.
+    Try <b>Manual install</b> if it does not show up inside VEGAS Pro.
   </p>
 
   <details>
     <summary class="text-2xl font-bold">Manual install</summary>
+
     <ol>
-      <li>Delete your current version from the previous install folder</li>
+      <li value="0">
+        If <b>Quick install</b> did not work - <b>Delete</b> (or move to the new folder) the VPFlow related .dll files from
+        the following folder:
+        <blockquote style="margin-top: 0.5em">%userprofile%\Documents\Vegas Application Extensions</blockquote>
+      </li>
+      <li>Save and close VEGAS Pro</li>
       <li>
-        Download "...13" for <b>13 and earlier</b>, or "...14" for <b>14 and later</b> Vegas Pro versions
+        Download "...13" for <b>13 and earlier</b>, or "...14" for <b>14 and later</b> VEGAS Pro versions from <b
+          >Manual install (.zip)</b
+        >
       </li>
       <li>
-        <b>Find or create</b> the relevant folder in <b>any</b> of the following paths:
+        <b>Update</b>
         <ul>
-          <li>%userprofile%\Documents\Vegas Application Extensions\</li>
+          <li>Navigate to the previous install path</li>
         </ul>
-        If the extension does not show up in VEGAS Pro, try any of the following paths (change the version number to your
-        Vegas version):
+        <b>New install</b>
         <ul>
-          <li>%localappdata%\VEGAS Pro\17.0\Application Extensions\</li>
-          <li>%appdata%\VEGAS Pro\17.0\Application Extensions\</li>
-          <li>%programdata%\Vegas Pro\17.0\Application Extensions\</li>
-          <li>%localappdata%\Vegas Pro\Application Extensions\</li>
-          <li>%appdata%\Vegas Pro\Application Extensions\</li>
-          <li>%programdata%\Vegas Pro\Application Extensions\</li>
+          <li>
+            Open any of the <b>Manual install paths</b> below and create an <b>Application Extensions</b>
+            folder like:
+            <blockquote style="margin-top: 0.5em">%appdata%\VEGAS Pro\Application Extensions</blockquote>
+          </li>
+          <li>If you chose a path that has a (version) number change it to <b>your</b> VEGAS version like:</li>
+          <blockquote style="margin-top: 0.5em">
+            %appdata%\VEGAS Pro\14.0 <br />
+            %appdata%\VEGAS Pro\18.0
+          </blockquote>
         </ul>
       </li>
-      <li>Extract the contents of the .zip file into the folder</li>
+      <li>Extract the .zip into the folder</li>
       <li>
         Start VEGAS Pro and search for the <b>Extension</b> under <b>Tools - Extensions</b>
       </li>
     </ol>
+    <h4>Manual install paths</h4>
+    <ul>
+      <li>%programdata%\VEGAS Pro</li>
+      <li>%appdata%\VEGAS Pro</li>
+      <li>%localappdata%\VEGAS Pro</li>
+      <li>%programdata%\VEGAS Pro\17.0</li>
+      <li>%appdata%\VEGAS Pro\17.0</li>
+      <li>%localappdata%\VEGAS Pro\17.0</li>
+    </ul>
   </details>
 </>
