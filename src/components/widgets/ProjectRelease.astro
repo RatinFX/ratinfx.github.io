@@ -61,8 +61,8 @@ const { version, classes, boxClasses } = Astro.props;
       {
         // Manual install
         version.vp13zip && version.vp14zip && (
-          <details class="text-start px-2">
-            <summary>Download for manual install</summary>
+          <details open class="text-start px-2">
+            <summary>Download for Manual install (.zip)</summary>
             <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
               <CallToActionButton
                 callToAction={{
@@ -94,7 +94,7 @@ const { version, classes, boxClasses } = Astro.props;
       {
         // Changes
         version?.changes && version.changes.length > 0 && (
-          <details class="text-start px-2" open>
+          <details open class="text-start px-2">
             <summary>Changes</summary>
             <ul class="not-prose" style="margin: 0">
               {version.changes.map((change) => (
