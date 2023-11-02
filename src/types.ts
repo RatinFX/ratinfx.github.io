@@ -72,8 +72,8 @@ export interface Version {
   releaseDate: Date;
   vp13exe?: string;
   vp14exe?: string;
-  vp13zip: string;
-  vp14zip: string;
+  vp13zip?: string;
+  vp14zip?: string;
   vp13tooltip?: string;
   vp14tooltip?: string;
   changes?: string[];

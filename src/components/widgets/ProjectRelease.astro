@@ -28,64 +28,72 @@ const { version, classes, boxClasses } = Astro.props;
 
       {
         // Automatic install
-        version.vp13exe && version.vp14exe && (
+        (version?.vp13exe || version?.vp14exe) && (
           <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
-            <CallToActionButton
-              callToAction={{
-                text: 'for VEGAS Pro 13 and earlier',
-                href: version.vp13exe,
-                tooltip: version?.vp13tooltip,
-                icon: 'tabler:download',
-                openOnNewTab: true,
-              }}
-              divClasses={'flex w-full sm:w-auto not-prose'}
-              btnClasses={'sm:mb-0 w-full'}
-              primary={true}
-            />
-            <CallToActionButton
-              callToAction={{
-                text: 'for VEGAS Pro 14 and later',
-                href: version.vp14exe,
-                tooltip: version?.vp14tooltip,
-                icon: 'tabler:download',
-                openOnNewTab: true,
-              }}
-              divClasses={'flex w-full sm:w-auto not-prose'}
-              btnClasses={'w-full'}
-              primary={true}
-            />
-          </div>
-        )
-      }
-
-      {
-        // Manual install
-        version.vp13zip && version.vp14zip && (
-          <details open class="text-start px-2">
-            <summary>Download for Manual install (.zip)</summary>
-            <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+            {version?.vp13exe && (
               <CallToActionButton
                 callToAction={{
                   text: 'for VEGAS Pro 13 and earlier',
-                  href: version.vp13zip,
+                  href: version?.vp13exe,
                   tooltip: version?.vp13tooltip,
                   icon: 'tabler:download',
                   openOnNewTab: true,
                 }}
                 divClasses={'flex w-full sm:w-auto not-prose'}
                 btnClasses={'sm:mb-0 w-full'}
+                primary={true}
               />
+            )}
+            {version?.vp14exe && (
               <CallToActionButton
                 callToAction={{
                   text: 'for VEGAS Pro 14 and later',
-                  href: version.vp14zip,
+                  href: version?.vp14exe,
                   tooltip: version?.vp14tooltip,
                   icon: 'tabler:download',
                   openOnNewTab: true,
                 }}
                 divClasses={'flex w-full sm:w-auto not-prose'}
                 btnClasses={'w-full'}
+                primary={true}
               />
+            )}
+          </div>
+        )
+      }
+
+      {
+        // Manual install
+        (version?.vp13zip || version?.vp14zip) && (
+          <details open class="text-start px-2">
+            <summary>Download for Manual install (.zip)</summary>
+            <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+              {version?.vp13zip && (
+                <CallToActionButton
+                  callToAction={{
+                    text: 'for VEGAS Pro 13 and earlier',
+                    href: version?.vp13zip,
+                    tooltip: version?.vp13tooltip,
+                    icon: 'tabler:download',
+                    openOnNewTab: true,
+                  }}
+                  divClasses={'flex w-full sm:w-auto not-prose'}
+                  btnClasses={'sm:mb-0 w-full'}
+                />
+              )}
+              {version?.vp14zip && (
+                <CallToActionButton
+                  callToAction={{
+                    text: 'for VEGAS Pro 14 and later',
+                    href: version?.vp14zip,
+                    tooltip: version?.vp14tooltip,
+                    icon: 'tabler:download',
+                    openOnNewTab: true,
+                  }}
+                  divClasses={'flex w-full sm:w-auto not-prose'}
+                  btnClasses={'w-full'}
+                />
+              )}
             </div>
           </details>
         )
@@ -97,7 +105,7 @@ const { version, classes, boxClasses } = Astro.props;
           <details open class="text-start px-2">
             <summary>Changes</summary>
             <ul class="not-prose" style="margin: 0">
-              {version.changes.map((change) => (
+              {version.changes.map((change: string[]) => (
                 <li set:html={change} />
               ))}
             </ul>
