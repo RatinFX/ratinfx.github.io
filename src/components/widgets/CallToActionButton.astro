@@ -4,9 +4,12 @@ import type { CallToAction } from '~/types';
 
 export interface Props {
   callToAction: string | CallToAction;
+  tooltip?: { title?: string };
+  primaryButton?: string;
   primary?: boolean;
   divClasses?: string;
   btnClasses?: string;
+  target?: { target?: string };
 }
 
 const {
@@ -15,7 +18,6 @@ const {
   primaryButton = Astro.props.primary ? 'btn-primary' : '',
   divClasses,
   btnClasses,
-
   target = typeof callToAction !== 'string' && callToAction?.openOnNewTab ? { target: '_blank' } : {},
 } = Astro.props;
 ---
