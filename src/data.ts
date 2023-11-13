@@ -94,29 +94,58 @@ export const headerData: HeaderProps = {
   socialLinks: [...socials],
 };
 
-export const workExperience: Array<FeatureItem2> = [
+export const experience: Array<FeatureItem2> = [
   {
     icon: 'tabler:3d-cube-sphere',
     title: 'Unity Developer',
-    timeFrame: '2022. Sept - 2023. March',
+    timeFrame: '2022. September - Present',
     tags: ['Unity', 'C#', 'Firebase', 'TypeScript', 'Figma'],
     description:
-      'I worked on AR applications for Android and iOS using AR Foundation.<br/>' +
-      'For another project, I created a Firebase Backend system with live data handling and connected it with the proper Frontend components.' +
+      'I mostly worked on AR applications for Android and iOS using AR Foundation ' +
+      'while cleaning, correcting, and fixing up older code.' +
+      '<br/>' +
+      '<br/>' +
+      'For another project, I created a Firebase Backend system with live data handling ' +
+      'and connected it with the proper Frontend components.' +
       '',
   },
   {
     icon: 'vscode-icons:file-type-vue',
     title: 'Full-stack Web Developer',
-    timeFrame: '2021. May - 2022. Sept',
+    timeFrame: '2021. May - 2022. September',
     tags: ['ASP.NET Core', 'C#', 'TypeScript', 'Vue.js 2', 'Vuetify', 'SQL'],
     description:
-      'Using Vue.js 2 with TypeScript frontend and ASP.NET Core backend.<br/>' +
-      '- MediatR event handling <br/>' +
-      '- SignalR live communication <br/>' +
-      '- Cypress E2E testing <br/>' +
-      '- Backent sortable and filterable search system' +
+      'Used Vue.js 2 with TypeScript frontend and ASP.NET Core backend.' +
+      '<br/>' +
+      '<br/>' +
+      'I worked on:' +
+      '<br/>' +
+      '- Recreating pages from their older application' +
+      '<br/>' +
+      '- MediatR event handling' +
+      '<br/>' +
+      '- SignalR live communication' +
+      '<br/>' +
+      '- Basic Cypress E2E testing' +
       '',
+  },
+  {
+    icon: 'twemoji:red-circle',
+    title: 'osu!',
+    timeFrame: '2013 - Present',
+    tags: ['osu!', 'Level design', 'Video game', 'C#'],
+    description:
+      '<a class="highlight-link" href="https://osu.ppy.sh/home">osu!</a> is a rhythm game. ' +
+      '<br/>' +
+      'Alongside becoming a former top #1000 player, I created many playable maps, ' +
+      'some of which became officially featured content of the game.' +
+      '<br/>' +
+      '<br/>' +
+      'I also started looking into and contributing to its open source version ' +
+      "called <a class='highlight-link' href='https://github.com/ppy/osu'>osu!lazer</a>." +
+      '',
+    bottomLink: 'https://osu.ppy.sh/users/3436625',
+    bottomLinkText: 'osu! profile',
   },
   {
     icon: 'logos:youtube-icon',
@@ -141,20 +170,6 @@ export const workExperience: Array<FeatureItem2> = [
       '',
     bottomLink: 'https://github.com/RatinFX',
     bottomLinkText: 'Github repositories',
-  },
-  {
-    icon: 'twemoji:red-circle',
-    title: 'osu!',
-    tags: ['osu!', 'Level design', 'Video game'],
-    description:
-      'Alongside becoming a former top #1000 player, I have crafted numerous playable maps in the ' +
-      'famous rhythm game called <a class="highlight-link" href="https://osu.ppy.sh/home">osu!</a>. ' +
-      '<br/>' +
-      'Some of which became officially featured content for the game ' +
-      'through hard work and help from other community members.' +
-      '',
-    bottomLink: 'https://osu.ppy.sh/users/3436625',
-    bottomLinkText: 'osu! profile',
   },
 ];
 

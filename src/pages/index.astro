@@ -1,7 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import { getPermalink } from '~/utils/permalinks';
-import { workExperience } from '~/data';
+import { experience } from '~/data';
 
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -65,7 +65,7 @@ const meta = {
 
   <LatestProjects title="Latest Projects" />
 
-  <Features2 title="Work experience" id="work-experience" items={workExperience} />
+  <Features2 title="Experience" id="experience" items={experience} />
 
   <SupportSection />
 </Layout>
