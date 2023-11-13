@@ -133,13 +133,23 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.4.6',
+      releaseDate: new Date('2023-11-13'),
+      vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.6/VegasProFlow14-1.4.6.exe',
+      vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.6/VegasProFlow14-1.4.6.zip',
+      changes: [
+        'Fixed an issue with Pan/Crop where it threw and error when the Rotation Center did not change during the animation',
+        '!! Only releasing for VP14 as I cannot test VP13',
+      ],
+    },
+    {
       release: '1.4.5',
       releaseDate: new Date('2023-11-02'),
       vp14exe: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.5/VegasProFlow14-1.4.5.exe',
       vp14zip: 'https://github.com/RatinFX/VegasProFlow/releases/download/1.4.5/VegasProFlow14-1.4.5.zip',
       changes: [
         'Fixed an issue with Pan/Crop where the Rotation Center was set to 0 during the animated frames regardless of its given value',
-        '!! Only releasing to VP14 and above as I cannot test VP13',
+        '!! Only releasing for VP14 as I cannot test VP13',
       ],
     },
     {
