@@ -104,8 +104,8 @@ const { version, classes, boxClasses } = Astro.props;
         version?.changes && version.changes.length > 0 && (
           <details open class="text-start px-2">
             <summary>Changes</summary>
-            <ul class="not-prose" style="margin: 0">
-              {version.changes.map((change: string[]) => (
+            <ul style="margin: 0">
+              {version.changes.map((change: string) => (
                 <li set:html={change} />
               ))}
             </ul>
