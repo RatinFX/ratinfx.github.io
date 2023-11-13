@@ -78,8 +78,8 @@ const socials: Link[] = [
 export const headerData: HeaderProps = {
   links: [
     {
-      text: 'Work experience',
-      href: getPermalink('#work-experience'),
+      text: 'Experience',
+      href: getPermalink('#experience'),
     },
     {
       text: 'Projects',
