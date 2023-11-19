@@ -2,7 +2,7 @@
 publishDate: 2022-11-06T00:00:00Z
 title: Vegas Pro Flow
 excerpt: Create stunning animations using Beziér Curves.
-# video: https://www.youtube.com/watch?v=
+video: https://www.youtube.com/watch?v=0wGeHbzAcog
 # image: ~/assets/images/
 github: https://github.com/RatinFX/VegasProFlow
 category: Vegas Pro Extension
