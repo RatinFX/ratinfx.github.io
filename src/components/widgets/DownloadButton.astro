@@ -1,0 +1,25 @@
+---
+import CallToActionButton from './CallToActionButton.astro';
+
+export interface Props {
+  text: string;
+  href: string;
+  tooltip?: string;
+  primary?: boolean;
+}
+
+const { text, href, tooltip, primary = false } = Astro.props;
+---
+
+<CallToActionButton
+  callToAction={{
+    text: text,
+    href: href,
+    tooltip: tooltip,
+    icon: 'tabler:download',
+    openOnNewTab: true,
+  }}
+  divClasses={'flex w-full sm:w-auto not-prose'}
+  btnClasses={'sm:mb-0 w-full'}
+  primary={primary}
+/>
