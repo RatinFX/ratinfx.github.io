@@ -1,5 +1,7 @@
 // #region General / Widgets
 
+import type { AstroComponentFactory } from 'astro/dist/runtime/server';
+
 export interface FeatureItem1 {
   title: string;
   description: string;
@@ -102,7 +104,7 @@ export interface Project {
   tags?: Array<string>;
   author?: string;
 
-  Content: unknown;
+  Content: AstroComponentFactory;
   content?: string;
 
   versions?: Version[];

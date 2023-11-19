@@ -73,7 +73,7 @@ const { project, url } = Astro.props;
             loading="eager"
             aspectRatio={16 / 9}
             width={900}
-            height={506}
+            height={400}
             loading="eager"
             decoding="async"
             background={undefined}
@@ -99,7 +99,6 @@ const { project, url } = Astro.props;
       {
         project.Content ? (
           <>
-            {/* @ts-ignore */}
             <project.Content />
           </>
         ) : (
