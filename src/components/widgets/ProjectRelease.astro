@@ -57,7 +57,7 @@ const { version, classes, boxClasses } = Astro.props;
         // Manual install
         (version?.vp13sec || version?.vp14sec || version?.singleSec) && (
           <details open class="text-start px-2">
-            <summary>Download for Manual install (.zip)</summary>
+            <summary>Download for Manual install (usually .zip)</summary>
             <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
               {version?.vp13sec && (
                 <DownloadButton
