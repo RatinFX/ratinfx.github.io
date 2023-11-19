@@ -76,6 +76,8 @@ export interface Version {
   vp14zip?: string;
   vp13tooltip?: string;
   vp14tooltip?: string;
+  singleExe?: string;
+  singleZip?: string;
   changes?: string[];
 }
 

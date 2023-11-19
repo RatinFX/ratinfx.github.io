@@ -2,11 +2,15 @@ import type { ProjectVersion } from '~/types';
 import {
   betterSearchLink,
   customFadesLink,
+  ratinfxVPLink,
   shortenExtendMediaLink,
-  vpdata as vpdataLink,
+  vpdataLink,
   vpflowLink,
 } from '~/utils/projectinfo';
 
+/**
+ * Discontinued extension
+ */
 const betterSearch: ProjectVersion = {
   project: 'better-search',
   versions: [
@@ -58,6 +62,62 @@ const betterSearch: ProjectVersion = {
   ],
 };
 
+// Helpers
+const ratinfxVP: ProjectVersion = {
+  project: 'ratinfx-vp',
+  versions: [
+    {
+      release: '1.1.0',
+      releaseDate: new Date('2023-11-19'),
+      singleExe: ratinfxVPLink('1.1.0'),
+      singleZip: ratinfxVPLink('1.1.0'),
+      changes: ['Moved [General] and [Threading] namespaces here from [VegasProData]'],
+    },
+  ],
+};
+
+const vegasProData: ProjectVersion = {
+  project: 'vegas-pro-data',
+  versions: [
+    {
+      release: '1.5.0',
+      releaseDate: new Date('2023-11-19'),
+      vp13zip: vpdataLink('1.5.0', '13'),
+      vp14zip: vpdataLink('1.5.0', '14'),
+      changes: ['Breaking - Moved some General methods to [RatinFX.VP]'],
+    },
+    {
+      release: '1.4.2',
+      releaseDate: new Date('2023-07-14'),
+      vp13zip: vpdataLink('1.4.2', '13'),
+      vp14zip: vpdataLink('1.4.2', '14'),
+      changes: ['Fixed crashes on Vegas Pro 20.0 when the extension threw an error'],
+    },
+    {
+      release: '1.4.1',
+      releaseDate: new Date('2023-05-14'),
+      vp13zip: vpdataLink('1.4.1', '13'),
+      vp14zip: vpdataLink('1.4.1', '14'),
+      changes: ['VegasProFlow update'],
+    },
+    {
+      release: '1.3.0',
+      releaseDate: new Date('2023-03-12'),
+      vp13zip: vpdataLink('1.3.0', '13'),
+      vp14zip: vpdataLink('1.3.0', '14'),
+      changes: ['Rebranding update', 'Added Custom Colors class', 'Added fileName to FavoriteConfig constructor'],
+    },
+    {
+      release: '1.2.0',
+      releaseDate: new Date('2023-02-18'),
+      vp13zip: vpdataLink('1.2.0', '13'),
+      vp14zip: vpdataLink('1.2.0', '14'),
+    },
+  ],
+};
+
+// Scripts
+
 const customFades: ProjectVersion = {
   project: 'custom-fades',
   versions: [
@@ -103,52 +163,24 @@ const shortenExtendMedia: ProjectVersion = {
   ],
 };
 
-const vegasProData: ProjectVersion = {
-  project: 'vegas-pro-data',
-  versions: [
-    {
-      release: '1.4.2',
-      releaseDate: new Date('2023-07-14'),
-      vp13zip: vpdataLink('1.4.2', '13'),
-      vp14zip: vpdataLink('1.4.2', '14'),
-      changes: ['Fixed crashes on Vegas Pro 20.0 when the extension threw an error'],
-    },
-    {
-      release: '1.4.1',
-      releaseDate: new Date('2023-05-14'),
-      vp13zip: vpdataLink('1.4.1', '13'),
-      vp14zip: vpdataLink('1.4.1', '14'),
-      changes: ['VegasProFlow update'],
-    },
-    {
-      release: '1.3.0',
-      releaseDate: new Date('2023-03-12'),
-      vp13zip: vpdataLink('1.3.0', '13'),
-      vp14zip: vpdataLink('1.3.0', '14'),
-      changes: ['Rebranding update', 'Added Custom Colors class', 'Added fileName to FavoriteConfig constructor'],
-    },
-    {
-      release: '1.2.0',
-      releaseDate: new Date('2023-02-18'),
-      vp13zip: vpdataLink('1.2.0', '13'),
-      vp14zip: vpdataLink('1.2.0', '14'),
-    },
-  ],
-};
+// Extensions
 
 const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.5.0',
+      releaseDate: new Date('2023-11-19'),
+      vp14exe: vpflowLink('1.5.0', '14', 'exe'),
+      vp14zip: vpflowLink('1.5.0', '14', 'zip'),
+      changes: ['VPData and RatinFX.VP update'],
+    },
+    {
       release: '1.4.7',
       releaseDate: new Date('2023-11-17'),
       vp14exe: vpflowLink('1.4.7', '14', 'exe'),
       vp14zip: vpflowLink('1.4.7', '14', 'zip'),
-      changes: [
-        'Fixed display issues with the yellow handler circle',
-        'Added version number to the Undocked Window',
-        '!! Only releasing for VP14 as I cannot test VP13 or below',
-      ],
+      changes: ['Fixed display issues with the yellow handler circle', 'Added version number to the Undocked Window'],
     },
     {
       release: '1.4.6',
@@ -263,8 +295,9 @@ const vegasProFlow: ProjectVersion = {
 
 export const projectVersions: ProjectVersion[] = [
   betterSearch,
+  vegasProData,
+  ratinfxVP,
   customFades,
   shortenExtendMedia,
-  vegasProData,
   vegasProFlow,
 ];

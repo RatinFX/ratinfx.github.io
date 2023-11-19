@@ -13,8 +13,8 @@ const projects: Link[] = [
     href: getPermalink('/vegas-pro-data'),
   },
   {
-    text: 'Better Search',
-    href: getPermalink('/better-search'),
+    text: 'RatinFX VP library',
+    href: getPermalink('/ratinfx-vp'),
   },
   {
     text: 'Shorten/Extend media',
@@ -27,6 +27,10 @@ const projects: Link[] = [
   {
     text: 'Github Pages',
     href: 'https://github.com/RatinFX/ratinfx.github.io',
+  },
+  {
+    text: 'Better Search',
+    href: getPermalink('/better-search'),
   },
 ];
 
