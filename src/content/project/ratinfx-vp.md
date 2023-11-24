@@ -14,6 +14,6 @@ tags:
 
 ## Overview
 
-Contains some of the reused methods and "Creator Form" I use in my other projects.
+Contains some of the reused methods and a Creator Window I use in my other projects.
 
 - Check out my [other open-source Projects](https://github.com/RatinFX?tab=repositories&q=vegas) to see how I used RatinFX.VP
