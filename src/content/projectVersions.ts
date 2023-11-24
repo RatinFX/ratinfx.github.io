@@ -1,12 +1,5 @@
 import type { ProjectVersion } from '~/types';
-import {
-  betterSearchLink,
-  customFadesLink,
-  ratinfxVPLink,
-  shortenExtendMediaLink,
-  vpdataLink,
-  vpflowLink,
-} from '~/utils/projectinfo';
+import { betterSearchLink, customFadesLink, shortenExtendMediaLink, vpflowLink } from '~/utils/projectinfo';
 
 /**
  * Discontinued extension
@@ -66,60 +59,10 @@ const betterSearch: ProjectVersion = {
 
 const ratinfxVP: ProjectVersion = {
   project: 'ratinfx-vp',
-  versions: [
-    {
-      release: '1.1.0',
-      releaseDate: new Date('2023-11-19'),
-      singlePrim: ratinfxVPLink('1.1.0'),
-      changes: ['Moved "General" and "Threading" namespaces here from [VegasProData]'],
-    },
-    {
-      release: '1.0.0',
-      releaseDate: new Date('2023-11-19'),
-      singlePrim: ratinfxVPLink('1.0.0'),
-      changes: ['Base Creator Form with my contact information'],
-    },
-  ],
 };
 
 const vegasProData: ProjectVersion = {
   project: 'vegas-pro-data',
-  versions: [
-    {
-      release: '1.5.0',
-      releaseDate: new Date('2023-11-19'),
-      vp13sec: vpdataLink('1.5.0', '13'),
-      vp14sec: vpdataLink('1.5.0', '14'),
-      changes: ['Breaking - Moved some General methods to [RatinFX.VP]'],
-    },
-    {
-      release: '1.4.2',
-      releaseDate: new Date('2023-07-14'),
-      vp13sec: vpdataLink('1.4.2', '13'),
-      vp14sec: vpdataLink('1.4.2', '14'),
-      changes: ['Fixed crashes on Vegas Pro 20.0 when the extension threw an error'],
-    },
-    {
-      release: '1.4.1',
-      releaseDate: new Date('2023-05-14'),
-      vp13sec: vpdataLink('1.4.1', '13'),
-      vp14sec: vpdataLink('1.4.1', '14'),
-      changes: ['VegasProFlow update'],
-    },
-    {
-      release: '1.3.0',
-      releaseDate: new Date('2023-03-12'),
-      vp13sec: vpdataLink('1.3.0', '13'),
-      vp14sec: vpdataLink('1.3.0', '14'),
-      changes: ['Rebranding update', 'Added Custom Colors class', 'Added fileName to FavoriteConfig constructor'],
-    },
-    {
-      release: '1.2.0',
-      releaseDate: new Date('2023-02-18'),
-      vp13sec: vpdataLink('1.2.0', '13'),
-      vp14sec: vpdataLink('1.2.0', '14'),
-    },
-  ],
 };
 
 // Scripts

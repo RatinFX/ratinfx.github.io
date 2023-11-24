@@ -25,14 +25,6 @@ export function shortenExtendMediaLink(tag: string, vpver: '13' | '14'): string 
   return dllLink('ShortenExtendMedia', tag, vpver, 'dll');
 }
 
-export function vpdataLink(tag: string, vpver: '13' | '14'): string {
-  return extensionLink('VegasProData', tag, vpver, 'dll');
-}
-
-export function ratinfxVPLink(tag: string): string {
-  return dllLink('RatinFX.VP', tag, '', 'dll');
-}
-
 export function vpflowLink(tag: string, vpver: '13' | '14', extension: 'zip' | 'exe'): string {
   return extensionLink('VegasProFlow', tag, vpver, extension);
 }

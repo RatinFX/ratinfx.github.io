@@ -9,21 +9,12 @@ import type { Link, MenuLink } from '~/types';
 
 export interface Props {
   links?: Array<MenuLink>;
-  socialLinks?: Array<Link>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
-  showLabels?: boolean;
   position?: string;
 }
 
-const {
-  links = [],
-  socialLinks = [],
-  isSticky = false,
-  showToggleTheme = false,
-  showLabels = false,
-  position = 'center',
-} = Astro.props;
+const { links = [], isSticky = false, showToggleTheme = false, position = 'center' } = Astro.props;
 ---
 
 <header

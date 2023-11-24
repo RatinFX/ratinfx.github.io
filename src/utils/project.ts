@@ -62,7 +62,7 @@ const getNormalizedProject = async (project: CollectionEntry<'project'>): Promis
     // or 'body' in case you consume from API
 
     permalink: await generatePermalink({ id, slug, publishDate, category }),
-    versions: versions?.versions.sort((a, b) => b.releaseDate.getTime() - a.releaseDate.getTime()),
+    versions: versions?.versions?.sort((a, b) => b.releaseDate.getTime() - a.releaseDate.getTime()),
   };
 };
 

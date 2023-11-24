@@ -66,7 +66,7 @@ export interface MenuLink extends Link {
 
 export interface ProjectVersion {
   project: string;
-  versions: Array<Version>;
+  versions?: Array<Version>;
 }
 
 export interface Version {
@@ -80,7 +80,7 @@ export interface Version {
   tooltipVP14?: string;
   singlePrim?: string;
   singleSec?: string;
-  changes?: string[];
+  changes?: Array<string>;
 }
 
 export interface Project {
@@ -107,7 +107,7 @@ export interface Project {
   Content: AstroComponentFactory;
   content?: string;
 
-  versions?: Version[];
+  versions?: Array<Version>;
 }
 
 export interface MetaSEO {
