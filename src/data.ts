@@ -95,7 +95,6 @@ export const headerData: HeaderProps = {
       links: [...socials],
     },
   ],
-  socialLinks: [...socials],
 };
 
 export const experience: Array<FeatureItem2> = [

@@ -4,7 +4,7 @@ import { getFormattedDate } from '~/utils/utils';
 
 const mainProjectSlug = 'vegas-pro-flow';
 const mainProjectName = 'Vegas Pro Flow';
-const lastUpdatedProject = projectVersions.find((x) => x.project == mainProjectSlug)?.versions[0];
+const lastUpdatedProject = projectVersions.find((x) => x.project == mainProjectSlug)?.versions?.at(0);
 const releaseDate = getFormattedDate(lastUpdatedProject?.releaseDate ?? new Date());
 const releaseNumber = lastUpdatedProject?.release ?? '0.0.0';
 ---
