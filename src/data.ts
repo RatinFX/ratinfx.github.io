@@ -28,10 +28,6 @@ const projects: Link[] = [
     text: 'Github Pages',
     href: 'https://github.com/RatinFX/ratinfx.github.io',
   },
-  {
-    text: 'Better Search',
-    href: getPermalink('/better-search'),
-  },
 ];
 
 const socials: Link[] = [
