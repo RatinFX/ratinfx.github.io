@@ -12,6 +12,11 @@ tags:
   - winforms
 ---
 
+## Discontinued
+
+- as VEGAS Pro 20.0 and up has objectively better search
+- and I created [VPConsole](/vpconsole)
+
 ## Overview
 
 ![Preview Picture](/preview/better-search.png)

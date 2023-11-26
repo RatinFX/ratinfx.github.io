@@ -8,6 +8,15 @@ const betterSearch: ProjectVersion = {
   project: 'better-search',
   versions: [
     {
+      release: '1.5.0 - final',
+      releaseDate: new Date('2023-11-26'),
+      vp13prim: betterSearchLink('1.5.0', '13', 'exe'),
+      vp14prim: betterSearchLink('1.5.0', '14', 'exe'),
+      vp13sec: betterSearchLink('1.5.0', '13', 'zip'),
+      vp14sec: betterSearchLink('1.5.0', '14', 'zip'),
+      changes: ['Removed Check for Updates and Website link', 'VPData and RatinFX.VP update'],
+    },
+    {
       release: '1.4.3',
       releaseDate: new Date('2023-07-14'),
       vp13prim: betterSearchLink('1.4.3', '13', 'exe'),
