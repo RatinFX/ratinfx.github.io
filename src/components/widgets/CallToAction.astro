@@ -7,6 +7,9 @@ export interface Props {
   subtitle?: string;
   callToAction?: string | CallToAction;
   callToAction2?: string | CallToAction;
+  isCTAPrimary?: boolean;
+  isCTA2Primary?: boolean;
+  id?: string;
 }
 
 const {
@@ -14,10 +17,13 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   callToAction = await Astro.slots.render('callToAction'),
   callToAction2 = await Astro.slots.render('callToAction2'),
+  isCTAPrimary = true,
+  isCTA2Primary,
+  id = '',
 } = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative" id={id}>
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="py-10">
       <div
@@ -39,7 +45,7 @@ const {
             callToAction && (
               <CallToActionButton
                 callToAction={callToAction}
-                primary={true}
+                primary={isCTAPrimary}
                 divClasses={'flex w-full sm:w-auto'}
                 btnClasses={'sm:mb-0 w-full '}
               />
@@ -50,6 +56,7 @@ const {
             callToAction2 && (
               <CallToActionButton
                 callToAction={callToAction2}
+                primary={isCTA2Primary}
                 divClasses={'flex w-full sm:w-auto'}
                 btnClasses={'w-full'}
               />
