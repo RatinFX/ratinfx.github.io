@@ -13,15 +13,24 @@ const contactSubtitle =
 ---
 
 <CallToAction
+  id="donate"
   title="Support me"
   subtitle={supportSubtitle}
   callToAction={{
     icon: 'tabler:rocket',
-    text: 'Donate',
-    tooltip: "Tell me you're from this site if you do so!",
+    text: 'Streamlabs',
+    tooltip: 'This WILL show up on livestreams!',
     href: 'https://streamlabs.com/RatinFX/tip',
     openOnNewTab: true,
   }}
+  callToAction2={{
+    icon: 'tabler:coffee',
+    text: 'Ko-fi',
+    tooltip: 'This will NOT show up on livestreams!',
+    href: 'https://streamlabs.com/RatinFX/tip',
+    openOnNewTab: true,
+  }}
+  isCTA2Primary={true}
 />
 
 <CallToAction
