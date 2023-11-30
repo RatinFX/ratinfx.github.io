@@ -115,9 +115,7 @@ const { project, url } = Astro.props;
                 (version, index) =>
                   index === 0 && (
                     <>
-                      <h2 id="latest-version" style="scroll-margin-top: 6rem">
-                        Latest version
-                      </h2>
+                      <h2 id="latest-version">Latest version</h2>
                       <ProjectRelease version={version} boxClasses={'bg-slate-100 dark:bg-slate-800'} />
                     </>
                   )

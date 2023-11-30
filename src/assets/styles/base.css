@@ -57,6 +57,14 @@
   display: block;
 }
 
+* {
+  scroll-margin-top: 4rem;
+}
+
+h2 {
+  scroll-margin-top: 6rem;
+}
+
 [astro-icon].icon-light > * {
   stroke-width: 1.2;
 }
