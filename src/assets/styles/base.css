@@ -65,6 +65,12 @@ h2 {
   scroll-margin-top: 6rem;
 }
 
+.shrink-page p,
+.shrink-page h2 {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
 [astro-icon].icon-light > * {
   stroke-width: 1.2;
 }

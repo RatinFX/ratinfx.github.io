@@ -57,8 +57,8 @@ const { version, classes, boxClasses } = Astro.props;
         // Manual install
         (version?.vp13sec || version?.vp14sec || version?.singleSec) && (
           <details open class="text-start px-2">
-            <summary>Download for Manual install (usually .zip)</summary>
-            <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+            <summary class="pb-4">Download for Manual install (usually .zip)</summary>
+            <div class="flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
               {version?.vp13sec && (
                 <DownloadButton
                   text="for VEGAS Pro 13 and earlier"
@@ -82,7 +82,7 @@ const { version, classes, boxClasses } = Astro.props;
       {
         // Changes
         version?.changes && version.changes.length > 0 && (
-          <details open class="text-start px-2">
+          <details open class="text-start px-2 pt-4">
             <summary>Changes</summary>
             <ul style="margin: 0">
               {version.changes.map((change: string) => (
