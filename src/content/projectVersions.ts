@@ -127,6 +127,17 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.5.1',
+      releaseDate: new Date('2023-12-31'),
+      vp14prim: vpflowLink('1.5.1', '14', 'exe'),
+      vp14sec: vpflowLink('1.5.1', '14', 'zip'),
+      changes: [
+        'VPData and RatinFX.VP update',
+        'Correct yellow circle position before Mouse movement',
+        'Always set the Keyframes to "Linear" type',
+      ],
+    },
+    {
       release: '1.5.0',
       releaseDate: new Date('2023-11-19'),
       vp14prim: vpflowLink('1.5.0', '14', 'exe'),
