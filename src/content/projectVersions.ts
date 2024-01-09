@@ -127,6 +127,13 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.5.2',
+      releaseDate: new Date('2024-01-09'),
+      vp14prim: vpflowLink('1.5.2', '14', 'exe'),
+      vp14sec: vpflowLink('1.5.2', '14', 'zip'),
+      changes: ['Fixed Rotation and Orientation not being animated correctly for Parent/Track Motion'],
+    },
+    {
       release: '1.5.1',
       releaseDate: new Date('2023-12-31'),
       vp14prim: vpflowLink('1.5.1', '14', 'exe'),
