@@ -64,16 +64,6 @@ const betterSearch: ProjectVersion = {
   ],
 };
 
-// Helpers
-
-const ratinfxVP: ProjectVersion = {
-  project: 'ratinfx-vp',
-};
-
-const vegasProData: ProjectVersion = {
-  project: 'vegas-pro-data',
-};
-
 // Scripts
 
 const customFades: ProjectVersion = {
@@ -271,8 +261,6 @@ const vegasProFlow: ProjectVersion = {
 
 export const projectVersions: ProjectVersion[] = [
   betterSearch,
-  vegasProData,
-  ratinfxVP,
   customFades,
   shortenExtendMedia,
   vegasProFlow,
