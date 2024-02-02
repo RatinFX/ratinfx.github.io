@@ -117,6 +117,13 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.5.3',
+      releaseDate: new Date('2024-02-02'),
+      vp14prim: vpflowLink('1.5.3', '14', 'exe'),
+      vp14sec: vpflowLink('1.5.3', '14', 'zip'),
+      changes: ['RatinFX.VP update: Use GitHub release when searching for updates'],
+    },
+    {
       release: '1.5.2',
       releaseDate: new Date('2024-01-09'),
       vp14prim: vpflowLink('1.5.2', '14', 'exe'),
