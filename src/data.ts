@@ -104,8 +104,8 @@ export const experience: Array<FeatureItem2> = [
       'while cleaning, correcting, and fixing up older code.' +
       '<br/>' +
       '<br/>' +
-      'For another project, I created a Firebase Backend system with live data handling ' +
-      'and connected it with the proper Frontend components.' +
+      'I also created a Firebase Backend system with live data handling ' +
+      'and connected it with the proper Frontend components for another project.' +
       '',
   },
   {
@@ -127,6 +127,18 @@ export const experience: Array<FeatureItem2> = [
       '<br/>' +
       '- Basic Cypress E2E testing' +
       '',
+  },
+  {
+    icon: 'flat-color-icons:home',
+    title: 'Own projects',
+    tags: ['Winforms', 'C#', 'WPF', 'VEGAS Pro', 'Astro'],
+    description:
+      'I mainly focused on creating VEGAS Pro extensions ' +
+      "to help out and speed up my own, and my friends' work " +
+      'while broadening my programming knowledge.' +
+      '',
+    bottomLink: 'https://github.com/RatinFX',
+    bottomLinkText: 'Github repositories',
   },
   {
     icon: 'twemoji:red-circle',
@@ -157,18 +169,6 @@ export const experience: Array<FeatureItem2> = [
       '',
     bottomLink: 'https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye',
     bottomLinkText: 'Playlist of related videos',
-  },
-  {
-    icon: 'flat-color-icons:home',
-    title: 'Own projects',
-    tags: ['Winforms', 'C#', 'WPF', 'VEGAS Pro', 'Astro'],
-    description:
-      'I mainly focused on creating VEGAS Pro extensions ' +
-      "to help out and speed up my own, and my friends' work " +
-      'while broadening my programming knowledge.' +
-      '',
-    bottomLink: 'https://github.com/RatinFX',
-    bottomLinkText: 'Github repositories',
   },
 ];
 
