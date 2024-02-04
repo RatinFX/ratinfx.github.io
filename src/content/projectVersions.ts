@@ -72,6 +72,13 @@ const vegasProFlow: ProjectVersion = {
   project: 'vegas-pro-flow',
   versions: [
     {
+      release: '1.5.4',
+      releaseDate: new Date('2024-02-04'),
+      vp14prim: vpflowLink('1.5.4', '14', 'exe'),
+      vp14sec: vpflowLink('1.5.4', '14', 'zip'),
+      changes: ['Fixed update check issues'],
+    },
+    {
       release: '1.5.3',
       releaseDate: new Date('2024-02-02'),
       vp14prim: vpflowLink('1.5.3', '14', 'exe'),
