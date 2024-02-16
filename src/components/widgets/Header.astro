@@ -5,14 +5,9 @@ import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
-import type { Link, MenuLink } from '~/types';
+import type { HeaderProps } from '~/types';
 
-export interface Props {
-  links?: Array<MenuLink>;
-  isSticky?: boolean;
-  showToggleTheme?: boolean;
-  position?: string;
-}
+export interface Props extends HeaderProps {}
 
 const { links = [], isSticky = false, showToggleTheme = false, position = 'center' } = Astro.props;
 ---

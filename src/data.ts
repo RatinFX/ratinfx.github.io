@@ -1,6 +1,4 @@
-import type { Props as HeaderProps } from '~/components/widgets/Header.astro';
-import type { Props as FooterProps } from '~/components/widgets/Footer.astro';
-import type { FeatureItem2, Link } from './types';
+import type { Link, HeaderProps, FeatureItem2, FooterProps } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
 const projects: Link[] = [

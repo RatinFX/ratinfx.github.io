@@ -2,12 +2,9 @@
 import { Icon } from 'astro-icon';
 import { SITE } from '~/config.mjs';
 import { getHomePermalink } from '~/utils/permalinks';
-import type { MenuLink } from '~/types';
+import type { FooterProps } from '~/types';
 
-export interface Props {
-  links: Array<MenuLink>;
-  theme?: string;
-}
+export interface Props extends FooterProps {}
 
 const { links = [], theme = 'light' } = Astro.props;
 ---

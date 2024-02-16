@@ -2,6 +2,18 @@
 
 import type { AstroComponentFactory } from 'astro/dist/runtime/server';
 
+export interface HeaderProps {
+  links?: Array<MenuLink>;
+  isSticky?: boolean;
+  showToggleTheme?: boolean;
+  position?: string;
+}
+
+export interface FooterProps {
+  links: Array<MenuLink>;
+  theme?: string;
+}
+
 export interface FeatureItem1 {
   title: string;
   description: string;
