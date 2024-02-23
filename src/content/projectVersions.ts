@@ -81,7 +81,7 @@ const vpem: VPProjectDetails = new VPProjectDetails({
   type: VPProjectType.Software,
 
   tag: '1.0.0',
-  releaseDate: new Date('2024-02-24'),
+  releaseDate: new Date('2024-02-23'),
 });
 
 export const allProjectDetails: VPProjectDetails[] = [
