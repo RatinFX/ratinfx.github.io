@@ -1,15 +1,15 @@
 ---
-import type { Version } from '~/types';
+import type { VPProjectDetails } from '~/types';
 import TimeBadge from './TimeBadge.astro';
 import DownloadButton from './DownloadButton.astro';
 
 export interface Props {
-  version: Version;
+  projectDetails: VPProjectDetails;
   classes?: string;
   boxClasses?: string;
 }
 
-const { version, classes, boxClasses } = Astro.props;
+const { projectDetails: projectDetails, classes, boxClasses } = Astro.props;
 ---
 
 <section class={`relative ${classes}`}>
@@ -19,73 +19,66 @@ const { version, classes, boxClasses } = Astro.props;
     >
       <div class="flex justify-center items-center gap-4 pb-4">
         <h6 style="margin-bottom: 0" class="text-2xl">
-          Release: {version.release}
+          Release: {projectDetails.releaseText}
         </h6>
         <span class="dark:text-slate-400">
-          <TimeBadge date={version.releaseDate} />
+          <TimeBadge date={projectDetails.releaseDate} />
         </span>
       </div>
 
       {
         // Automatic install
-        (version?.vp13prim || version?.vp14prim || version?.singlePrim) && (
+        projectDetails.hasPrimary() && (
           <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
-            {version?.vp13prim && (
-              <DownloadButton
-                text="for VEGAS Pro 13 and earlier"
-                href={version?.vp13prim}
-                tooltip={version?.tooltipVP13}
-                primary={true}
-              />
-            )}
-            {version?.vp14prim && (
-              <DownloadButton
-                text="for VEGAS Pro 14 and later"
-                href={version?.vp14prim}
-                tooltip={version?.tooltipVP14}
-                primary={true}
-              />
-            )}
-            {version?.singlePrim && (
-              <DownloadButton text="Download this version" href={version?.singlePrim} primary={true} />
-            )}
+            <DownloadButton
+              text={projectDetails?.singlePrimaryText ?? 'Download this version'}
+              href={projectDetails?.singlePrimary()}
+              primary={true}
+              tooltip={projectDetails?.tooltipSingle}
+            />
           </div>
         )
       }
 
       {
         // Manual install
-        (version?.vp13sec || version?.vp14sec || version?.singleSec) && (
-          <details open class="text-start px-2">
-            <summary class="pb-4">Download for Manual install (usually .zip)</summary>
+        projectDetails.hasSecondary() && (
+          <>
+            <h4 style="margin-top: 0">Download for Manual install</h4>
             <div class="flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
-              {version?.vp13sec && (
+              {projectDetails?.hasManualVP13 && (
                 <DownloadButton
                   text="for VEGAS Pro 13 and earlier"
-                  href={version?.vp13sec}
-                  tooltip={version?.tooltipVP13}
+                  href={projectDetails.manualVP13()}
+                  tooltip={projectDetails?.tooltipVP13}
                 />
               )}
-              {version?.vp14sec && (
+              {projectDetails?.hasManualVP14 && (
                 <DownloadButton
                   text="for VEGAS Pro 14 and later"
-                  href={version?.vp14sec}
-                  tooltip={version?.tooltipVP14}
+                  href={projectDetails.manualVP14()}
+                  tooltip={projectDetails?.tooltipVP14}
                 />
               )}
-              {version?.singleSec && <DownloadButton text="Download this version" href={version?.singleSec} />}
+              {projectDetails?.hasManualSingle && (
+                <DownloadButton
+                  text={projectDetails?.singleSecondaryText ?? 'Download this version'}
+                  href={projectDetails.singleSecondary()}
+                  tooltip={projectDetails?.tooltipSingle}
+                />
+              )}
             </div>
-          </details>
+          </>
         )
       }
 
       {
         // Changes
-        version?.changes && version.changes.length > 0 && (
+        projectDetails?.changes && projectDetails.changes.length > 0 && (
           <details open class="text-start px-2 pt-4">
             <summary>Changes</summary>
             <ul style="margin: 0">
-              {version.changes.map((change: string) => (
+              {projectDetails.changes.map((change: string) => (
                 <li set:html={change} />
               ))}
             </ul>

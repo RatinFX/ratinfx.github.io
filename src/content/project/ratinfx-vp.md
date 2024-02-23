@@ -1,11 +1,11 @@
 ---
 publishDate: 2022-01-22T00:00:00Z
-title: RatinFX VP library
-excerpt: General and VegasPro related utilities used in my other projects.
+title: RatinFX.VP library
+excerpt: General C# utilities used in my WPF and WinForms projects.
 # video: https://www.youtube.com/watch?v=
 # image: ~/assets/images/
 github: https://github.com/RatinFX/RatinFX.VP
-category: Vegas Pro Extension
+category: VEGAS Pro Extension
 tags:
   - dev
   - csharp

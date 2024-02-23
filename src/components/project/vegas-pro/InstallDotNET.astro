@@ -1,0 +1,17 @@
+---
+export interface Props {
+  version?: string;
+}
+
+const { version = '4.8' } = Astro.props;
+
+const link = version.replace('.', '');
+---
+
+<>
+  <h2 id="how-to-install">How to install</h2>
+  Install <a href=`https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net${link}-web-installer`
+    >.NET {version} (or higher)</a
+  >
+  on your computer.
+</>

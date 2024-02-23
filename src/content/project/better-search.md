@@ -5,9 +5,9 @@ excerpt: Improved search for Effects, Generators, and their Presets.
 # video: https://www.youtube.com/watch?v=
 # image: ~/assets/images/
 github: https://github.com/RatinFX/BetterSearch
-category: Vegas Pro Extension
+category: VEGAS Pro Extension
 tags:
-  - custom-command
+  - extension
   - csharp
   - winforms
 ---
@@ -17,9 +17,9 @@ tags:
 - as VEGAS Pro 20.0 and up has objectively better search
 - and I created [VPConsole](/vpconsole)
 
-## Overview
-
 ![Preview Picture](/preview/better-search.png)
+
+## Overview
 
 Quickly search and find **VideoFX**, **AudioFX** and **Generators**
 

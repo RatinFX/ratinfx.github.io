@@ -1,6 +1,8 @@
 // #region General / Widgets
 
 import type { AstroComponentFactory } from 'astro/dist/runtime/server';
+import { dllLink, extensionLink, latestRelease, softwareLink } from './utils/projectinfo';
+import { ProjectNames, VPProjectType } from './enums';
 
 export interface HeaderProps {
   links?: Array<MenuLink>;
@@ -76,23 +78,68 @@ export interface MenuLink extends Link {
 
 // #region Project
 
-export interface ProjectVersion {
-  project: string;
-  versions?: Array<Version>;
-}
+export class VPProjectDetails {
+  slug: string = 'slug';
+  name: ProjectNames = ProjectNames.Unknown;
+  type: VPProjectType = VPProjectType.Unknown;
 
-export interface Version {
-  release: string;
-  releaseDate: Date;
-  vp13prim?: string;
-  vp14prim?: string;
-  vp13sec?: string;
-  vp14sec?: string;
+  tag: string = '0.0.0';
+  releaseText?: string;
+  releaseDate: Date = new Date();
+  changes?: Array<string>;
+
+  hasSinglePrimary: boolean = true;
+  hasManualSingle: boolean = false;
+  singlePrimaryText?: string;
+  singleSecondaryText?: string;
+
+  hasManualVP13: boolean = false;
+  hasManualVP14: boolean = false;
+
+  tooltipSingle?: string;
   tooltipVP13?: string;
   tooltipVP14?: string;
-  singlePrim?: string;
-  singleSec?: string;
-  changes?: Array<string>;
+
+  constructor(props: Partial<VPProjectDetails>) {
+    const data = { ...props };
+    Object.assign(this, data);
+
+    this.releaseText = data.releaseText ? data.releaseText.replace('@tag', this.tag) : this.tag;
+
+    if (this.hasSinglePrimary && (this.type == VPProjectType.Extension || this.type == VPProjectType.Script)) {
+      this.singlePrimaryText = 'Download via VPEM';
+    }
+  }
+
+  public hasPrimary(): boolean {
+    return this.hasSinglePrimary;
+  }
+
+  public hasSecondary(): boolean {
+    return this.hasManualSingle || this.hasManualVP13 || this.hasManualVP14;
+  }
+
+  downloadLink(vpver: '' | '13' | '14'): string {
+    if (this.type == VPProjectType.Extension) return extensionLink(this.name, this.tag, vpver);
+    if (this.type == VPProjectType.Script) return dllLink(this.name, this.tag, vpver);
+    return '';
+  }
+
+  public manualVP13(): string {
+    return this.downloadLink('13');
+  }
+
+  public manualVP14(): string {
+    return this.downloadLink('14');
+  }
+
+  public singlePrimary(): string {
+    return softwareLink(this.name, this.tag);
+  }
+
+  public singleSecondary(): string {
+    return latestRelease(this.name);
+  }
 }
 
 export interface Project {
@@ -119,7 +166,7 @@ export interface Project {
   Content: AstroComponentFactory;
   content?: string;
 
-  versions?: Array<Version>;
+  projectDetails?: VPProjectDetails;
 }
 
 export interface MetaSEO {

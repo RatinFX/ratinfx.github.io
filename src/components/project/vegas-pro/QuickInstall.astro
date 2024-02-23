@@ -1,0 +1,24 @@
+---
+export interface Props {
+  isExtension: boolean;
+}
+
+const { isExtension = true } = Astro.props;
+
+const type = isExtension ? 'Extension' : 'Script';
+const menu = isExtension ? 'Extensions' : 'Scripting';
+---
+
+<>
+  <h3 style="margin-top: 2rem">Quick install</h3>
+  <ol>
+    <li>Download using <a href="/vpem#latest-version" title="VEGAS Pro Extension Manager">VPEM</a></li>
+    <li><b>Start VEGAS Pro</b> and search for the {type} under <b class="highlight">Tools - {menu}</b></li>
+  </ol>
+  <ul>
+    <li>If it does not show up, <b>[ Remove ]</b> then <b>try a different folder</b></li>
+  </ul>
+  <ul>
+    <li>If <b>NOTHING</b> worked, try <b>Manual install</b>.</li>
+  </ul>
+</>

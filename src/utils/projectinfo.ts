@@ -1,30 +1,27 @@
-function gitRepo(name: string): string {
-  return `https://github.com/RatinFX/${name}/`;
+function gitRepo(repo: string): string {
+  return `https://github.com/RatinFX/${repo}/`;
 }
 
-function dllLink(repoName: string, tag: string, vpver: '' | '13' | '14', extension: 'zip' | 'exe' | 'dll'): string {
-  return gitRepo(repoName) + `releases/download/${tag}/${repoName}${vpver}.${extension}`;
+function gitReleases(repo: string): string {
+  return gitRepo(repo) + `releases/`;
 }
 
-function extensionLink(repoName: string, tag: string, vpver: '13' | '14', extension: 'zip' | 'exe' | 'dll'): string {
-  return gitRepo(repoName) + `releases/download/${tag}/${repoName}${vpver}-${tag}.${extension}`;
+export function latestRelease(repo: string): string {
+  return gitReleases(repo) + `latest/`;
 }
 
-/**
- * Discontinued extension
- */
-export function betterSearchLink(tag: string, vpver: '13' | '14', extension: 'zip' | 'exe'): string {
-  return extensionLink('BetterSearch', tag, vpver, extension);
+export function dllLink(repo: string, tag: string, vpver: '' | '13' | '14'): string {
+  return gitReleases(repo) + `download/${tag}/${repo}${vpver}.dll`;
 }
 
-export function customFadesLink(tag: string, vpver: '13' | '14'): string {
-  return dllLink('CustomFades', tag, vpver, 'dll');
+export function extensionLink(repo: string, tag: string, vpver: '' | '13' | '14'): string {
+  return gitReleases(repo) + `download/${tag}/${repo}${vpver}-${tag}.zip`;
 }
 
-export function shortenExtendMediaLink(tag: string, vpver: '13' | '14'): string {
-  return dllLink('ShortenExtendMedia', tag, vpver, 'dll');
+export function softwareLink(name: string, tag: string): string {
+  return gitReleases(name) + `download/${tag}/${name}.zip`;
 }
 
-export function vpflowLink(tag: string, vpver: '13' | '14', extension: 'zip' | 'exe'): string {
-  return extensionLink('VegasProFlow', tag, vpver, extension);
+export function linkToProjectLatest(project: string): string {
+  return `${project}`;
 }

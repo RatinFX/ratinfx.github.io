@@ -1,26 +1,31 @@
-import type { Link, HeaderProps, FeatureItem2, FooterProps } from './types';
+import { ProjectNames } from './enums';
+import type { FeatureItem2, FooterProps, HeaderProps, Link } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
 const projects: Link[] = [
   {
-    text: 'Vegas Pro Flow',
+    text: ProjectNames.VPExtensionManager,
+    href: getPermalink('/vpem'),
+  },
+  {
+    text: ProjectNames.VPFlow,
     href: getPermalink('/vegas-pro-flow'),
   },
   {
-    text: 'Vegas Pro Data',
-    href: getPermalink('/vegas-pro-data'),
-  },
-  {
-    text: 'RatinFX VP library',
-    href: getPermalink('/ratinfx-vp'),
-  },
-  {
-    text: 'Shorten/Extend media',
+    text: ProjectNames.ShortenExtendMedia,
     href: getPermalink('/shorten-extend-media'),
   },
   {
-    text: 'Custom Fades',
+    text: ProjectNames.CustomFades,
     href: getPermalink('/custom-fades'),
+  },
+  {
+    text: 'VPData library',
+    href: getPermalink('/vegas-pro-data'),
+  },
+  {
+    text: 'RatinFX.VP library',
+    href: getPermalink('/ratinfx-vp'),
   },
   {
     text: 'Github Pages',
@@ -131,7 +136,7 @@ export const experience: Array<FeatureItem2> = [
     title: 'Own projects',
     tags: ['Winforms', 'C#', 'WPF', 'VEGAS Pro', 'Astro'],
     description:
-      'I mainly focused on creating VEGAS Pro extensions ' +
+      'I mainly focused on creating VEGAS Pro Extensions ' +
       "to help out and speed up my own, and my friends' work " +
       'while broadening my programming knowledge.' +
       '',

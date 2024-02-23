@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Project } from '~/types';
 import { cleanSlug, trimSlash, PROJECT_PERMALINK_PATTERN } from './permalinks';
-import { projectVersions } from '~/content/projectVersions';
+import { allProjectDetails } from '~/content/projectVersions';
 
 const generatePermalink = async ({ id, slug, publishDate, category }: any) => {
   const year = String(publishDate.getFullYear()).padStart(4, '0');
@@ -45,7 +45,7 @@ const getNormalizedProject = async (project: CollectionEntry<'project'>): Promis
   const publishDate = new Date(rawPublishDate);
   const category = rawCategory ? cleanSlug(rawCategory) : undefined;
   const tags = rawTags.map((tag: string) => cleanSlug(tag));
-  const versions = projectVersions.find((x) => x.project == slug);
+  const projectDetails = allProjectDetails.find((x) => x.slug == slug);
 
   return {
     id: id,
@@ -62,7 +62,7 @@ const getNormalizedProject = async (project: CollectionEntry<'project'>): Promis
     // or 'body' in case you consume from API
 
     permalink: await generatePermalink({ id, slug, publishDate, category }),
-    versions: versions?.versions?.sort((a, b) => b.releaseDate.getTime() - a.releaseDate.getTime()),
+    projectDetails: projectDetails,
   };
 };
 

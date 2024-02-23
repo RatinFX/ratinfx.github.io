@@ -5,16 +5,16 @@ excerpt: Quick and easy Fade in / out customization for VEGAS Pro.
 # video: https://www.youtube.com/watch?v=
 # image: ~/assets/images/
 github: https://github.com/RatinFX/CustomFades
-category: Vegas Pro Extension
+category: VEGAS Pro Extension
 tags:
   - script
   - csharp
   - winforms
 ---
 
-## Overview
-
 ![Preview Picture](/preview/custom-fades.png)
+
+## Overview
 
 Quickly **Increase**, **Decrease** or **Set** the length of the **Fade in** or **Fade out** on the **selected Events**
 

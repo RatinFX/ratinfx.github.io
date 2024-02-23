@@ -1,12 +1,11 @@
 ---
-import { projectVersions } from '~/content/projectVersions';
+import { allProjectDetails } from '~/content/projectVersions';
 import { getFormattedDate } from '~/utils/utils';
 
-const mainProjectSlug = 'vegas-pro-flow';
-const mainProjectName = 'Vegas Pro Flow';
-const lastUpdatedProject = projectVersions.find((x) => x.project == mainProjectSlug)?.versions?.at(0);
-const releaseDate = getFormattedDate(lastUpdatedProject?.releaseDate ?? new Date());
-const releaseNumber = lastUpdatedProject?.release ?? '0.0.0';
+const mainSlug = 'vpem';
+const project = allProjectDetails.find((x) => x.slug == mainSlug);
+const releaseDate = getFormattedDate(project?.releaseDate ?? new Date());
+const releaseNumber = project?.releaseText ?? '0.0.0';
 ---
 
 <div
@@ -18,7 +17,7 @@ const releaseNumber = lastUpdatedProject?.release ?? '0.0.0';
 
   {releaseDate} -
 
-  <a href=`/${mainProjectSlug}#latest-version` class="highlight-link"> {mainProjectName}</a>
+  <a href=`/${mainSlug}#latest-version` class="highlight-link"> {project?.name}</a>
 
   {releaseNumber} release is live!
 </div>

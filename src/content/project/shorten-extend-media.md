@@ -5,16 +5,16 @@ excerpt: Quick and easy Track length customization for VEGAS Pro.
 # video: https://www.youtube.com/watch?v=
 # image: ~/assets/images/
 github: https://github.com/RatinFX/ShortenExtendMedia
-category: Vegas Pro Extension
+category: VEGAS Pro Extension
 tags:
   - script
   - csharp
   - winforms
 ---
 
-## Overview
-
 ![Preview Picture](/preview/shorten-extend-media.png)
+
+## Overview
 
 Quickly **Increase** or **Decrease** the length of the **selected Events**
 
