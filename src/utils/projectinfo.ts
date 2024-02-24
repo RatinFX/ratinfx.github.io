@@ -23,5 +23,5 @@ export function softwareLink(name: string, tag: string): string {
 }
 
 export function linkToProjectLatest(project: string): string {
-  return `${project}`;
+  return `/${project}`;
 }
