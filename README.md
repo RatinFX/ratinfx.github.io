@@ -1,6 +1,6 @@
 # Portfolio Github Pages
 
-> 📌 https://ratinfx.github.io
+> 📌 https://ratinfx.com
 
 ### Using Astro 🚀
 
