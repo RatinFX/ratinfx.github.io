@@ -80,8 +80,13 @@ const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.0.0',
-  releaseDate: new Date('2024-02-23'),
+  tag: '1.1.0',
+  releaseDate: new Date('2024-02-27'),
+  changes: [
+    'Added "Update Notes" button to Extensions',
+    'Added click Action to Notifications',
+    'Changed Latest Version check related displays',
+  ],
 });
 
 export const allProjectDetails: VPProjectDetails[] = [
