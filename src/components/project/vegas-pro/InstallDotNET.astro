@@ -1,17 +1,21 @@
 ---
 export interface Props {
   version?: string;
+  framework?: boolean;
 }
 
-const { version = '4.8' } = Astro.props;
+const { version = '4.8', framework = true } = Astro.props;
 
-const link = version.replace('.', '');
+const linkVersion = framework ? version.replace('.', '') : version;
+
+const href = framework
+  ? `https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net${linkVersion}-web-installer`
+  : `https://aka.ms/dotnet/${linkVersion}/windowsdesktop-runtime-win-x64.exe`;
+
+const dotnetText = framework ? `.NET ${version} Framework (or higher)` : `.NET ${version} (or higher)`;
 ---
 
 <>
   <h2 id="how-to-install">How to install</h2>
-  Install <a href=`https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net${link}-web-installer`
-    >.NET {version} (or higher)</a
-  >
-  on your computer.
+  You might need to install <a href={href}>{dotnetText}</a> on your computer.
 </>

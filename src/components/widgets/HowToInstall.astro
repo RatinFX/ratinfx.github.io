@@ -38,6 +38,11 @@ function PageContains(tag: string): boolean {
         </>
       )) ||
       (PageContains(Tags.dev) && <HowToInstallDev />) ||
-      (PageContains(Tags.software) && <InstallSoftware />)
+      (PageContains(Tags.software) && (
+        <>
+          <InstallDotNET version="6.0" framework={false} />
+          <InstallSoftware />
+        </>
+      ))
   }
 </>
