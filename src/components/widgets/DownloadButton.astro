@@ -6,9 +6,10 @@ export interface Props {
   href: string;
   tooltip?: string;
   primary?: boolean;
+  openOnNewTab?: boolean;
 }
 
-const { text, href, tooltip, primary = false } = Astro.props;
+const { text, href, tooltip, primary = false, openOnNewTab = true } = Astro.props;
 ---
 
 <CallToActionButton
@@ -17,7 +18,7 @@ const { text, href, tooltip, primary = false } = Astro.props;
     href: href,
     tooltip: tooltip,
     icon: 'tabler:download',
-    openOnNewTab: true,
+    openOnNewTab: openOnNewTab,
   }}
   divClasses={'flex w-full sm:w-auto not-prose'}
   btnClasses={'sm:mb-0 w-full'}
