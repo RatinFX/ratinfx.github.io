@@ -2,6 +2,8 @@ import { ProjectNames, ProjectSlugs, VPProjectType } from '~/enums';
 import { VPProjectDetails } from '~/types';
 import { linkToProjectLatest } from '~/utils/projectinfo';
 
+const ttDownloadViaVPEM = 'Redirects to Download VEGAS Pro Extension Manager';
+
 /**
  * Discontinued extension
  */
@@ -33,8 +35,9 @@ const customFades: VPProjectDetails = new VPProjectDetails({
     'Fixed the whole slug because it was not working',
   ],
 
+  openInVPEM: true,
   singlePrimary: () => linkToProjectLatest('vpem'),
-  tooltipSingle: 'VEGAS Pro Extension Manager',
+  tooltipSingle: ttDownloadViaVPEM,
   hasManualVP13: true,
   hasManualVP14: true,
 });
@@ -51,8 +54,9 @@ const shortenExtendMedia: VPProjectDetails = new VPProjectDetails({
     'Removed <b>Help</b> button and moved information to <b>About</b> ',
   ],
 
+  openInVPEM: true,
   singlePrimary: () => linkToProjectLatest('vpem'),
-  tooltipSingle: 'VEGAS Pro Extension Manager',
+  tooltipSingle: ttDownloadViaVPEM,
   hasManualVP13: true,
   hasManualVP14: true,
 });
@@ -68,8 +72,9 @@ const vegasProFlow: VPProjectDetails = new VPProjectDetails({
   releaseDate: new Date('2024-02-04'),
   changes: ['Fixed update check issues'],
 
+  openInVPEM: true,
   singlePrimary: () => linkToProjectLatest('vpem'),
-  tooltipSingle: 'VEGAS Pro Extension Manager',
+  tooltipSingle: ttDownloadViaVPEM,
   hasManualVP14: true,
 });
 
@@ -80,13 +85,16 @@ const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.1.0',
-  releaseDate: new Date('2024-02-27'),
+  tag: '1.2.0',
+  releaseDate: new Date('2024-03-12'),
   changes: [
-    'Added "Update Notes" button to Extensions',
-    'Added click Action to Notifications',
-    'Changed Latest Version check related displays',
+    'Added support for "vpem://" links',
+    'Added "Add VPEM URL handler" button to Settings that recreates and runs the Registry file',
+    'Added VPEM Update installer',
   ],
+
+  openInVPEM: true,
+  openInVPEMLink: 'vpem://',
 });
 
 export const allProjectDetails: VPProjectDetails[] = [

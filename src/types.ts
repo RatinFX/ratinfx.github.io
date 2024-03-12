@@ -88,6 +88,10 @@ export class VPProjectDetails {
   releaseDate: Date = new Date();
   changes?: Array<string>;
 
+  openInVPEM: boolean = false;
+  openInVPEMLink?: string;
+  openInVPEMText: string = 'Update in VPEM';
+
   hasSinglePrimary: boolean = true;
   hasManualSingle: boolean = false;
   singlePrimaryText?: string;
@@ -106,13 +110,13 @@ export class VPProjectDetails {
 
     this.releaseText = data.releaseText ? data.releaseText.replace('@tag', this.tag) : this.tag;
 
-    if (this.hasSinglePrimary && (this.type == VPProjectType.Extension || this.type == VPProjectType.Script)) {
-      this.singlePrimaryText = 'Download via VPEM';
+    if (this.openInVPEM && (this.type == VPProjectType.Extension || this.type == VPProjectType.Script)) {
+      this.singlePrimaryText = 'Download with VPEM';
     }
   }
 
   public hasPrimary(): boolean {
-    return this.hasSinglePrimary;
+    return this.hasSinglePrimary || this.openInVPEM;
   }
 
   public hasSecondary(): boolean {

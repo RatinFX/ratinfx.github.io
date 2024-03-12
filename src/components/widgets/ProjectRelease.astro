@@ -30,6 +30,15 @@ const { projectDetails: projectDetails, classes, boxClasses } = Astro.props;
         // Automatic install
         projectDetails.hasPrimary() && (
           <div class="pb-4 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+            {projectDetails.openInVPEM && (
+              <DownloadButton
+                text={projectDetails.openInVPEMText}
+                href={projectDetails?.openInVPEMLink ? projectDetails.openInVPEMLink : `vpem://${projectDetails?.name}`}
+                primary={true}
+                tooltip="Opens VEGAS Pro Extension Manager"
+                openOnNewTab={false}
+              />
+            )}
             <DownloadButton
               text={projectDetails?.singlePrimaryText ?? 'Download this version'}
               href={projectDetails?.singlePrimary()}
@@ -76,7 +85,7 @@ const { projectDetails: projectDetails, classes, boxClasses } = Astro.props;
         // Changes
         projectDetails?.changes && projectDetails.changes.length > 0 && (
           <details open class="text-start px-2 pt-4">
-            <summary>Changes</summary>
+            <summary>Notable changes</summary>
             <ul style="margin: 0">
               {projectDetails.changes.map((change: string) => (
                 <li set:html={change} />
