@@ -111,7 +111,7 @@ export class VPProjectDetails {
     this.releaseText = data.releaseText ? data.releaseText.replace('@tag', this.tag) : this.tag;
 
     if (this.openInVPEM && (this.type == VPProjectType.Extension || this.type == VPProjectType.Script)) {
-      this.singlePrimaryText = 'Download with VPEM';
+      this.singlePrimaryText = 'Download VPEM';
     }
   }
 
