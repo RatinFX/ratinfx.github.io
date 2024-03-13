@@ -81,6 +81,7 @@ const vegasProFlow: VPProjectDetails = new VPProjectDetails({
   singlePrimary: () => linkToProjectLatest('vpem'),
   tooltipSingle: ttDownloadViaVPEM,
   hasManualVP14: true,
+  hasManualVP13: true,
 });
 
 // Software
