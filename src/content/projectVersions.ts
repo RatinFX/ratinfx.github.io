@@ -68,9 +68,14 @@ const vegasProFlow: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.5.4',
-  releaseDate: new Date('2024-02-04'),
-  changes: ['Fixed update check issues'],
+  tag: '1.5.5',
+  releaseDate: new Date('2024-03-13'),
+  changes: [
+    'Added icon',
+    'Fixed null exceptions',
+    'Added Track Motion warning for TMGlow and TMShadow',
+    'Reworked the About window',
+  ],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest('vpem'),
