@@ -40,3 +40,7 @@ Check out the [YouTube playlist](https://www.youtube.com/playlist?list=PL9FpRwzr
 To [Angelolz](https://www.youtube.com/@angelolz1) for being an early supporter and tester of the project while providing crucial feedback.
 
 - [Angelolz](https://www.youtube.com/@angelolz1) created: [love is an open door (とびら開けて) ╱ ver.KORO x @NightKorio](https://www.youtube.com/watch?v=Ro-KaV3iCs0)
+
+To **MANUGP (lologp)** for the VPFlow icon from my Discord server.
+
+To **夜\_\_晓** and **zzzzzz9125** for sharing the Chinese translations on Discord.
