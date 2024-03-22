@@ -2,7 +2,7 @@
 import { allProjectDetails } from '~/content/projectVersions';
 import { getFormattedDate } from '~/utils/utils';
 
-const mainSlug = 'vpem';
+const mainSlug = 'vegas-pro-flow';
 const project = allProjectDetails.find((x) => x.slug == mainSlug);
 const releaseDate = getFormattedDate(project?.releaseDate ?? new Date());
 const releaseNumber = project?.releaseText ?? '0.0.0';
