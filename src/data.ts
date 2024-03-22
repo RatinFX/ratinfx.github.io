@@ -1,4 +1,4 @@
-import { vpflow, vpem, vpconsole, customFades, shortenExtendMedia } from './content/projectVersions';
+import { vpflow, vpem, customFades, shortenExtendMedia } from './content/projectVersions';
 import type { FeatureItem2, FooterProps, HeaderProps, Link } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
@@ -6,10 +6,6 @@ const projects: Link[] = [
   {
     text: vpem.displayName,
     href: getPermalink('/' + vpem.slug),
-  },
-  {
-    text: vpconsole.displayName,
-    href: getPermalink('/' + vpconsole.slug),
   },
   {
     text: vpflow.displayName,
