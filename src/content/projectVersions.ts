@@ -1,4 +1,4 @@
-import { ProjectNames, ProjectSlugs, VPProjectType } from '~/enums';
+import { ProjectNames, ProjectSlugs, ShortProjectNames, VPProjectType } from '~/enums';
 import { VPProjectDetails } from '~/types';
 import { linkToProjectLatest } from '~/utils/projectinfo';
 
@@ -7,7 +7,7 @@ const ttDownloadViaVPEM = 'Redirects to Download VEGAS Pro Extension Manager';
 /**
  * Discontinued extension
  */
-const betterSearch: VPProjectDetails = new VPProjectDetails({
+export const betterSearch: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.BetterSearch,
   name: ProjectNames.BetterSearch,
   type: VPProjectType.Extension,
@@ -22,7 +22,7 @@ const betterSearch: VPProjectDetails = new VPProjectDetails({
 
 // Scripts
 
-const customFades: VPProjectDetails = new VPProjectDetails({
+export const customFades: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.CustomFades,
   name: ProjectNames.CustomFades,
   type: VPProjectType.Script,
@@ -42,7 +42,7 @@ const customFades: VPProjectDetails = new VPProjectDetails({
   hasManualVP14: true,
 });
 
-const shortenExtendMedia: VPProjectDetails = new VPProjectDetails({
+export const shortenExtendMedia: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.ShortenExtendMedia,
   name: ProjectNames.ShortenExtendMedia,
   type: VPProjectType.Script,
@@ -63,18 +63,19 @@ const shortenExtendMedia: VPProjectDetails = new VPProjectDetails({
 
 // Extensions
 
-const vegasProFlow: VPProjectDetails = new VPProjectDetails({
+export const vpflow: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.VPFlow,
   name: ProjectNames.VPFlow,
+  displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.5.5',
-  releaseDate: new Date('2024-03-13'),
+  tag: '1.6.0',
+  releaseDate: new Date('2024-03-22'),
   changes: [
-    'Added icon',
-    'Fixed null exceptions',
-    'Added Track Motion warning for TMGlow and TMShadow',
-    'Reworked the About window',
+    'Added Settings window in <b>"Settings -> Preferences..."</b>',
+    'Added support for Localization which is saved to <code>...\\Documents\\Vegas Application Extensions\\Languages.json</code>',
+    'Added Chinese translation thanks to <b>夜__晓</b> and <b>zzzzzz9125</b>',
+    'Fixed more issues with Transition Progress',
   ],
 
   openInVPEM: true,
@@ -86,7 +87,7 @@ const vegasProFlow: VPProjectDetails = new VPProjectDetails({
 
 // Software
 
-const vpem: VPProjectDetails = new VPProjectDetails({
+export const vpem: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.VPExtensionManager,
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
@@ -107,6 +108,6 @@ export const allProjectDetails: VPProjectDetails[] = [
   betterSearch,
   customFades,
   shortenExtendMedia,
-  vegasProFlow,
+  vpflow,
   vpem,
 ];

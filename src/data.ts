@@ -1,23 +1,27 @@
-import { ProjectNames } from './enums';
+import { vpflow, vpem, vpconsole, customFades, shortenExtendMedia } from './content/projectVersions';
 import type { FeatureItem2, FooterProps, HeaderProps, Link } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
 const projects: Link[] = [
   {
-    text: ProjectNames.VPExtensionManager,
-    href: getPermalink('/vpem'),
+    text: vpem.displayName,
+    href: getPermalink('/' + vpem.slug),
   },
   {
-    text: ProjectNames.VPFlow,
-    href: getPermalink('/vegas-pro-flow'),
+    text: vpconsole.displayName,
+    href: getPermalink('/' + vpconsole.slug),
   },
   {
-    text: ProjectNames.ShortenExtendMedia,
-    href: getPermalink('/shorten-extend-media'),
+    text: vpflow.displayName,
+    href: getPermalink('/' + vpflow.slug),
   },
   {
-    text: ProjectNames.CustomFades,
-    href: getPermalink('/custom-fades'),
+    text: shortenExtendMedia.displayName,
+    href: getPermalink('/' + shortenExtendMedia.slug),
+  },
+  {
+    text: customFades.displayName,
+    href: getPermalink('/' + customFades.slug),
   },
   {
     text: 'VPData library',

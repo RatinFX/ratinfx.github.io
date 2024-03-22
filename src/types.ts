@@ -81,6 +81,7 @@ export interface MenuLink extends Link {
 export class VPProjectDetails {
   slug: string = 'slug';
   name: ProjectNames = ProjectNames.Unknown;
+  displayName: string = ProjectNames.Unknown;
   type: VPProjectType = VPProjectType.Unknown;
 
   tag: string = '0.0.0';
@@ -108,6 +109,7 @@ export class VPProjectDetails {
     const data = { ...props };
     Object.assign(this, data);
 
+    this.displayName = data.displayName ? data.displayName : this.name;
     this.releaseText = data.releaseText ? data.releaseText.replace('@tag', this.tag) : this.tag;
 
     if (this.openInVPEM && (this.type == VPProjectType.Extension || this.type == VPProjectType.Script)) {

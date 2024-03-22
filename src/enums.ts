@@ -31,3 +31,7 @@ export enum ProjectNames {
   VPConsole = 'VPConsole',
   VPExtensionManager = 'VPExtensionManager',
 }
+
+export enum ShortProjectNames {
+  VPFlow = 'VPFlow',
+}
