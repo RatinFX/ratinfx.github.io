@@ -69,13 +69,11 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.6.0',
-  releaseDate: new Date('2024-03-22'),
+  tag: '1.6.1',
+  releaseDate: new Date('2024-03-23'),
   changes: [
-    'Added Settings window in <b>"Settings -> Preferences..."</b>',
-    'Added support for Localization which is saved to <code>...\\Documents\\Vegas Application Extensions\\Languages.json</code>',
-    'Added Chinese translation thanks to <b>夜__晓</b> and <b>zzzzzz9125</b>',
-    'Fixed more issues with Transition Progress',
+    'Reworked Language handling',
+    'If this broke something just delete <code>...\\Documents\\Vegas Application Extensions\\VegasProFlow\\Languages.json</code>',
   ],
 
   openInVPEM: true,
