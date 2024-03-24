@@ -69,10 +69,11 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.6.1',
-  releaseDate: new Date('2024-03-23'),
+  tag: '1.6.2',
+  releaseDate: new Date('2024-03-24'),
   changes: [
-    'Reworked Language handling',
+    'RatinFX.VP update',
+    'Updated Missing End Keyframe string',
     'If this broke something just delete <code>...\\Documents\\Vegas Application Extensions\\VegasProFlow\\Languages.json</code>',
   ],
 
