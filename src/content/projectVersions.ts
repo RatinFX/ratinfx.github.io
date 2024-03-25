@@ -91,13 +91,9 @@ export const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.2.0',
-  releaseDate: new Date('2024-03-12'),
-  changes: [
-    'Added support for "vpem://" links',
-    'Added "Add VPEM URL handler" button to Settings that recreates and runs the Registry file',
-    'Added VPEM Update installer',
-  ],
+  tag: '1.2.1',
+  releaseDate: new Date('2024-03-25'),
+  changes: ['Removed wrongly placed MouseUp from Install Window labels'],
 
   openInVPEM: true,
   openInVPEMLink: 'vpem://',
