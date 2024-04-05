@@ -28,7 +28,7 @@ const projects: Link[] = [
     href: getPermalink('/ratinfx-vp'),
   },
   {
-    text: 'Github Pages',
+    text: 'GitHub Pages',
     href: 'https://github.com/RatinFX/ratinfx.github.io',
   },
 ];
@@ -71,8 +71,8 @@ const socials: Link[] = [
     href: 'https://www.instagram.com/RatnFX',
   },
   {
-    text: 'Github',
-    ariaLabel: 'Github',
+    text: 'GitHub',
+    ariaLabel: 'GitHub',
     icon: 'tabler:brand-github',
     href: 'https://github.com/RatinFX?tab=repositories',
   },
@@ -141,7 +141,7 @@ export const experience: Array<FeatureItem2> = [
       'while broadening my programming knowledge.' +
       '',
     bottomLink: 'https://github.com/RatinFX',
-    bottomLinkText: 'Github repositories',
+    bottomLinkText: 'GitHub repositories',
   },
   {
     icon: 'twemoji:red-circle',

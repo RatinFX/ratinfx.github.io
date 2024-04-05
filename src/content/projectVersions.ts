@@ -78,7 +78,7 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   ],
 
   openInVPEM: true,
-  singlePrimary: () => linkToProjectLatest('vpem'),
+  singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
   tooltipSingle: ttDownloadViaVPEM,
   hasManualVP14: true,
   hasManualVP13: true,

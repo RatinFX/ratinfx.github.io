@@ -1,4 +1,4 @@
-# Portfolio Github Pages
+# Portfolio GitHub Pages
 
 > 📌 https://ratinfx.com
 
