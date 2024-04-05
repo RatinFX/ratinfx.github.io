@@ -3,6 +3,7 @@ export enum Tags {
   script = 'script',
   dev = 'dev',
   software = 'software',
+  vegasSetup = 'vegas-setup',
 }
 
 export enum VPProjectType {

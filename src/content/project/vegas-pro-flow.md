@@ -10,6 +10,7 @@ tags:
   - extension
   - csharp
   - winforms
+  - vegas-setup
 ---
 
 ![Preview Picture](/preview/vegas-pro-flow.png)

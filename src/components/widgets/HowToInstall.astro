@@ -26,7 +26,7 @@ function PageContains(tag: string): boolean {
         <InstallDotNET />
         <QuickInstall isExtension={true} />
         <ManualInstallExtension />
-        <VegasSetup />
+        {PageContains(Tags.vegasSetup) && <VegasSetup />}
       </>
     )) ||
       (PageContains(Tags.script) && (
@@ -34,7 +34,7 @@ function PageContains(tag: string): boolean {
           <InstallDotNET />
           <QuickInstall isExtension={false} />
           <ManualInstallScript />
-          <VegasSetup />
+          {PageContains(Tags.vegasSetup) && <VegasSetup />}
         </>
       )) ||
       (PageContains(Tags.dev) && <HowToInstallDev />) ||
