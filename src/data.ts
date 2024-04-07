@@ -1,4 +1,4 @@
-import { vpflow, vpem, customFades, shortenExtendMedia } from './content/projectVersions';
+import { vpflow, vpem, vpconsole, customFades, shortenExtendMedia } from './content/projectVersions';
 import type { FeatureItem2, FooterProps, HeaderProps, Link } from './types';
 import { getPermalink, getProjectsPermalink } from './utils/permalinks';
 
@@ -6,6 +6,10 @@ const projects: Link[] = [
   {
     text: vpem.displayName,
     href: getPermalink('/' + vpem.slug),
+  },
+  {
+    text: vpconsole.displayName,
+    href: getPermalink('/' + vpconsole.slug),
   },
   {
     text: vpflow.displayName,
@@ -18,14 +22,6 @@ const projects: Link[] = [
   {
     text: customFades.displayName,
     href: getPermalink('/' + customFades.slug),
-  },
-  {
-    text: 'VPData library',
-    href: getPermalink('/vegas-pro-data'),
-  },
-  {
-    text: 'RatinFX.VP library',
-    href: getPermalink('/ratinfx-vp'),
   },
   {
     text: 'GitHub Pages',
@@ -134,7 +130,7 @@ export const experience: Array<FeatureItem2> = [
   {
     icon: 'flat-color-icons:home',
     title: 'Own projects',
-    tags: ['Winforms', 'C#', 'WPF', 'VEGAS Pro', 'Astro'],
+    tags: ['C#', 'WinForms', 'WPF', 'VEGAS Pro', 'Astro'],
     description:
       'I mainly focused on creating VEGAS Pro Extensions ' +
       "to help out and speed up my own, and my friends' work " +

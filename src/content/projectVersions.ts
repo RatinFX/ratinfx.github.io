@@ -84,6 +84,22 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   hasManualVP13: true,
 });
 
+export const vpconsole: VPProjectDetails = new VPProjectDetails({
+  slug: ProjectSlugs.VPConsole,
+  name: ProjectNames.VPConsole,
+  type: VPProjectType.Extension,
+
+  tag: '1.0.0',
+  releaseDate: new Date('2024-04-10'),
+
+  hasSinglePrimary: false,
+  //openInVPEM: true,
+  singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
+  tooltipSingle: ttDownloadViaVPEM,
+  //hasManualVP13: true,
+  //hasManualVP14: true,
+});
+
 // Software
 
 export const vpem: VPProjectDetails = new VPProjectDetails({
@@ -104,5 +120,6 @@ export const allProjectDetails: VPProjectDetails[] = [
   customFades,
   shortenExtendMedia,
   vpflow,
+  vpconsole,
   vpem,
 ];
