@@ -36,7 +36,7 @@ export const customFades: VPProjectDetails = new VPProjectDetails({
   ],
 
   openInVPEM: true,
-  singlePrimary: () => linkToProjectLatest('vpem'),
+  singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
   tooltipSingle: ttDownloadViaVPEM,
   hasManualVP13: true,
   hasManualVP14: true,
@@ -55,7 +55,7 @@ export const shortenExtendMedia: VPProjectDetails = new VPProjectDetails({
   ],
 
   openInVPEM: true,
-  singlePrimary: () => linkToProjectLatest('vpem'),
+  singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
   tooltipSingle: ttDownloadViaVPEM,
   hasManualVP13: true,
   hasManualVP14: true,
