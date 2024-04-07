@@ -97,25 +97,21 @@ const { project, url } = Astro.props;
       class="shrink-page mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
     >
       {
-        project.projectDetails && (
+        project.projectDetails && (project.projectDetails.hasPrimary() || project.projectDetails.hasSecondary()) && (
           <>
             {project?.tags && <HowToInstall tags={project.tags} />}
 
-            {(project.projectDetails.hasPrimary() || project.projectDetails.hasSecondary()) && (
+            <h2 id="latest-version">Latest version</h2>
+            <ProjectRelease projectDetails={project.projectDetails} boxClasses={'bg-slate-100 dark:bg-slate-800'} />
+
+            {project.github && (
               <>
-                <h2 id="latest-version">Latest version</h2>
-                <ProjectRelease projectDetails={project.projectDetails} boxClasses={'bg-slate-100 dark:bg-slate-800'} />
+                <h2 id="older-versions">Older versions</h2>
 
-                {project.github && (
-                  <>
-                    <h2 id="older-versions">Older versions</h2>
-
-                    <a href={project.github}>
-                      <Icon name="tabler:brand-github" class="w-5 h-5 inline-block -mt-0.5 " />
-                      You can find older versions on the GitHub page
-                    </a>
-                  </>
-                )}
+                <a href={project.github}>
+                  <Icon name="tabler:brand-github" class="w-5 h-5 inline-block -mt-0.5 " />
+                  You can find older versions on the GitHub page
+                </a>
               </>
             )}
 
