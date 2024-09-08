@@ -31,8 +31,8 @@ const projects: Link[] = [
 
 const socials: Link[] = [
   {
-    text: 'Discord: RatinFX',
-    ariaLabel: 'Discord: RatinFX',
+    text: 'Discord server',
+    ariaLabel: 'Discord server',
     icon: 'tabler:brand-discord',
     href: 'https://discord.gg/3Quqz28',
   },
