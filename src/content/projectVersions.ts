@@ -69,13 +69,9 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.6.2',
-  releaseDate: new Date('2024-03-24'),
-  changes: [
-    'RatinFX.VP update',
-    'Updated Missing End Keyframe string',
-    'If this broke something just delete <code>...\\Documents\\Vegas Application Extensions\\VegasProFlow\\Languages.json</code>',
-  ],
+  tag: '1.6.3',
+  releaseDate: new Date('2024-09-21'),
+  changes: ['RatinFX.VP update', 'Fixed an issue when checking for updates'],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
