@@ -69,9 +69,9 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.6.3',
-  releaseDate: new Date('2024-09-21'),
-  changes: ['RatinFX.VP update', 'Fixed an issue when checking for updates'],
+  tag: '1.6.4',
+  releaseDate: new Date('2024-10-21'),
+  changes: ['RatinFX.VP hotfix update: Language was resetting on every VEGAS launch'],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
@@ -86,7 +86,7 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   type: VPProjectType.Extension,
 
   tag: '1.0.0',
-  releaseDate: new Date('2024-04-10'),
+  releaseDate: new Date('2024-10-20'),
 
   hasSinglePrimary: false,
   //openInVPEM: true,
