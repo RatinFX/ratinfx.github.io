@@ -20,7 +20,7 @@ tags:
 
 ## Overview
 
-Effortlessly find and add **Effects**, **Transitions**, and **Generators**
+Quickly find and add **Effects**, **Transitions**, and **Generators**
 
 Create **Shortcuts** by **Right clicking** on an item and use them with the **1-9 keys**
 
@@ -30,6 +30,8 @@ Save **Snapshots** in **JPG**, **PNG**, or copy them to **Clipboard**
 
 ## Setup Keyboard Shortcut
 
-- Set VPConsole as a **Keyboard Shortcut** in `Tools -> Customize Keyboard`
-- **Search** for `VPConsole` and **select the Extension**
-- **Set a key combination** in `Shortcut Keys` then click **[Add]** then **[OK]**
+- Set VPConsole as a **Keyboard Shortcut** in `Options -> Customize Keyboard`
+- Select `Global`
+- **Search** for `VPConsole` (under `Show commands containing`) and **select the Extension**
+- **Set a key combination** in `Shotcut keys`
+- Finally click **[Add]** then **[OK]**
