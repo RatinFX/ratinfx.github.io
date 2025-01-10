@@ -90,7 +90,7 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   type: VPProjectType.Extension,
 
   tag: '1.0.0',
-  releaseDate: new Date('2024-10-20'),
+  releaseDate: new Date('2025-10-20'),
 
   hasSinglePrimary: false,
   //openInVPEM: true,
