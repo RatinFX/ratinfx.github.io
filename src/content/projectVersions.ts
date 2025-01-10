@@ -69,9 +69,13 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.6.4',
-  releaseDate: new Date('2024-10-21'),
-  changes: ['RatinFX.VP hotfix update: Language was resetting on every VEGAS launch'],
+  tag: '1.7.0',
+  releaseDate: new Date('2025-01-10'),
+  changes: [
+    'Added "Only create necessary Keyframes" option with "Keyframe density" options',
+    'Refactored Settings window',
+    'VegasProData update',
+  ],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
