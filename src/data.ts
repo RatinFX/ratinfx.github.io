@@ -46,13 +46,13 @@ const socials: Link[] = [
     text: 'Main YouTube',
     ariaLabel: 'Main YouTube',
     icon: 'tabler:brand-youtube',
-    href: 'https://youtube.com/@MartinFX?sub_confirmation=1',
+    href: 'https://youtube.com/@RatinFX?sub_confirmation=1',
   },
   {
     text: 'Second YouTube',
     ariaLabel: 'Second YouTube',
     icon: 'tabler:brand-youtube',
-    href: 'https://youtube.com/@RatinFX?sub_confirmation=1',
+    href: 'https://youtube.com/@RatinFX2?sub_confirmation=1',
   },
   {
     text: 'Twitter',
