@@ -69,13 +69,9 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.7.0',
-  releaseDate: new Date('2025-01-10'),
-  changes: [
-    'Added "Only create necessary Keyframes" option with "Keyframe density" options',
-    'Refactored Settings window',
-    'VegasProData update',
-  ],
+  tag: '1.7.1',
+  releaseDate: new Date('2025-02-24'),
+  changes: ['RatinFX.VP update - updated YT handles'],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
