@@ -103,15 +103,10 @@ export const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.2.6',
-  releaseDate: new Date('2025-01-10'),
+  tag: '1.2.7',
+  releaseDate: new Date('2025-03-10'),
   changes: [
-    'Close notifications by default',
-    'Close "update available" notification on click',
-    'Remove old Updater files other than the executable',
-    'Fixes during Debug',
-    'Fixed self-updater not working properly',
-    'Increased "supported" versions to VP22',
+    'Update "Install and UpdateNotes" button Enabled status, if the first GitHub release was finally found',
   ],
 
   openInVPEM: true,
