@@ -103,8 +103,8 @@ export const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.2.7',
-  releaseDate: new Date('2025-03-10'),
+  tag: '1.2.8',
+  releaseDate: new Date('2025-03-12'),
   changes: [
     'Update "Install and UpdateNotes" button Enabled status, if the first GitHub release was finally found',
   ],
