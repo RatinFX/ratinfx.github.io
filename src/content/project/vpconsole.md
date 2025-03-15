@@ -12,10 +12,6 @@ tags:
   - wpf
 ---
 
-# DISCLAIMER
-
-## This project is still work-in-progress
-
 ![Preview Picture](/preview/vpconsole.png)
 
 ## Overview
@@ -33,5 +29,5 @@ Save **Snapshots** in **JPG**, **PNG**, or copy them to **Clipboard**
 - Set VPConsole as a **Keyboard Shortcut** in `Options -> Customize Keyboard`
 - Select `Global`
 - **Search** for `VPConsole` (under `Show commands containing`) and **select the Extension**
-- **Set a key combination** in `Shotcut keys`
+- **Set a key combination** in `Shotcut keys` like **Ctrl + Shift + Space**
 - Finally click **[Add]** then **[OK]**

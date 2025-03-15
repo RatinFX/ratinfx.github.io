@@ -86,14 +86,14 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   type: VPProjectType.Extension,
 
   tag: '1.0.0',
-  releaseDate: new Date('2025-10-20'),
+  releaseDate: new Date('2025-03-15'),
 
   hasSinglePrimary: false,
-  //openInVPEM: true,
+  openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
   tooltipSingle: ttDownloadViaVPEM,
-  //hasManualVP13: true,
-  //hasManualVP14: true,
+  hasManualVP13: true,
+  hasManualVP14: true,
 });
 
 // Software
