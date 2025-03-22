@@ -1,5 +1,5 @@
 ---
-publishDate: 2024-04-07T00:00:00Z
+publishDate: 2025-03-15T00:00:00Z
 title: VPConsole
 excerpt: Quick access to your favorite Effects and Generators.
 # video:
