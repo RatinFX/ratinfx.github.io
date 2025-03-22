@@ -2,7 +2,7 @@
 publishDate: 2025-03-15T00:00:00Z
 title: VPConsole
 excerpt: Quick access to your favorite Generators, Effects and Transitions.
-# video:
+video: https://www.youtube.com/watch?v=4ZZBfTb2Ubg
 # image: ~/assets/images/
 github: https://github.com/RatinFX/VPConsole
 category: VEGAS Pro Extension
