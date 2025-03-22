@@ -1,6 +1,6 @@
 ---
 publishDate: 2022-01-23T00:00:00Z
-title: VPData
+title: VegasProData
 excerpt: Class Library with VEGAS Scripting API variables for a better developer experience.
 # video: https://www.youtube.com/watch?v=
 # image: ~/assets/images/
