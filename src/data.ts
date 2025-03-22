@@ -94,45 +94,12 @@ export const headerData: HeaderProps = {
 
 export const experience: Array<FeatureItem2> = [
   {
-    icon: 'tabler:3d-cube-sphere',
-    title: 'Unity Developer',
-    timeFrame: '2022. September - Present',
-    tags: ['Unity', 'C#', 'Firebase', 'TypeScript', 'Figma'],
-    description:
-      'I mostly worked on AR applications for Android and iOS using AR Foundation ' +
-      'while cleaning, correcting, and fixing up older code.' +
-      '<br/>' +
-      '<br/>' +
-      'I also created a Firebase Backend system with live data handling ' +
-      'and connected it with the proper Frontend components for another project.' +
-      '',
-  },
-  {
-    icon: 'vscode-icons:file-type-vue',
-    title: 'Full-stack Web Developer',
-    timeFrame: '2021. May - 2022. September',
-    tags: ['ASP.NET Core', 'C#', 'TypeScript', 'Vue.js 2', 'Vuetify', 'SQL'],
-    description:
-      'Used Vue.js 2 with TypeScript frontend and ASP.NET Core backend.' +
-      '<br/>' +
-      '<br/>' +
-      'I worked on:' +
-      '<br/>' +
-      '- Recreating pages from their older application' +
-      '<br/>' +
-      '- MediatR event handling' +
-      '<br/>' +
-      '- SignalR live communication' +
-      '<br/>' +
-      '- Basic Cypress E2E testing' +
-      '',
-  },
-  {
     icon: 'flat-color-icons:home',
     title: 'Own projects',
+    timeFrame: '2013 - Present',
     tags: ['C#', 'WinForms', 'WPF', 'VEGAS Pro', 'Astro'],
     description:
-      'I mainly focused on creating VEGAS Pro Extensions ' +
+      'Nowadays, I mainly focus on creating VEGAS Pro Extensions ' +
       "to help out and speed up my own, and my friends' work " +
       'while broadening my programming knowledge.' +
       '',
@@ -140,34 +107,74 @@ export const experience: Array<FeatureItem2> = [
     bottomLinkText: 'GitHub repositories',
   },
   {
+    icon: 'logos:youtube-icon',
+    title: 'YouTube',
+    timeFrame: '2016 - Present',
+    tags: ['VEGAS Pro', 'After Effects', 'Premiere Pro', 'Photoshop'],
+    description:
+      'I began creating some videos back in 2009 ' +
+      '- sadly, my earlier videos are lost to time.' +
+      '</br>' +
+      '</br>' +
+      'Video collaborations:' +
+      '</br>' +
+      '- organized and participated in many projects, mostly with friends or smaller communities,' +
+      '</br>' +
+      '- at times, coordinated our efforts with over 25 individuals at the same time.' +
+      '',
+    bottomLink: 'https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye',
+    bottomLinkText: 'Playlist of related videos',
+  },
+  {
     icon: 'twemoji:red-circle',
     title: 'osu!',
     timeFrame: '2013 - Present',
-    tags: ['osu!', 'Level design', 'Video game', 'C#'],
+    tags: ['Video game', 'Level design', 'C#'],
     description:
       '<a class="highlight-link" href="https://osu.ppy.sh/home">osu!</a> is a rhythm game. ' +
       '<br/>' +
-      'Alongside becoming a former top #1000 player, I created many playable maps, ' +
-      'some of which became officially featured content of the game.' +
+      'Alongside becoming a former top #1000 player, I created many playable levels (beatmaps), ' +
+      'some of which became "officially featured content" of the game.' +
       '<br/>' +
       '<br/>' +
-      'I also started looking into and contributing to its open source version ' +
+      'I also looked into and contributed to its open source version ' +
       "called <a class='highlight-link' href='https://github.com/ppy/osu'>osu!lazer</a>." +
       '',
     bottomLink: 'https://osu.ppy.sh/users/3436625',
     bottomLinkText: 'osu! profile',
   },
   {
-    icon: 'logos:youtube-icon',
-    title: 'Video Collaborations',
-    timeFrame: '2016 - Present',
-    tags: ['VEGAS Pro', 'After Effects', 'Premiere Pro', 'Photoshop'],
+    icon: 'vscode-icons:file-type-vue',
+    title: 'Full-stack Web Developer',
+    timeFrame: '2021 - 2022',
+    tags: ['C#', 'ASP.NET Core', 'TypeScript', 'Vue.js', 'SQL'],
     description:
-      'I have been involved in organizing and participating' +
-      'in video collaborations with more than 25 individuals.' +
+      'I worked on many things but mostly:' +
+      '<br/>' +
+      '- Recreated older app pages on the web,' +
+      '<br/>' +
+      '- Maintained <b>Database compatibility</b> between different apps,' +
+      '<br/>' +
+      '- Handled events via <b>MediatR</b> and <b>SignalR</b>,' +
+      '<br/>' +
+      '- Automatization with Windows <b>TaskScheduler</b>,' +
+      '<br/>' +
+      '- <b>Kept tools up to date</b> to speed up workflows.' +
       '',
-    bottomLink: 'https://www.youtube.com/playlist?list=PLbWOgfpY-MeAEQ-baK9VAi_c6KFlqaMye',
-    bottomLinkText: 'Playlist of related videos',
+  },
+  {
+    icon: 'tabler:3d-cube-sphere',
+    title: 'Unity Developer',
+    timeFrame: '2022 - 2023',
+    tags: ['C#', 'Unity', 'TypeScript', 'Firebase', 'Figma'],
+    description:
+      'I mostly worked on <b>AR applications</b> for Android and iOS using <b>AR Foundation</b> ' +
+      'while cleaning, correcting, and fixing up older code.' +
+      '<br/>' +
+      '<br/>' +
+      'For another project, I created a <b>Firebase Backend</b> system with live data handling ' +
+      'and connected it to the proper <b>Unity Frontend</b> components.' +
+      '',
   },
 ];
 
