@@ -1,7 +1,7 @@
 ---
 publishDate: 2025-03-15T00:00:00Z
 title: VPConsole
-excerpt: Quick access to your favorite Effects and Generators.
+excerpt: Quick access to your favorite Generators, Effects, and Transitions.
 # video:
 # image: ~/assets/images/
 github: https://github.com/RatinFX/VPConsole
