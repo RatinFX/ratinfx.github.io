@@ -85,8 +85,9 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.0.0',
-  releaseDate: new Date('2025-03-15'),
+  tag: '1.0.1',
+  releaseDate: new Date('2025-03-24'),
+  changes: ['Updated "Settings -> Support" section'],
 
   hasSinglePrimary: false,
   openInVPEM: true,
@@ -105,9 +106,7 @@ export const vpem: VPProjectDetails = new VPProjectDetails({
 
   tag: '1.2.8',
   releaseDate: new Date('2025-03-12'),
-  changes: [
-    'Update "Install and UpdateNotes" button Enabled status, if the first GitHub release was finally found',
-  ],
+  changes: ['Update "Install and UpdateNotes" button Enabled status, if the first GitHub release was finally found'],
 
   openInVPEM: true,
   openInVPEMLink: 'vpem://',
