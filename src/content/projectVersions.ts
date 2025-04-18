@@ -85,9 +85,9 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.0.1',
-  releaseDate: new Date('2025-03-24'),
-  changes: ['Updated "Settings -> Support" section'],
+  tag: '1.1.0',
+  releaseDate: new Date('2025-04-18'),
+  changes: ['Added Search Tags', 'Added Edit Shortcut Window quality of life changes', 'RatinFX.VP update'],
 
   hasSinglePrimary: false,
   openInVPEM: true,
