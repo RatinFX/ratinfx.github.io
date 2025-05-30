@@ -44,4 +44,4 @@ To [Angelolz](https://www.youtube.com/@angelolz1) for being an early supporter a
 
 To **MANUGP (lologp)** for the VPFlow icon from my Discord server.
 
-To **夜\_\_晓** and **zzzzzz9125** for sharing the Chinese translations on Discord.
+To **夜\_\_晓** and **zzzzzz9125** for continuously sharing and updating the Chinese translations on my Discord server.
