@@ -69,9 +69,15 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.7.1',
-  releaseDate: new Date('2025-02-24'),
-  changes: ['RatinFX.VP update - updated YT handles'],
+  tag: '1.8.0',
+  releaseDate: new Date('2025-06-07'),
+  changes: [
+    'Added support for <b>DXT</b> (mostly built-in effects), <b>Media Generators</b>, <b>Parent</b> and <b>Track Composite Mode FX</b>, and <b>OFXCustomParameter</b> (e.g. Mesh Warp - WarpData)',
+    'Force focus Timeline after pressing Apply',
+    'Display Update available text on the Main form',
+    'Changed displayed text for Parameter selection (second dropdown)',
+    'Various bug fixes',
+  ],
 
   openInVPEM: true,
   singlePrimary: () => linkToProjectLatest(ProjectSlugs.VPExtensionManager),
