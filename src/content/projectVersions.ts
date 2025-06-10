@@ -69,9 +69,10 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.8.0',
-  releaseDate: new Date('2025-06-07'),
+  tag: '1.8.2',
+  releaseDate: new Date('2025-06-10'),
   changes: [
+    'Make VPFlow <b>available in Edit, View, and Tools</b> at the same time (1.8.1)',
     'Added support for <b>DXT</b> (mostly built-in effects), <b>Media Generators</b>, <b>Parent</b> and <b>Track Composite Mode FX</b>, and <b>OFXCustomParameter</b> (e.g. Mesh Warp - WarpData)',
     'Force focus Timeline after pressing Apply',
     'Display Update available text on the Main form',
