@@ -92,9 +92,14 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.1.0',
-  releaseDate: new Date('2025-04-18'),
-  changes: ['Added Search Tags', 'Added Edit Shortcut Window quality of life changes', 'RatinFX.VP update'],
+  tag: '1.1.1',
+  releaseDate: new Date('2025-06-13'),
+  changes: [
+    'Make VPFlow <b>available in Edit, View, and Tools</b> at the same time (1.1.1)',
+    'Added Search Tags',
+    'Added Edit Shortcut Window quality of life changes',
+    'RatinFX.VP update',
+  ],
 
   hasSinglePrimary: false,
   openInVPEM: true,
