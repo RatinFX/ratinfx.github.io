@@ -95,7 +95,7 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   tag: '1.1.1',
   releaseDate: new Date('2025-06-13'),
   changes: [
-    'Make VPFlow <b>available in Edit, View, and Tools</b> at the same time (1.1.1)',
+    'Make VPConsole <b>available in Edit, View, and Tools</b> at the same time (1.1.1)',
     'Added Search Tags',
     'Added Edit Shortcut Window quality of life changes',
     'RatinFX.VP update',
