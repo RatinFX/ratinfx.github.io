@@ -92,13 +92,11 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.1.1',
-  releaseDate: new Date('2025-06-13'),
+  tag: '1.2.0',
+  releaseDate: new Date('2025-10-05'),
   changes: [
-    'Make VPConsole <b>available in Edit, View, and Tools</b> at the same time (1.1.1)',
-    'Added Search Tags',
-    'Added Edit Shortcut Window quality of life changes',
-    'RatinFX.VP update',
+    'Open Effects UI after adding an Effect to a Video/Audio Event or Track',
+    'Open Media Generator UI after creating a Generator (for VP18 and up)',
   ],
 
   hasSinglePrimary: false,
@@ -116,9 +114,9 @@ export const vpem: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPExtensionManager,
   type: VPProjectType.Software,
 
-  tag: '1.2.8',
-  releaseDate: new Date('2025-03-12'),
-  changes: ['Update "Install and UpdateNotes" button Enabled status, if the first GitHub release was finally found'],
+  tag: '1.2.10',
+  releaseDate: new Date('2025-10-05'),
+  changes: ['Update VPConsole dependency list'],
 
   openInVPEM: true,
   openInVPEMLink: 'vpem://',
