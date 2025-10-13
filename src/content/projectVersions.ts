@@ -69,10 +69,12 @@ export const vpflow: VPProjectDetails = new VPProjectDetails({
   displayName: ShortProjectNames.VPFlow,
   type: VPProjectType.Extension,
 
-  tag: '1.8.2',
-  releaseDate: new Date('2025-06-10'),
+  tag: '1.8.3',
+  releaseDate: new Date('2025-10-13'),
   changes: [
-    'Make VPFlow <b>available in Edit, View, and Tools</b> at the same time (1.8.2)',
+    '.3: Fixed displayed text for some warnings',
+    '.3: RatinFX.VP update',
+    '.2: Make VPFlow <b>available in Edit, View, and Tools</b> at the same time (1.8.2)',
     'Added support for <b>DXT</b> (mostly built-in effects), <b>Media Generators</b>, <b>Parent</b> and <b>Track Composite Mode FX</b>, and <b>OFXCustomParameter</b> (e.g. Mesh Warp - WarpData)',
     'Force focus Timeline after pressing Apply',
     'Display Update available text on the Main form',
@@ -92,9 +94,10 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.2.0',
-  releaseDate: new Date('2025-10-05'),
+  tag: '1.2.1',
+  releaseDate: new Date('2025-10-13'),
   changes: [
+    '.1: Fix Snapshot filename (RatinFX.VP update)',
     'Open Effects UI after adding an Effect to a Video/Audio Event or Track',
     'Open Media Generator UI after creating a Generator (for VP18 and up)',
   ],
