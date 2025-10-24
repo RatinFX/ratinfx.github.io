@@ -94,9 +94,11 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
   name: ProjectNames.VPConsole,
   type: VPProjectType.Extension,
 
-  tag: '1.2.1',
-  releaseDate: new Date('2025-10-13'),
+  tag: '1.2.2',
+  releaseDate: new Date('2025-10-24'),
   changes: [
+    '.2: Add option to toggle Effect UI auto-open',
+    '.2: Update Tag rules to remove leading "-"',
     '.1: Fix Snapshot filename (RatinFX.VP update)',
     'Open Effects UI after adding an Effect to a Video/Audio Event or Track',
     'Open Media Generator UI after creating a Generator (for VP18 and up)',
@@ -111,7 +113,10 @@ export const vpconsole: VPProjectDetails = new VPProjectDetails({
 });
 
 // Software
-
+// TODO: - vpem always check for the latest version of a project
+//         before downloading a new version inside VPEM
+//         -> could display info: "never version for X is available, these 2 might conflict"
+// TODO: - vpconsole: fix not opening with bad network
 export const vpem: VPProjectDetails = new VPProjectDetails({
   slug: ProjectSlugs.VPExtensionManager,
   name: ProjectNames.VPExtensionManager,
